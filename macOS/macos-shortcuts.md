@@ -15,32 +15,32 @@ Shortcuts
 
 ### Cut, copy, paste, and other common shortcuts
 
-| `⌘ - X` | Cut the selected item and copy it to the Clipboard |
-| `⌘ - C` | Copy the selected item to the Clipboard |
-| `⌘ - V` | Paste the contents of the Clipboard |
-| `⌘ - Z` | Undo the previous ⌘ |
-| `⇧ - ⌘ - Z` | Redo |
-| `⌘ - A` | Select All items |
-| `⌘ - F` | Find items |
-| `⌘ - G` | Find next |
-| `⌘ - H` | Hide the windows of the front app |
-| `⌥ - ⌘ - H` | Hide all other apps, execpt the front app |
-| `⌘ - M` | Minimize the front window to the Dock |
-| `⌥ - ⌘ - M` | Minimize all |
-| `⌘ - O` | Open the selected item |
-| `⌘ - P` | Print the current document |
-| `⌘ - S` | Save the current document |
-| `⌘ - T` | Open a new tab |
-| `⌘ - W` | Close the front window |
-| `⌥ - ⌘ - Esc` | Force quit an app |
-| `⌘ - space` | Show/hide the Spotlight search field |
-| `⌃ - ⌘ - space` | Show the Character Viewer |
-| `⌃ - ⌘ - F` | Use the app in full screen |
+| `⌘X` | Cut the selected item and copy it to the Clipboard |
+| `⌘C` | Copy the selected item to the Clipboard |
+| `⌘V` | Paste the contents of the Clipboard |
+| `⌘Z` | Undo the previous ⌘ |
+| `⇧⌘Z` | Redo |
+| `⌘A` | Select All items |
+| `⌘F` | Find items |
+| `⌘G` | Find next |
+| `⌘H` | Hide the windows of the front app |
+| `⌥⌘H` | Hide all other apps, execpt the front app |
+| `⌘M` | Minimize the front window to the Dock |
+| `⌥⌘M` | Minimize all |
+| `⌘O` | Open the selected item |
+| `⌘P` | Print the current document |
+| `⌘S` | Save the current document |
+| `⌘T` | Open a new tab |
+| `⌘W` | Close the front window |
+| `⌥⌘Esc` | Force quit an app |
+| `⌘space` | Show/hide the Spotlight search field |
+| `⌃⌘space` | Show the Character Viewer |
+| `⌃⌘F` | Use the app in full screen |
 | `space` | Use Quick Look to preview |
-| `⌘ - Tab` | Switch between apps |
-| `⇧ - ⌘ - 5` | Take a screenshot or make a screen recording |
-| `⇧ - ⌘ - N` | Create a new folder in the Finder |
-| `⌘ - ,` | Open preferences for the front app |
+| `⌘⭾` | Switch between apps |
+| `⇧⌘5` | Take a screenshot or make a screen recording |
+| `⇧⌘N` | Create a new folder in the Finder |
+| `⌘,` | Open preferences for the front app |
 {: .-shortcuts}
 
 ### Comments
