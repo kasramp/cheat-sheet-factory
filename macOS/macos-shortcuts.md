@@ -15,17 +15,17 @@ Shortcuts
 
 ### Cut, copy, paste, and other common shortcuts
 
-| `⌘X` | Cut the selected item and copy it to the Clipboard |
-| `⌘C` | Copy the selected item to the Clipboard |
-| `⌘V` | Paste the contents of the Clipboard |
-| `⌘Z` | Undo the previous ⌘ |
+| `⌘X` | Cut |
+| `⌘C` | Copy |
+| `⌘V` | Paste |
+| `⌘Z` | Undo |
 | `⇧⌘Z` | Redo |
-| `⌘A` | Select All items |
+| `⌘A` | Select All |
 | `⌘F` | Find items |
 | `⌘G` | Find next |
-| `⌘H` | Hide the windows of the front app |
+| `⌘H` | Hide the windows of front app |
 | `⌥⌘H` | Hide all other apps, execpt the front app |
-| `⌘M` | Minimize the front window to the Dock |
+| `⌘M` | Minimize the front window |
 | `⌥⌘M` | Minimize all |
 | `⌘O` | Open the selected item |
 | `⌘P` | Print the current document |
