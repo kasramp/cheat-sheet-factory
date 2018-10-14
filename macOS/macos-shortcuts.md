@@ -33,10 +33,10 @@ Shortcuts
 | `⌘T` | Open a new tab |
 | `⌘W` | Close the front window |
 | `⌥⌘Esc` | Force quit an app |
-| `⌘space` | Show/hide the Spotlight search field |
-| `⌃⌘space` | Show the Character Viewer |
+| `⌘Space` | Show/hide the Spotlight search field |
+| `⌃⌘Space` | Show the Character Viewer |
 | `⌃⌘F` | Use the app in full screen |
-| `space` | Use Quick Look to preview |
+| `Space` | Use Quick Look to preview |
 | `⌘⭾` | Switch between apps |
 | `⇧⌘5` | Take a screenshot or make a screen recording |
 | `⇧⌘N` | Create a new folder in the Finder |
@@ -49,7 +49,7 @@ Shortcuts
 | `^⇧Power` | Put the display to sleep |
 | `⌃Power` | Shutdown menu |
 | `⌃⌘Power` | Force restart |
-| `⌃⌘Media Eject` | Quit all apps, then restart |
+| `⌃⌘Eject` | Quit all apps, then restart |
 | `⌃⌥⌘Power` | Quit all apps, then shut down |
 | `⇧⌘Q` | Log out with confirmation | 
 | `⌥⇧⌘Q` | Log out no confirmation |
