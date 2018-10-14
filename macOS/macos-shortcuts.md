@@ -46,25 +46,76 @@ Shortcuts
 ### Sleep, log out, and shut down
 
 | `⌥⌘Power` | Sleep |
-| `^⇧Power button` | Put the display to sleep |
-| `⌃Power button` | Shutdown menu |
-| `⌃⌘Power button` | Force restart |
+| `^⇧Power` | Put the display to sleep |
+| `⌃Power` | Shutdown menu |
+| `⌃⌘Power` | Force restart |
 | `⌃⌘Media Eject` | Quit all apps, then restart |
-| `⌃⌥⌘Power button` | Quit all apps, then shut down |
+| `⌃⌥⌘Power` | Quit all apps, then shut down |
 | `⇧⌘Q` | Log out with confirmation | 
 | `⌥⇧⌘Q` | Log out no confirmation |
 {: .-shortcuts}
 
-### View
+### Finder and system
 
-| Shortcut | Description |
-| --- | --- |
-| `⌘k` `←` | Split pane to the left |
-| --- | --- |
-| `⌘⌥=` | Grow pane |
-| `⌘⌥-` | Shrink pane |
-| --- | --- |
-| `^⇧←` | Move tab to left |
+`⌘D` | Duplicate the selected files |
+`⌘E` | Eject the selected disk or volume |
+`⌘F` | Start a Spotlight search |
+`⌘I` | Show the Get Info window |
+`⇧⌘C` | Open the Computer window |
+`⇧⌘D` | Open the desktop folder |
+`⇧⌘F` | Open the All My Files window |
+`⇧⌘G` | Open a Go to Folder window |
+`⇧⌘H` | Open Home |
+`⇧⌘I` | Open iCloud |
+`⇧⌘K` | Open the Network |
+`⌥⌘L` | Open the Downloads |
+`⇧⌘N` | Create a new folder |
+`⇧⌘O` | Open the Documents |
+`⇧⌘P` | Show/hide the Preview pane |
+`⇧⌘R` | Open the AirDrop |
+`⇧⌘T` | Show/hide the tab bar in Finder |
+`⌃⇧⌘T` | Add selected Finder item to the Dock |
+`⇧⌘U` | Open the Utilities |
+`⌥⌘D` | Show/hide the Dock | 
+`⌃⌘T` | Add the selected item to the sidebar |
+`⌥⌘P` | Hide/show the path bar |
+`⌥⌘S` | Hide/show the Sidebar |
+`⌘/` | Hide/show the status bar |
+`⌘J` | Show View ⌥ s |
+`⌘K` | Open the Connect to Server |
+`⌘L` | Make an alias of the selected item |
+`⌘N` | Open a new Finder |
+`⌥⌘N` | Create a new Smart Folder |
+`⌘T` | Show/hide the tab bar |
+`⌥⌘T` | Show or hide the toolbar |
+`⌥⌘V` | Move |
+`⌘Y` | Use Quick Look to preview |
+`⌥⌘Y` | View a Quick Look slideshow |
+`⌘1` | View the items in the Finder as icons |
+`⌘2` | View the items in a Finder as a list |
+`⌘3` | View the items in a Finder in columns | 
+`⌘4` | View the items in a Finder with Cover Flow |
+`⌘[` | Go to the previous folder |
+`⌘]` | Go to the next folder |
+`⌘↑` | Open the folder |
+`⌘⌃↑` | Open the folder in a new window |
+`⌘↓` | Open the selected item |
+`→` | Open the selected folder |
+`←` | Close the selected folder |
+`⌘Delete` | Move the selected item to the Trash |
+`⇧⌘Delete` |  Empty the Trash |
+`⌥⇧⌘Delete` | Empty the Trash without confirmation |
+`⌘Brightness Up` | Turn target display mode on/off |
+`⌘Brightness Down` | Turn video mirroring on/off |
+`⌥Brightness Up` | Open Displays preferences |
+`⌃Brightness Up/Down` | Change the brightness of external display |
+`⌥⇧Brightness Up/Down` | Adjust the display brightness |
+`⌥⌃` | Open Mission ⌃  preferences |
+`⌘⌃` | Show the desktop | 
+`⌃↓` | Show all windows of the front app |
+`⌥Volume Up` | Open Sound preferences |
+`⌥⇧Volume Up/Down` | Adjust the sound volume |
+`⌥Brightness Up` | Open Keyboard preferences |
 {: .-shortcuts}
 
 ### Bracket matcher
