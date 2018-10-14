@@ -2,6 +2,7 @@
 title: macOS Shortcuts
 category: macOS
 layout: 2017/sheet
+tags: [Featured]
 updated: 2018-10-14
 keywords:
     - "macOS keyboard shortcuts"
@@ -74,10 +75,10 @@ Shortcuts
 | `⇧⌘P` | Show/hide the Preview pane |
 | `⇧⌘R` | Open the AirDrop |
 | `⇧⌘T` | Show/hide the tab bar in Finder |
-| `⌃⇧⌘T` | Add selected Finder item to the Dock |
+| `⌃⇧⌘T` | Add selected item to the Dock |
 | `⇧⌘U` | Open the Utilities |
 | `⌥⌘D` | Show/hide the Dock | 
-| `⌃⌘T` | Add the selected item to the sidebar |
+| `⌃⌘T` | Add the selected item to sidebar |
 | `⌥⌘P` | Hide/show the path bar |
 | `⌥⌘S` | Hide/show the Sidebar |
 | `⌘/` | Hide/show the status bar |
@@ -91,10 +92,10 @@ Shortcuts
 | `⌥⌘V` | Move |
 | `⌘Y` | Use Quick Look to preview |
 | `⌥⌘Y` | View a Quick Look slideshow |
-| `⌘1` | View the items in the Finder as icons |
-| `⌘2` | View the items in a Finder as a list |
-| `⌘3` | View the items in a Finder in columns | 
-| `⌘4` | View the items in a Finder with Cover Flow |
+| `⌘1` | View items in Finder as icons |
+| `⌘2` | View items in Finder as a list |
+| `⌘3` | View items in Finder in columns | 
+| `⌘4` | View items in Finder with Cover Flow |
 | `⌘[` | Go to the previous folder |
 | `⌘]` | Go to the next folder |
 | `⌘↑` | Open the folder |
@@ -102,9 +103,9 @@ Shortcuts
 | `⌘↓` | Open the selected item |
 | `→` | Open the selected folder |
 | `←` | Close the selected folder |
-| `⌘Delete` | Move the selected item to the Trash |
+| `⌘Delete` | Delete |
 | `⇧⌘Delete` |  Empty the Trash |
-| `⌥⇧⌘Delete` | Empty the Trash without confirmation |
+| `⌥⇧⌘Delete` | Empty the Trash no confirmation |
 | `⌥⌃` | Open Mission ⌃  preferences |
 | `⌘⌃` | Show the desktop | 
 | `⌃↓` | Show all windows of the front app |
