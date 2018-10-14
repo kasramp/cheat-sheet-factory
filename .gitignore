@@ -1,0 +1,6 @@
+_output
+_site
+.jekyll-metadata
+/node_modules
+/vendor
+/.idea
