@@ -15,8 +15,6 @@ Shortcuts
 
 ### Cut, copy, paste, and other common shortcuts
 
-| Shortcut | Function |
-| --- | --- |
 | `⌘ - X` | Cut the selected item and copy it to the Clipboard |
 | `⌘ - C` | Copy the selected item to the Clipboard |
 | `⌘ - V` | Paste the contents of the Clipboard |
