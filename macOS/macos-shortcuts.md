@@ -105,17 +105,9 @@ Shortcuts
 | `⌘Delete` | Move the selected item to the Trash |
 | `⇧⌘Delete` |  Empty the Trash |
 | `⌥⇧⌘Delete` | Empty the Trash without confirmation |
-| `⌘Brightness Up` | Turn target display mode on/off |
-| `⌘Brightness Down` | Turn video mirroring on/off |
-| `⌥Brightness Up` | Open Displays preferences |
-| `⌃Brightness Up/Down` | Change the brightness of external display |
-| `⌥⇧Brightness Up/Down` | Adjust the display brightness |
 | `⌥⌃` | Open Mission ⌃  preferences |
 | `⌘⌃` | Show the desktop | 
 | `⌃↓` | Show all windows of the front app |
-| `⌥Volume Up` | Open Sound preferences |
-| `⌥⇧Volume Up/Down` | Adjust the sound volume |
-| `⌥Brightness Up` | Open Keyboard preferences |
 {: .-shortcuts}
 
 ### Document
