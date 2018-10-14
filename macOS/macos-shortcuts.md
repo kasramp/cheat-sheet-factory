@@ -43,11 +43,16 @@ Shortcuts
 | `⌘,` | Open preferences for the front app |
 {: .-shortcuts}
 
-### Comments
+### Sleep, log out, and shut down
 
-| Shortcut | Description |
-| --- | --- |
-| `⌘/` | Toggle comments |
+| `⌥⌘Power` | Sleep |
+| `^⇧Power button` | Put the display to sleep |
+| `⌃Power button` | Shutdown menu |
+| `⌃⌘Power button` | Force restart |
+| `⌃⌘Media Eject` | Quit all apps, then restart |
+| `⌃⌥⌘Power button` | Quit all apps, then shut down |
+| `⇧⌘Q` | Log out with confirmation | 
+| `⌥⇧⌘Q` | Log out no confirmation |
 {: .-shortcuts}
 
 ### View
