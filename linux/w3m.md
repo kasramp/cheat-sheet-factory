@@ -13,7 +13,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-twi-column}
+{: .-three-column}
 
 ### Common shortcuts
 
@@ -50,8 +50,23 @@ Shortcuts
 
 ### Misc
 
-+ Show all links in a page in pop up form to select (without going to link): `Escm`.
-+ Show all links in a page in pop up form to select (wit going to link): `Escl`.
-+ To be able to login to sites that require cookies: `w3m -cookie`.
-+ Bookmarks are stored in `~/.w3m/bookmarks.html`.
+Show all links in a page in pop up form to select (without going to link):
+```
+Escm
+```
+
+Show all links in a page in pop up form to select (wit going to link): 
+```
+Escl
+```
+
+To be able to login to sites that require cookies:
+```
+w3m -cookie
+```
+
+Bookmarks are stored in:
+```
+~/.w3m/bookmarks.html
+```
 
