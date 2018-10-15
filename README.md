@@ -7,11 +7,6 @@ This project is a fork of [devhints.io](https://devhints.io/) which its cheat sh
 ## Contact
 * kasra@madadipouya.com
 
-## Support
-You can always support me by donating any amount of money :-)
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=C68PYFWLT332S)
-
 ## License
 
 Cheat Sheet Factory is [MIT licensed](./LICENSE).
