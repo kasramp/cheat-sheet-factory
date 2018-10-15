@@ -51,6 +51,7 @@ Shortcuts
 ### Misc
 
 Show all links in a page in pop up form to select (without going to link):
+{: .-setup}
 
 ```
 Escm
