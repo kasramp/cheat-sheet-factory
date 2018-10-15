@@ -52,8 +52,9 @@ Shortcuts
 | `⌃⌘Power` | Force restart |
 | `⌃⌘Eject` | Quit all apps, then restart |
 | `⌃⌥⌘Power` | Quit all apps, then shut down |
-| `⇧⌘Q` | Log out with confirmation | 
+| `⇧⌘Q` | Log out with confirmation |
 | `⌥⇧⌘Q` | Log out no confirmation |
+| `^⌘Q` | Screen lock |
 {: .-shortcuts}
 
 ### Finder and system
