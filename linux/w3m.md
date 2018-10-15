@@ -51,22 +51,25 @@ Shortcuts
 ### Misc
 
 Show all links in a page in pop up form to select (without going to link):
+
 ```
 Escm
 ```
 
-Show all links in a page in pop up form to select (wit going to link): 
+Show all links in a page in pop up form to select (with going to link): 
+
 ```
 Escl
 ```
 
 To be able to login to sites that require cookies:
+
 ```
 w3m -cookie
 ```
 
 Bookmarks are stored in:
+
 ```
 ~/.w3m/bookmarks.html
 ```
-
