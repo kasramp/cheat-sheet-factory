@@ -25,6 +25,7 @@ Shortcuts
 | `z` | Play previous |
 | `s` | Shuffle |
 | `r` | Repeat |
+{: .-shortcuts}
 
 ### Misc
 

@@ -46,7 +46,7 @@ Shortcuts
 | `Esca` | To bookmark |
 | `<>` | Scroll left and right |
 | `o` | Open options/preferences |
-
+{: .-shortcuts}
 
 ### Misc
 

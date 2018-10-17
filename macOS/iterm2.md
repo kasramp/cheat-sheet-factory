@@ -21,6 +21,7 @@ iTerm2
 | `⌘1, 2, 3, ...` | Switch tabs |
 | `⌘⇧←→` | Change tab position |
 | `⌃u` | Clear line from cursor to left |
+{: .-shortcuts}
 
 ### Basics
 
