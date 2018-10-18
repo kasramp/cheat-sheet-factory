@@ -1,6 +1,6 @@
 ---
 title: IntelliJ IDEA
-category: ide
+category: IDE
 layout: 2017/sheet
 tags: [Featured]
 updated: 2018-10-18
