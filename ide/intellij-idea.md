@@ -1,6 +1,6 @@
 ---
 title: iTerm2
-category: macOS
+category: ide
 layout: 2017/sheet
 tags: [Featured]
 updated: 2018-10-18
@@ -13,7 +13,7 @@ intro: |
 
 IntelliJ IDEA
 ---------
-{: .-two-column}
+{: .-three-column}
 
 ### Handy Shortcuts (Linux)
 
