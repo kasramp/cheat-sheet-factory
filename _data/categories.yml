@@ -2,4 +2,5 @@ enabled: true
 names:
   - macOS
   - Linux
+  - IDE
   - Others
