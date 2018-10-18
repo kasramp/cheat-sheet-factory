@@ -42,10 +42,9 @@ IntelliJ IDEA
 | `^❖⎇←→` | Backs/Forwards to previous/next places in the files |
 | `⇧F6`| Refactor code and apply to all files. Useful for batch rename of methods |
 | `⎇7`| Shows method definitions |
-
 {: .-shortcuts}
 
 ### Complete shortcut list
 
-- You can download the full shortcut list [here](_docs/pdfs/IntelliJ IDEA.pdf)
+- You can download the full shortcut list [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/IntelliJ%20IDEA.pdf)
 {: .-setup}
