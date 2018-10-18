@@ -46,5 +46,5 @@ IntelliJ IDEA
 
 ### Complete shortcut list
 
-- You can download the full shortcut list [here](https://github.com/kasramp/cheat-sheet-factory/raw/gh-pages/_docs/pdfs/IntelliJ%20IDEA.pdf)
+- You can download the full shortcut list [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/IntelliJ%20IDEA.pdf)
 {: .-setup}
