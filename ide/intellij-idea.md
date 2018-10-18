@@ -1,5 +1,5 @@
 ---
-title: iTerm2
+title: IntelliJ IDEA
 category: ide
 layout: 2017/sheet
 tags: [Featured]
