@@ -166,3 +166,10 @@ Shortcuts
 | `⌘=` | Reset the size |
 | `⇧⌘?` | Open the Help |
 {: .-shortcuts}
+
+### Safari
+
+| `⌘/` | Show links on mouseover | 
+| `⌘D` | Add bookmark |
+| `⌥⌘B` | Edit bookmark |
+{: .-shortcuts}
