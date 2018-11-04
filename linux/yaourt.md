@@ -14,7 +14,7 @@ intro: |
 
 Switches
 ---------
-{: .-three-column}
+{: .-two-column}
 
 ### Installation
 
