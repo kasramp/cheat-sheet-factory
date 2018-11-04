@@ -25,5 +25,5 @@ Switches
 | `-S` | Install a package |
 | `-Sy` | Sync database |
 | `-R` | Remove a package |
-| -S [package] --noconfirm` | Install without confirmation |
+| `-S [package] --noconfirm` | Install without confirmation |
 {: .-shortcuts}
