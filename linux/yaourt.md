@@ -2,7 +2,6 @@
 title: yaourt
 category: Linux
 layout: 2017/sheet
-tags: [Featured]
 updated: 2018-11-04
 keywords:
     - "yaourt"

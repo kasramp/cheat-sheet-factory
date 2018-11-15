@@ -2,7 +2,6 @@
 title: cmus
 category: Linux
 layout: 2017/sheet
-tags: [Featured]
 updated: 2018-10-16
 keywords:
     - "cmus"

@@ -2,7 +2,6 @@
 title: Visual Studio Code
 category: IDE
 layout: 2017/sheet
-tags: [Featured]
 updated: 2018-11-14
 keywords:
     - "VS Code"

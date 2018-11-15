@@ -2,7 +2,6 @@
 title: w3m Shortcuts
 category: Linux
 layout: 2017/sheet
-tags: [Featured]
 updated: 2018-10-15
 keywords:
     - "w3m"

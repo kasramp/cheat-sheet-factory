@@ -2,7 +2,6 @@
 title: Keyboard Unicode Symbols
 category: Others
 layout: 2017/sheet
-tags: [Featured]
 updated: 2018-10-19
 keywords:
     - "Keyboard symbols"
