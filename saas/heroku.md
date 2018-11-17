@@ -15,7 +15,7 @@ Shortcuts
 ---------
 {: .-two-column}
 
-### Common shortcuts
+### Handy heroku-cli commands
 
 | `heroku login` | Logins to account |
 | `heroku apps` | Lists apps |
