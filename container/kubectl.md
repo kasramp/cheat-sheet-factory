@@ -22,5 +22,10 @@ Shortcuts
 | `kubectl config view` | Shows configurations |
 | `kubectl config view` | Shows configurations |
 | `kubectl get services` | Lists all services in the namespace |
-| `kubectl get pods --all-namespaces` | List all pods in all namespaces |
-| `kubectl get deployment my-dep` | List a particular deployment |
+| `kubectl get pods --all-namespaces` | Lists all pods in all namespaces |
+| `kubectl get deployment my-dep` | Lists a particular deployment |
+| `kubectl scale --replicas=3 rs/foo` | Scales a replicaset named 'foo' to 3 |
+
+### Reference
+
+[https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
