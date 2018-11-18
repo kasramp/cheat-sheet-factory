@@ -1,6 +1,8 @@
 enabled: true
 names:
-  - macOS
-  - Linux
+  - Container
   - IDE
+  - Linux
+  - macOS
   - Others
+  - SaaS
