@@ -1,6 +1,6 @@
 ---
 title: git
-category: Version Controll
+category: Version Control
 layout: 2017/sheet
 tags: [Featured]
 updated: 2018-11-19
@@ -82,4 +82,4 @@ Shortcuts
 
 ### Reference
 
-- Full cheat sheet, [here]()
+- Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf)
