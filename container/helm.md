@@ -17,6 +17,11 @@ Shortcuts
 ### Handy helm commands
 
 | `helm list` | List installed releases |
+| `helm list --tiller-namespace [namespace]` | List installed releases for that namespace |
+| `helm history --tiller-namespace [namespace] [project name]` | List all releases for that app in a namespace |
+| `helm rollback --tiller-namespace [namespace] [project name] [version] [` | Rollback an app in a namespace to a specific version|
+| `helmfile --selector app=[name] sync --args --recreate-pods` | Pod recreation for an app, with downtime |
+| `helmfile --selector app=[name] sync` | Restarts an app without down time, hot swap |
 
 
 ### Reference
