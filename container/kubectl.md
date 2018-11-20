@@ -16,14 +16,14 @@ Shortcuts
 
 ### Handy kubectl commands
 
-| `kubectl get pods -n [namespace]` | Lists pods |
-| `kubectl logs -n [namespace] [podname] -f` | Tails logs for a pod in a namespace |
-| `kubectl config view` | Shows configurations |
-| `kubectl config view` | Shows configurations |
-| `kubectl get services` | Lists all services in the namespace |
-| `kubectl get pods --all-namespaces` | Lists all pods in all namespaces |
-| `kubectl get deployment my-dep` | Lists a particular deployment |
-| `kubectl scale --replicas=3 rs/foo` | Scales a replicaset named 'foo' to 3 |
+| `kubectl get pods -n [namespace]` | List pods |
+| `kubectl logs -n [namespace] [podname] -f` | Tail logs for a pod in a namespace |
+| `kubectl config view` | Show configurations |
+| `kubectl config view` | Show configurations |
+| `kubectl get services` | List all services in the namespace |
+| `kubectl get pods --all-namespaces` | List all pods in all namespaces |
+| `kubectl get deployment my-dep` | List a particular deployment |
+| `kubectl scale --replicas=3 rs/foo` | Scale a replicaset named 'foo' to 3 |
 
 ### Reference
 
