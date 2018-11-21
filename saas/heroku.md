@@ -17,9 +17,9 @@ Shortcuts
 
 ### Handy heroku-cli commands
 
-| `heroku login` | Logins to account |
-| `heroku apps` | Lists apps |
-| `heroku logs --app AppName` | Shows logs |
-| `heroku logs --app AppName -t` | Tails logs |
-| `heroku domains --app AppName` | Shows an app domains |
-| `heroku restart --app AppName` | Restarts an app |
+| `heroku login` | Login to account |
+| `heroku apps` | List apps |
+| `heroku logs --app AppName` | Show logs |
+| `heroku logs --app AppName -t` | Tail logs |
+| `heroku domains --app AppName` | Show an app domains |
+| `heroku restart --app AppName` | Restart an app |

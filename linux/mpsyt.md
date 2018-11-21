@@ -19,9 +19,9 @@ Shortcuts
 
 
 | `i [video number]` | Video metadata |
-| `d [video number]` | Downloads video |
-| `da [video number]` | Downloads audio |
-| `x [video number]` | Copies video link to clipboard |
+| `d [video number]` | Download a video |
+| `da [video number]` | Download a audio |
+| `x [video number]` | Copy video link to clipboard |
 
 ### Note
 

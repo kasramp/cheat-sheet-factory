@@ -31,7 +31,7 @@ IntelliJ IDEA
 | `^⇧/` | Comment lines within a single block |
 | `⇧⇧` | Search everywhere |
 | `^H` | Show the class hierarchy |
-| `^⎇O` | Organiz imports |
+| `^⎇O` | Organize imports |
 | `^F12` | Show all methods of the current file |
 | `^⇧↑↓` | Move a block of code (method) up or down |
 | `^Y` | Delete the current line |
