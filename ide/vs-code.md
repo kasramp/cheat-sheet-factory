@@ -22,7 +22,7 @@ Visual Studio Code
 | `^⇧I` | Format code |
 | `^E` | Search for a file in a project |
 | `^P` | Search for a file in all projects |
-| `^N` | Opens a new unsaved file |
+| `^N` | Open a new unsaved file |
 
 {: .-shortcuts}
 
