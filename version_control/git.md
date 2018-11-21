@@ -17,48 +17,48 @@ Shortcuts
 
 ### Stash
 
-| `git stash` | Stashes the changes |
-| `git stash pop` | Unstashes the changes |
+| `git stash` | Stash the changes |
+| `git stash pop` | Unstash the changes |
 
 ### Squash
 
-| `git rebase -i HEAD~4` | Squashes last four commits into one |
-| `git push -f` | Force pushes the changes to upstream 
+| `git rebase -i HEAD~4` | Squash last four commits into one |
+| `git push -f` | Force push the changes to upstream |
 
 ### Branching
 
 | `git checkout -b [branch name]` | Branch out locally |
-| `git push -u origin [branch name]` | Pushes local branch to upstream |
+| `git push -u origin [branch name]` | Push local branch to upstream |
 
 
 ### Delete a branch
 
-| `git branch -d [branch name]` | Deletes a branch locally |
-| `git branch -d [branch name] && git push` | Deletes branch on upstream |
+| `git branch -d [branch name]` | Delete a branch locally |
+| `git branch -d [branch name] && git push` | Delete branch on upstream |
 
 ### Merging
 
-| `git checkout master && git pull` | Pulls latest master branch changes |
-| `git checkout [branch name] && git merge master` | Merges master to branch name |
+| `git checkout master && git pull` | Pull latest master branch changes |
+| `git checkout [branch name] && git merge master` | Merge master to branch name |
 
 ### Amend commit message
 
-| `git commit --amend` | Amends commits message |
+| `git commit --amend` | Amend commits message |
 
 
 ### Unstage local changes
 
-| `git reset` | Unstages local changes |
+| `git reset` | Unstage local changes |
 
 ### Cherry picking
 
-| `git cherry-pick [Commit hash]` | Cherry picks a commit |
-| `git cherry-pick [Commit hash] && git push` | Cherry picks a commit and pushes to upstream |
+| `git cherry-pick [Commit hash]` | Cherry pick a commit |
+| `git cherry-pick [Commit hash] && git push` | Cherry pick a commit and pushes to upstream |
 
 
 ### Clean working directly
 
-| `git clean -xdf` | Removes all files not in remote |
+| `git clean -xdf` | Remove all files not in remote |
 
 
 ### Tagging
