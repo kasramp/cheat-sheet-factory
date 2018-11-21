@@ -63,22 +63,22 @@ Shortcuts
 
 ### Tagging
 
-| `git tag` | Gets tag list |
-| `git tag -a [Tag name]` | Creates a new tag |
-| `git tag -d [Tag name]` | Deletes a tag |
+| `git tag` | Get tag list |
+| `git tag -a [Tag name]` | Create a new tag |
+| `git tag -d [Tag name]` | Delete a tag |
  
 ### Get rid of local commits
 
-| `git reset --hard origin/[Branch name]` | Deletes all local commits |
+| `git reset --hard origin/[Branch name]` | Delete all local commits |
 
 ### Revert
 
-| `git revert [Commit hash] && git push` | Reverts commit hash and pushes changes to upstream |
+| `git revert [Commit hash] && git push` | Revert commit hash and pushes changes to upstream |
 
 
 ### Uncommit local commits
 
-| `git reset HEAD~` | Uncommits local commit |
+| `git reset HEAD~` | Uncommit local commit |
 
 ### Reference
 
