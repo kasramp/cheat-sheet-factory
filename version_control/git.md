@@ -80,6 +80,10 @@ Shortcuts
 
 | `git reset HEAD~` | Uncommit local commit |
 
+### Change the URI for a remote repository
+
+| `git remote set-url origin git://new.uri` | Set a new URI |
+
 ### Reference
 
 - Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf)
