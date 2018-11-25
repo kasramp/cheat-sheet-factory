@@ -2,7 +2,7 @@
 title: pacman
 category: Linux
 layout: 2017/sheet
-updated: 2018-11-01
+updated: 2018-11-25
 keywords:
     - "pacman"
     - "arch pacman"
@@ -20,6 +20,7 @@ Switches
 | `-Syy` | Update repository list |
 | `-Syu` | Upgrade packages |
 | `-Sy` | Install a package |
+| `-Ss` | Search for a package |
 {: .-shortcuts}
 
 ### Useful aliases for Ubuntu/Debian users
@@ -27,3 +28,4 @@ Switches
 + `alias apt-update='sudo pacman -Syy'` 
 + `alias apt-upgrade='sudo pacman -Syu'`
 + `alias apt-install='sudo pacman -Sy'`
++ `alias apt-search='sudo pacman -Ss'`
