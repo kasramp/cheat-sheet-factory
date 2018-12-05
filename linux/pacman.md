@@ -2,7 +2,7 @@
 title: pacman
 category: Linux
 layout: 2017/sheet
-updated: 2018-11-25
+updated: 2018-12-04
 keywords:
     - "pacman"
     - "arch pacman"
@@ -22,6 +22,10 @@ Switches
 | `-Sy` | Install a package |
 | `-Ss` | Search for a package |
 {: .-shortcuts}
+
+### Reconfiguring mirrors
+
++ `sudo pacman-mirrors -g`
 
 ### Useful aliases for Ubuntu/Debian users
 
