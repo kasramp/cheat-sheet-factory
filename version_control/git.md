@@ -84,6 +84,15 @@ Shortcuts
 
 | `git remote set-url origin git://new.uri` | Set a new URI |
 
+### Update a forked repository
+
++ `git remote add upstream [repo]`
++ `git fetch upstream`
++ `git checkout master`
++ `git rebase upstream/master`
+
+If needed, have to force push: `git push -f origin master`
+
 ### Reference
 
 - Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf)
