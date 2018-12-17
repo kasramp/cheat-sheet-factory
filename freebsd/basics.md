@@ -1,0 +1,47 @@
+---
+title: freeBSD getting started basics
+category: freebsd
+layout: 2017/sheet
+tags: [Featured]
+updated: 2018-12-17
+keywords:
+    - "freebsd"
+    - "freebsd basics"
+intro: |
+    freebsd getting started basics
+---
+
+Shortcuts
+---------
+{: .-two-column}
+
+### Package manager
+
+| `pkg update` | Install/upgrade package manager |
+| `pkg search [keyword]` | Search for a package |
+
+### Application installation
+
+| `pkg install xorg` | Install Xorg |
+| `pkg install i3 i3 status i3lock dmenu` | Install i3WM |
+| `pkg install firefox` | Install Firefox |
+| `pkg install w3m w3m-img` | Install w3m |
+| `pkg install mpv` | Install mpv |
+  
+### Getting network running
+
++ `ifconfig -a`, pick the network interface 
++ `dhclient [network interface]`
+
+### Set i3 as default WM
+
++ `echo 'exec i3' >> ~/.xinitrc`
+
+### Starting Xorg
+
++ `startx`
+
+### Shutdown & reboot
+
++ `poweroff` or `shutdown -p now`
++ `reboot`

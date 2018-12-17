@@ -1,6 +1,7 @@
 enabled: true
 names:
   - Container
+  - FreeBSD
   - IDE
   - Linux
   - macOS
