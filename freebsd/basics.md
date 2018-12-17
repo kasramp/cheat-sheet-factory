@@ -1,5 +1,5 @@
 ---
-title: freeBSD getting started basics
+title: FreeBSD getting started basics
 category: FreeBSD
 layout: 2017/sheet
 tags: [Featured]
