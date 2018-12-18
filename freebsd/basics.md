@@ -3,7 +3,7 @@ title: FreeBSD getting started basics
 category: FreeBSD
 layout: 2017/sheet
 tags: [Featured]
-updated: 2018-12-17
+updated: 2018-12-18
 keywords:
     - "freebsd"
     - "freebsd basics"
@@ -27,6 +27,7 @@ Shortcuts
 | `pkg install firefox` | Install Firefox |
 | `pkg install w3m w3m-img` | Install w3m |
 | `pkg install mpv` | Install mpv |
+| `pkg install htop` | Install htop |
   
 ### Getting network running
 
