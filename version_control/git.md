@@ -15,6 +15,13 @@ Shortcuts
 ---------
 {: .-two-column}
 
+## Basics
+| `git init .` | Create a local repo |
+| `git commit -a` | Add commit staged files |
+| `git checkout [commitHash] .` | Checkout to a particular commit |
+| `git rm [fileName]` | Remove a file |
+| `git revert [commitHash]` | Revert a commit |
+
 ### Stash
 
 | `git stash` | Stash the changes |
