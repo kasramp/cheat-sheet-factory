@@ -16,6 +16,7 @@ Shortcuts
 {: .-two-column}
 
 ## Basics
+
 | `git init .` | Create a local repo |
 | `git commit -a` | Add commit staged files |
 | `git checkout [commitHash] .` | Checkout to a particular commit |
@@ -23,6 +24,7 @@ Shortcuts
 | `git revert [commitHash]` | Revert a commit |
 
 ## Git logs
+
 | `git log` | Get commit logs |
 | `git log --oneline` | One liner logs |
 | `git log -p` | Logs with details of affected files |
