@@ -15,7 +15,7 @@ Shortcuts
 ---------
 {: .-two-column}
 
-## Basics
+### Basics
 
 | `git init .` | Create a local repo |
 | `git commit -a` | Add commit staged files |
@@ -23,7 +23,7 @@ Shortcuts
 | `git rm [fileName]` | Remove a file |
 | `git revert [commitHash]` | Revert a commit |
 
-## Git logs
+### Git logs
 
 | `git log` | Get commit logs |
 | `git log --oneline` | One liner logs |
