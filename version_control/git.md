@@ -22,6 +22,15 @@ Shortcuts
 | `git rm [fileName]` | Remove a file |
 | `git revert [commitHash]` | Revert a commit |
 
+## Git logs
+| `git log` | Get commit logs |
+| `git log --oneline` | One liner logs |
+| `git log -p` | Logs with details of affected files |
+| `git log -- fileName` | Getting log of a particular file |
+| `git log --author email` | Getting commit list of a particular author |
+| `git log --grep="SearchKeywords"` | Search for a particular message |
+| `git log --graph` | Tree view |
+
 ### Stash
 
 | `git stash` | Stash the changes |
