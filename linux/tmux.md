@@ -18,6 +18,7 @@ Shortcuts
 ## Basic shortcuts
 
 ### Running in unicode
+
 + `tmux -u`
 
 ### Splitting
@@ -38,3 +39,47 @@ Shortcuts
 | `tmux attach`  | Attach a tmux session |
 | `tmux attach -t [session name/number]` | Attach to a tmux with a given name |
 | `tmux ls` | Get a list of tmux session |
+
+
+## [Oh My Tmux! shortcuts](https://github.com/gpakosz/.tmux)
+
+### FYI
+
++ `Ctrl + b` and `Ctrl + a` are interchangeable
+
+
+### Splitting
+
+| `Ctrl + b + %` | Vertical split |
+| `Ctrl + b + -` | Horizontal split |
+| `Ctrl + b` + `l`/`h` | Traverse vertical split |
+| `Ctrl + b` + `j`/`k` | Traverse horizontal split | 
+
+### Windowing
+
+| `Ctrl + b + c` | Create a new window |
+| `Ctrl + b + l` | *Next window |
+| `Ctrl + b + h` | *Previous widow |
+
+
+### Attaching/detaching
+
+| `Ctrl + b + d` | Detach tmux |
+| `tmux attach` | Attach tmux |
+
+### Copy
+
++ Copy to clipboard: `Ctrl + b + [` or `Ctrl + b + Enter` to go to copy mode, then `Ctrl + Space` to select, and then `y` to yank, and then `Ctrl + w` to exit the copy mode 
++ Copy to clipboard: Use mouse to select and then press `Ctrl + b + y` to yank
+
+### Paste
+
++ Paste from clipboard: `Ctrl + b + ]` or `Ctrl + b + p` or `Ctrl + b + P` to paste from custom clipboard stack
+
+### History
+
++ Clipboard history: `Ctrl + b + b`
+
+### Mouse enable/disable
+
++ Enable and disable mouse for mouse scrolling: `Ctrl + b + m`. Keep in mind when mouse scrolling is activated, middle click copy/paste won't work
