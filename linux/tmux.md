@@ -2,7 +2,7 @@
 title: tmux
 category: Linux
 layout: 2017/sheet
-updated: 2018-12-24
+updated: 2018-12-25
 keywords:
     - "tmux"
     - "tmux cheat sheet"
@@ -38,8 +38,17 @@ Shortcuts
 | `Ctrl + b + d` | Detach a tmux session |
 | `tmux attach`  | Attach a tmux session |
 | `tmux attach -t [session name/number]` | Attach to a tmux with a given name |
-| `tmux ls` | Get a list of tmux session |
 
+### Misc
+
+| `tmux ls` | Get a list of tmux session |
+| `tmux kill-session -t [session name/number]` | Kill a tmux session |
+
+### Renaming
+
+| `Ctrl + b + $` | Rename the tmux session |
+| `Ctrl + b + ,` | Rename the current window |
+| `tmux -s [session name]` | Create a session with custom name |
 
 ## [Oh My Tmux! shortcuts](https://github.com/gpakosz/.tmux)
 
