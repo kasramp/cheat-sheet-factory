@@ -2,7 +2,7 @@
 title: vim
 category: Linux
 layout: 2017/sheet
-updated: 2018-12-25
+updated: 2019-01-02
 keywords:
     - "vim"
     - "vim cheat sheet"
@@ -62,3 +62,41 @@ Shortcuts
 | `:set splitright` | Open split on right side |
 | `Ctrl + w + r` | Rotate a split down |
 | `Ctrl + w + R` | Rotate a split up (clockwise) |
+
+## Nerd Tree
+
+### File opening
+
+| `o` | Open in prev window |
+| `go` | Preview |
+| `t` | Open in a new tab |
+| `T` | Open in a new tab silently |
+| `i` | Open split |
+| `gi` | Preview split |
+| `s` | Open vsplit |
+| `gs` | Preview vsplit |
+
+### File manager
+
+| `o` | Open and close a tree |
+| `t` | Open a new file manager in a new tab |
+| `T` | Open a new file manager in a new tab silently |
+| `r` | Refresh current directory |
+| `R` | Referesh current root |
+| `p` | Go to parent |
+| `P` | Go to root |
+| `K` | Go to the first child of directory |
+| `J` | Go to the last child of directory |
+| `Ctrl + j` | Go the next sibling |
+| `Ctrl + k` | Go to the previous sibiling |
+| `u` | Move up the root directory |
+| `r` | Referesh selected directory |
+| `R` | Referesh root directory |
+| `I` | Toggle hidden files |
+| `e` | Open a selected directory in a new split |
+| `m` | Open a nerd tree menu
+
+### Tab related key bindings
+
+| `gt` | Go to the next tab |
+| `gT` | Go to the previous tab | 
