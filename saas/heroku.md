@@ -2,8 +2,7 @@
 title: heroku
 category: SaaS
 layout: 2017/sheet
-tags: [Featured]
-updated: 2018-11-17
+updated: 2019-01-02
 keywords:
     - "heroku"
     - "heroku shortcuts"
