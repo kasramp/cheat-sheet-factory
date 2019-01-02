@@ -2,8 +2,7 @@
 title: FreeBSD getting started basics
 category: FreeBSD
 layout: 2017/sheet
-tags: [Featured]
-updated: 2018-12-18
+updated: 2019-01-02
 keywords:
     - "freebsd"
     - "freebsd basics"
