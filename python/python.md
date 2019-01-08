@@ -67,8 +67,3 @@ a_str = "Hello {firstName} {lastName}. Your age is {age}"
 
 print(a_str.format(**a_dict)) # print 'Hello Mike Miller. Your age is 30'
 ```
-
-```bash
-length=2
-echo ${name:0:length}  #=> "Jo"
-```
