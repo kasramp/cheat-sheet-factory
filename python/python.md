@@ -28,7 +28,6 @@ from games import NumberGuessing # import a class from 'games' package
 ### Print
 
 ```python
-
 text = "Hello World!"
 
 print(text*2) # print 'Hello World!' twice
@@ -42,7 +41,6 @@ print("Hello", name, "How are you?") # print Hello Mike How are you?
 ### String interpolation
 
 ```python
-
 value = 4 * 20
 
 print("The value is {value}".format(value=value)) # print 'The value is 80' 
@@ -68,5 +66,9 @@ a_dict = {
 a_str = "Hello {firstName} {lastName}. Your age is {age}"
 
 print(a_str.format(**a_dict)) # print 'Hello Mike Miller. Your age is 30'
+```
 
+```bash
+length=2
+echo ${name:0:length}  #=> "Jo"
 ```
