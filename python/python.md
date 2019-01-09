@@ -67,3 +67,25 @@ a_str = "Hello {firstName} {lastName}. Your age is {age}"
 
 print(a_str.format(**a_dict)) # print 'Hello Mike Miller. Your age is 30'
 ```
+
+### List
+
+```
+lst = ["One", "Two", "Three", "Four", "Five"]
+
+# print a list elements one by one
+for element in lst:
+    print(element)
+    
+print(len(lst)) # list length
+
+print(lst[2]) # get third element of a list
+
+lst_copy = lst.copy()
+
+lst.append("Six") # append a new element to a list
+
+two = lst.pop(1) # get and remove "Two" from the list
+
+lst.pop(0) # removes element "One" from the list
+```
