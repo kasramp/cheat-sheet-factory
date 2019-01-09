@@ -18,7 +18,7 @@ Shortcuts
 
 ### Import
 
-```python
+```bash
 #!/us/bin/python
 
 import gi # import a package
@@ -27,7 +27,7 @@ from games import NumberGuessing # import a class from 'games' package
 
 ### Print
 
-```python
+```bash
 text = "Hello World!"
 
 print(text*2) # print 'Hello World!' twice
@@ -40,7 +40,7 @@ print("Hello", name, "How are you?") # print Hello Mike How are you?
 
 ### String interpolation
 
-```python
+```bash
 value = 4 * 20
 
 print("The value is {value}".format(value=value)) # print 'The value is 80' 
