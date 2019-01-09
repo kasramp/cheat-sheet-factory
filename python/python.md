@@ -70,7 +70,7 @@ print(a_str.format(**a_dict)) # print 'Hello Mike Miller. Your age is 30'
 
 ### List
 
-```
+```bash
 lst = ["One", "Two", "Three", "Four", "Five"]
 
 # print a list elements one by one
