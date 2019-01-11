@@ -2,7 +2,7 @@
 title: python
 category: Python
 layout: 2017/sheet
-updated: 2019-01-07
+updated: 2019-01-11
 keywords:
     - "python"
     - "python cheat sheet"
@@ -81,7 +81,15 @@ print(len(lst)) # list length
 
 print(lst[2]) # get third element of a list
 
-lst_copy = lst.copy()
+lst_copy = lst.copy() # copy python 3
+
+lst_copy = lst[:] # copy list for both python 2 and 3
+
+lst[1:] # ['Two', 'Three', 'Four', 'Five']
+lst[:2] # ['One', 'Two']
+lst[-2:] # ['Four', 'Five']
+lst[:-2] # ['One', 'Two', 'Three']
+lst[-1] # 'Five'
 
 lst.append("Six") # append a new element to a list
 
