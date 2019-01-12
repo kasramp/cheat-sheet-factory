@@ -3,7 +3,7 @@ title: git
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2018-12-21
+updated: 2019-01-13
 keywords:
     - "git"
     - "git cheat sheet"
@@ -110,6 +110,12 @@ Shortcuts
 + `git rebase upstream/master`
 
 If needed, have to force push: `git push -f origin master`
+
+### Import a project from a git server to another
+
++ `git clone [source URL]`
++ `git remote add [a name] [destination url]`
++ `git push --mirror [a name]`
 
 ### Reference
 
