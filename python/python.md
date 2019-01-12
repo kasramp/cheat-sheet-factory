@@ -97,3 +97,45 @@ two = lst.pop(1) # get and remove "Two" from the list
 
 lst.pop(0) # removes element "One" from the list
 ```
+
+### Dictionary
+
+```bash
+a_dict = {
+    1: "One",
+    2: "Two",
+    3: "Three",
+    4: "Four",
+    5: "Five"
+}
+
+a_dict[2] # return 'two'
+
+a_dict[6] # throw exception
+
+a_dict.get(6) # return None 
+
+a_dict[6] = "Six" # append to dictionary
+
+a_dict[1] = "Something else" # change the value of key '1'
+
+a_dict+={10: "Ten"}
+
+print(a_dict[5] * 2) # print 'FiveFive'
+
+len(a_dict) # get dictionary length
+
+# iterating through a dictionary
+for i in a_dict.keys():
+    print("{key} = {value}".format(key = i, value = a_dict[i]))
+
+
+# filtering string in a dictionary and modifying it at the same time
+str_lst = []
+
+for element in a_dict.copy().keys():
+    if isinstance(element, str):
+        a_dict.pop(element)
+        str_lst.append(element)
+```
+
