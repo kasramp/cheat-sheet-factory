@@ -2,7 +2,7 @@
 title: pacman
 category: Linux
 layout: 2017/sheet
-updated: 2018-12-04
+updated: 2019-01-12
 keywords:
     - "pacman"
     - "arch pacman"
@@ -21,11 +21,16 @@ Switches
 | `-Syu` | Upgrade packages |
 | `-Sy` | Install a package |
 | `-Ss` | Search for a package |
+| `-Qq` | List of installed packages |
 {: .-shortcuts}
 
 ### Reconfiguring mirrors
 
 + `sudo pacman-mirrors -g`
+
+### Count of installed packages
+
++ `sudo pacman -Qq | wc -l`
 
 ### Useful aliases for Ubuntu/Debian users
 
