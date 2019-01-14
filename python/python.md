@@ -2,7 +2,7 @@
 title: python
 category: Python
 layout: 2017/sheet
-updated: 2019-01-12
+updated: 2019-01-14
 keywords:
     - "python"
     - "python cheat sheet"
