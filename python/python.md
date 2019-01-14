@@ -139,3 +139,91 @@ for element in a_dict.copy().keys():
         str_lst.append(element)
 ```
 
+### Conditions
+
+```bash
+
+x = 10
+
+if x is 10:
+    print("Ten")
+elif x == 9:
+    print("Nine")
+else:
+    print("Unknown")
+
+text = "Hello world!"
+
+if isinstance(text, str):
+    print("It's a text message")
+elif isinstance(text, int):
+    print("It's an integer")
+else:
+    print("Noops")
+
+number = 3
+
+if number > 0 and number % 2 is not 0:
+    print("Something")
+elif number > 0 or number == 3:
+    print("Something else")     
+
+```
+
+### Loop
+
+```bash
+
+lst = ["One", "Two", "Three", "Four", "Five"]
+
+# for-each type of loop
+for element in lst:
+    print(element)
+
+# traditional for-loop
+for i in range(len(lst)):
+    print(lst[i])
+    
+for i in range(10, 20):
+    print(i) # print 10 to 19 NOT 20
+
+# while-loop
+i, n = 0, 20 
+while i < n:
+    print(i) # print 0 to 19
+    i += 1
+```
+
+### class
+
+```bash
+
+# class creation
+class Person:
+    __age = 0 # similar to private field
+
+    __gender = "Male" # similar to private field
+
+    def get_age(self):
+        return self.__age
+
+    def get_gender(self):
+        return self.__gender
+        
+    def set_gender(self, gender = "Male"):
+        self.__gender = gender     
+
+# class instantiation
+
+a_person = Person()
+
+print(a_person.get_gender())
+
+a_person.set_gender("Female")
+
+print(a_person.get_gender())
+
+a_person.set_gender()
+
+print(a_person.get_gender())
+```
