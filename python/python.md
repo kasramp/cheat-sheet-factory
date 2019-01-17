@@ -227,3 +227,63 @@ a_person.set_gender()
 
 print(a_person.get_gender())
 ```
+
+### Inheritance
+
+```bash
+class Mammal:
+
+    __name = "Nothing"
+
+    __age = 0
+
+    __gender = "Male"
+
+    def __init__(self, name):
+        self.__name = name
+
+    def get_name(self):
+        return self.__name
+
+    def get_age(self):
+        return self.__age
+
+    def set_age(self, age):
+        self.__age =  age
+
+    def get_gender(self):
+        return self.__gender
+
+    def set_gender(self, gender):
+        self.__gender = gender
+
+
+class Human(Mammal):
+
+    __education = "Diploma"
+
+    __occupation = "Developer"
+
+    def __init__(self, age, gender, education, occupation):
+        # calling parent class method
+        super().__init__("Human")
+        super().set_age(age)
+        super().set_gender(gender)
+        self.__education = education
+        self.__occupation = occupation
+
+    def get_education(self):
+        return self.__education
+
+    def get_occupation(self):
+        return self.__occupation
+
+
+cat = Mammal("Kitty")
+cat.set_age(2)
+cat.set_gender("Female")
+print(cat.get_age())
+
+developer = Human(30, "Male", "Masters", "Developer")
+print(developer.get_age())
+```
