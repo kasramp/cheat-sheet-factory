@@ -194,7 +194,7 @@ while i < n:
     i += 1
 ```
 
-### class
+### Class
 
 ```bash
 
