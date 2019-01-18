@@ -2,7 +2,7 @@
 title: python
 category: Python
 layout: 2017/sheet
-updated: 2019-01-17
+updated: 2019-01-18
 keywords:
     - "python"
     - "python cheat sheet"
@@ -286,4 +286,37 @@ print(cat.get_age())
 
 developer = Human(30, "Male", "Masters", "Developer")
 print(developer.get_age())
+```
+
+### Abstract Base Class (ABC) or Interface
+
+```bash
+# Base class
+import abc
+
+
+class Game(metaclass=abc.ABCMeta):
+
+    @abc.abstractmethod
+    def get_name(self):
+        pass
+
+    @abc.abstractmethod
+    def play(self):
+        pass
+
+# Implementation
+
+
+import random
+
+from games import Game
+
+
+class NumberGuessing(Game):
+    def get_name(self):
+        # method implementation
+
+    def play(self):
+        # method implementation
 ```
