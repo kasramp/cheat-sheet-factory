@@ -2,8 +2,7 @@
 title: macOS Shortcuts
 category: macOS
 layout: 2017/sheet
-tags: [Featured]
-updated: 2018-10-14
+updated: 2019-01-23
 keywords:
     - "macOS keyboard shortcuts"
 intro: |
