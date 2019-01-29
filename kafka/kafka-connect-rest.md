@@ -8,12 +8,12 @@ keywords:
     - "kafka connect rest"
     - "kafka connect rest cheat sheet"
 intro: |
-  Cheat sheet for Kafka connect rest apis
+  Cheat sheet for Kafka connect rest APIs
 ---
 
 Shortcuts
 ---------
-{: .-two-column}
+{: .-one-column}
 
 ### Rest APIs
 
