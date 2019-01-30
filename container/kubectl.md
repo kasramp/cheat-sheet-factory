@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2018-11-20
+updated: 2019-01-30
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -24,6 +24,8 @@ Shortcuts
 | `kubectl get pods --all-namespaces` | List all pods in all namespaces |
 | `kubectl get deployment my-dep` | List a particular deployment |
 | `kubectl scale --replicas=3 rs/foo` | Scale a replicaset named 'foo' to 3 |
+| `kubectl delete pods [pod]` | Delete a pod |
+| `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod | 
 
 ### Reference
 
