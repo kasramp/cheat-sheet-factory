@@ -25,7 +25,8 @@ Shortcuts
 | `kubectl get deployment my-dep` | List a particular deployment |
 | `kubectl scale --replicas=3 rs/foo` | Scale a replicaset named 'foo' to 3 |
 | `kubectl delete pods [pod]` | Delete a pod |
-| `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod | 
+| `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
+| `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
 
 ### Reference
 
