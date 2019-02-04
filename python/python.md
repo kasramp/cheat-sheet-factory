@@ -3,7 +3,7 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-01-23
+updated: 2019-02-04
 keywords:
     - "python"
     - "python cheat sheet"
@@ -320,4 +320,31 @@ class NumberGuessing(Game):
 
     def play(self):
         # method implementation
+```
+
+### Get and initialize subclasses of a class
+
+```bash
+
+# Defining parent and child classes
+class Parent:
+    
+    def printHello(self):
+        print("Hello")
+        
+class ChildOne(Parent):
+    
+    def printHello(self):
+        print("Hallo")
+
+class ChildTwo(Parent):
+    
+    def printHello(self):
+        print("Hola!")
+
+children = [cls() for cls in Parent.__subclasses__()]
+
+
+for child in children:
+    child.printHello() # prints 'Hallo' and 'Hola!'
 ```
