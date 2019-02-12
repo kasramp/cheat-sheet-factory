@@ -3,7 +3,7 @@ title: vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-01-02
+updated: 2019-02-12
 keywords:
     - "vim"
     - "vim cheat sheet"
