@@ -19,8 +19,6 @@ Shortcuts
 
 ## Normal Mode
 
-Following are list of the useful keystrokes of normal mode in Vim. 
-
 ### Movements
 
 Moving to *right*, *left*, *up*, and *down*
@@ -35,7 +33,7 @@ Moving to *right*, *left*, *up*, and *down*
 
 | `h` | Moves the cursor to *left* |
 | `2h` | Moves the cursor **two** characters to *left* |
-| `nh**: Moves the cursor **n** characters to *left* |
+| `nh` |Moves the cursor **n** characters to *left* |
 
 #### Moving *up*
 
