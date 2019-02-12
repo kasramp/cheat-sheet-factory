@@ -17,39 +17,37 @@ Shortcuts
 {: .-two-column}
 
 
-## Normal Mode
-
-### Movements
+## Movements
 
 Moving to *right*, *left*, *up*, and *down*
 
-#### Moving *right*
+### Moving *right*
 
 | `l` | Moves the cursor to *right* |
 | `2l` | Moves the cursor **two** characters to *right* |
 | `nl` | Moves the cursor **n** characters to *right* |
 
-#### Moving *left*
+### Moving *left*
 
 | `h` | Moves the cursor to *left* |
 | `2h` | Moves the cursor **two** characters to *left* |
 | `nh` |Moves the cursor **n** characters to *left* |
 
-#### Moving *up*
+### Moving *up*
 
 | `k` | Moves the cursor to *up* |
 | `2k` | Moves the cursor **two** characters to *up* |
 | `nk` | Moves the cursor **n** characters to *up* |
 | `gk` | Move the cursor to a **virtual** line *up* |
  
-#### Moving *down*
+### Moving *down*
 
 | `j` | Moves the cursor to *down* |
 | `2j` | Moves the cursor **two** characters to *down* |
 | `nj` | Moves the cursor **n** characters to *down* |
 | `gj` | Moves the cursor to a **virtual** line *down* |
 
-#### Moving to the *beginning* and the *end* of the *line/file*
+### Moving to the *beginning* and the *end* of the *line/file*
 
 | `gg` | Jumps to the *beginning* of the file |
 | `G` | Jumps to the *end* of the file |
@@ -58,7 +56,7 @@ Moving to *right*, *left*, *up*, and *down*
 | `0` | Jumps to the *beginning* of the line but **remains** in the normal mode |
 | `$` | Jumps to the *end* of the line but **remains** in the normal mode |
 
-#### Moving *forward* and *backward* *word* by *word*
+### Moving *forward* and *backward* *word* by *word*
 
 | `w` | Moves **forward** by a *word* which cursor stops at the **first character** of the word |
 | `2w` | Moves **forward** **two** *words* which cursor stops at the **first character** of the word |
@@ -70,29 +68,29 @@ Moving to *right*, *left*, *up*, and *down*
 | `2b` | Moves **backward** by **two** *words* |
 | `nb` | Moves **backward** by **n** *words* |
 
-#### Moving *forward* and *backward* *sentence* by *sentence*
+### Moving *forward* and *backward* *sentence* by *sentence*
 
 | `)` | Moves **forward** by a sentence without leaving normal mode |
 | `(` | Moves **backward** by a sentence without leaving normal mode |
 
-#### Moving *forward* and *backward* *paragraph* by *paragraph*
+### Moving *forward* and *backward* *paragraph* by *paragraph*
 
 | `}` | Moves **forward** by a paragraph without leaving normal mode |
 | `{` | Moves **backward** by a paragraph without leaving normal mode |
 
-#### Moving *forward* and *backward* *page* by *page*
+### Moving *forward* and *backward* *page* by *page*
 
 | `Ctrl + f` | Moves **forward** by a page without leaving normal mode |
 | `Ctrl + b` | Moves **backward** by a page without leaving normal mode |
 | `Ctrl + d` | Moves **forward** by a half page without leaving normal mode (page down) |
 | `Ctrl + u` | Moves **backward** by a half page without leaving normal mode (page up) |
 
-#### Moving *beginning* and *end* the document
+### Moving *beginning* and *end* the document
 
 | `[` | Move to the **beginning** of the document |
 | `]` | Moves to the **end** of the document |
 
-#### Moving *back* and *forth* in code
+### Moving *back* and *forth* in code
 
 | `%` | Move to the matching bracket or parentheses |
 
