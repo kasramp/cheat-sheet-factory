@@ -94,6 +94,31 @@ Moving to *right*, *left*, *up*, and *down*
 
 | `%` | Move to the matching bracket or parentheses |
 
+## Insertion
+
+Including inserting a *line* and switching to *insert* mode
+
+### *Line* insertion
+
+| `o` | Inserts a *line* **below** of the current line and moves the cursor to the *beginning* of the line |
+| `O` | Insert a *line* **above** of the current line and moves the cursor to the *beginning* of the line |
+| `r + enter` | Break the current line to the new line which moves all the text to the next line. It does not switch to insert mode |
+
+### *Line* insertion *helper*
+
+| `Enter` | Insert a *line* **below** of the current line but **does not** switches to Insert mode |
+| `[ + Space` | Insert a *line* **above** of the current line but **does not** switches to Insert mode |
+
+### Switching to *Insert* mode
+
+| `i` | Switches to *Insert* mode, **does not** change cursor position |
+| `a` | Switches to *Insert* mode, **moves** the cursor **one** character forward |
+
+### *Indentation* insertion
+
+| `>` | Adds a tab, usually eight characters |
+| `<` | Removes a tab, usually eight characters |
+
 ## Splitting
 
 ### Create split
