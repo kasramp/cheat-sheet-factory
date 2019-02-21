@@ -119,6 +119,45 @@ Including inserting a *line* and switching to *insert* mode
 | `>` | Adds a tab, usually eight characters |
 | `<` | Removes a tab, usually eight characters |
 
+## Cut, Copy, Paste, Selection, Undo and Redo operations
+
+### *Cut (Delete)*, *Copy (Yank)* and *Paste*
+
+| `yy` | Yanks the **current** *line* |
+| `2yy` | Yanks **two** *lines* |
+| `nyy` | Yanks **n** *lines* |
+| `pp` | Pastes the yanked *line(s)* |
+| `x` | Cuts the **current** *character* on the cursor |
+| `r` | Replaces the **current** *character* without going to **Insert** mode. |
+| `dd` | Cuts the **current** *line* |
+| `2dd` | Cuts **two** *lines* |
+| `ndd` | Cuts **n** *lines* |
+| `dw` | Cuts a *word* if the cursor is at the **beginning** of the word |
+| `2dw` | Cuts **two** *words* if the cursor is at the **beginning** of the word |
+| `ndw` | Cuts **n** *words* if the cursor is at the **beginning** of the word |
+| `diw` | Cuts a *word* **regardless** of the cursor position, but **keeps** white spaces |
+| `daw` | Cuts a *word* **regardless** of the cursor position and **removes** white spaces |
+| `cw` | Cuts a *word* and switches to **Insert** mode |
+| `ciw` | Cuts a *word* **regardless** of the cursor position, but **keeps** white spaces and switches to **Insert** mode |
+| `caw` | Cuts a *word* **regardless** of the cursor position and **removes** white spaces and switches to **Inert** mode |
+| `das` | Cuts around a *sentence* |
+| `dap` | Cuts around a *paragraph* |
+| `d$/D` | Cuts from the *current* cursor position until the **end** of the line |
+
+### *Selection* (Visual Mode)
+
+| `V` | Selects the **entire** of the **current** line |
+| `v` | Switches to **visual** mode |
+
+### *Undo* and *Redo*
+
+| `u` | Does undo |
+| `Ctrl + r** or **.` | Does redo |
+
+### *Miscellaneous*
+
+| `J` | Joins the **next** line to the **current** line |
+
 ## Splitting
 
 ### Create split
