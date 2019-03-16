@@ -12,7 +12,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-two-column}
+{: .-one-column}
 
 ### Handy kubectl commands
 
@@ -42,4 +42,3 @@ kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ### Reference
 
 [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-
