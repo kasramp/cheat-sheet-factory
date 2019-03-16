@@ -28,6 +28,17 @@ Shortcuts
 | `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
 
+
+## Kubectl config for multiple clusters
+
+```bash
+export KUBECONFIG='stage-cluster.kubeconfig:prod-cluster.kubeconfig' # export kube configs for multiple clusters
+kubectl config get-contexts # get list of contexts
+kubectl config current-context # get current context in use
+kubectl config use-context stage-cluster # switch to `stage-cluster` context
+kubectl config use-context prod-cluster # switch to `prod-cluster` context
+```
+
 ### Reference
 
 [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
