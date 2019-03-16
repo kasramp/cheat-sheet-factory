@@ -29,7 +29,7 @@ Shortcuts
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
 
 
-## Kubectl config for multiple clusters
+### Kubectl config for multiple clusters
 
 ```bash
 export KUBECONFIG='stage-cluster.kubeconfig:prod-cluster.kubeconfig' # export kube configs for multiple clusters
