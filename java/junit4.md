@@ -85,7 +85,7 @@ Shortcuts
     
         @Parameters
         public Collection<String[]> testConditions() {
-            String[][] expectedOutputs = {{"Input1", "Output1"}, {"Input2", "Output2"}}
+            String[][] expectedOutputs = { {"Input1", "Output1"}, {"Input2", "Output2"} }
             return Arrays.asList(expectedOutputs);
         }
     
