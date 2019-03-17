@@ -54,7 +54,7 @@ Shortcuts
 
 + Testing an exception in Junit,
 
-```bash
+```groovy
     @Test(expected=NullPointerException.class)
     public void testSortClassNPE() {
         int[] numbers = null;
@@ -64,7 +64,7 @@ Shortcuts
 
 + Adding performance test on Junit tests,
 
-```java
+```kotlin
     @Test(timeout=100)
     public void testPerformance() {
     } 
@@ -72,7 +72,7 @@ Shortcuts
 
 + Creating parameterized tests,
 
-```cpp
+```kotlin
     @RunWith(Parameterized.class)
     public class TestClass {
         private String input;
@@ -96,4 +96,15 @@ Shortcuts
     }
 ```
 
++ It is not possible to have two parameterized tests in a single class, it must be a separate class.
+
++ Creating test suits,
+
+```java
+    @RunWith(Suite.class)
+    @SuiteClasses({ Test1.class, Test2.class })
+    public class TestSuiteOne {
+    
+    }
+``` 
 
