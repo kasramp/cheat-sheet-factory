@@ -22,3 +22,17 @@ Shortcuts
     assertTrue("The assertion has failed", instance.isCorrect());
 ```
 
++ To run a method before and after each test, can use `@Before` and `@After` annotations,
+   
+```java 
+@Before
+public void setup() {
+    // do something before each unit test runs
+}
+
+@After
+public void teardown() {
+   // do something each each unit test ran
+}
+```
+
