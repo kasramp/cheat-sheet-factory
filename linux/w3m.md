@@ -2,10 +2,11 @@
 title: w3m Shortcuts
 category: Linux
 layout: 2017/sheet
-updated: 2018-10-15
+updated: 2019-03-17
 keywords:
     - "w3m"
     - "w3m key bindings"
+prism_languages: [bash]
 intro: |
   List of w3m key bindings 
 ---
@@ -52,24 +53,24 @@ Shortcuts
 Show all links in a page in pop up form to select (without going to link):
 {: .-setup}
 
-```
+```bash
 Escm
 ```
 
 Show all links in a page in pop up form to select (with going to link): 
 
-```
+```bash
 Escl
 ```
 
 To be able to login to sites that require cookies:
 
-```
+```bash
 w3m -cookie
 ```
 
 Bookmarks are stored in:
 
-```
+```bash
 ~/.w3m/bookmarks.html
 ```

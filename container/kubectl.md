@@ -2,10 +2,11 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2019-01-30
+updated: 2019-03-17
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
+prism_languages: [bash]
 intro: |
   Kubectl cheat sheet
 ---
