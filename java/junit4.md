@@ -16,3 +16,9 @@ Shortcuts
 
 ### Commons
 
++ For any assertion it is possible to write a description. For instance,
+
+```java
+    assertTrue("The assertion has failed", instance.isCorrect());
+```
+
