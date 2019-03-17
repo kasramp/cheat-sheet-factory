@@ -6,6 +6,7 @@ updated: 2019-03-17
 keywords:
     - "junit4"
     - "junit4 cheat sheet"
+prism_languages: [java]
 intro: |
   JUnit 4 cheat sheet
 ---
@@ -18,7 +19,7 @@ Shortcuts
 
 + For any assertion it is possible to write a description. For instance,
 
-```bash
+```java
     assertTrue("The assertion has failed", instance.isCorrect());
 ```
 
@@ -38,7 +39,7 @@ Shortcuts
 
 + To limit running `@Before` and `@After` to the entire class, we can use `@BeforeClass` and `@AfterClass` which execute one time when a unit test class running.
     
-```bash
+```java
     @BeforeClass
     public static void setup() {
         // do something before the unit test class runs
@@ -54,7 +55,7 @@ Shortcuts
 
 + Testing an exception in Junit,
 
-```groovy
+```java
     @Test(expected=NullPointerException.class)
     public void testSortClassNPE() {
         int[] numbers = null;
@@ -64,7 +65,7 @@ Shortcuts
 
 + Adding performance test on Junit tests,
 
-```kotlin
+```java
     @Test(timeout=100)
     public void testPerformance() {
     } 
@@ -72,7 +73,7 @@ Shortcuts
 
 + Creating parameterized tests,
 
-```kotlin
+```java
     @RunWith(Parameterized.class)
     public class TestClass {
         private String input;
