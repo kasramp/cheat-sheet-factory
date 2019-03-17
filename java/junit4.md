@@ -18,7 +18,7 @@ Shortcuts
 
 + For any assertion it is possible to write a description. For instance,
 
-```java
+```bash
     assertTrue("The assertion has failed", instance.isCorrect());
 ```
 
