@@ -50,3 +50,14 @@ public static void teardown() {
 } 
 ```
 
+```js
+"hello".repeat(3)
+"hello".includes("ll")
+"hello".startsWith("he")
+"hello".padStart(8) // "   hello"
+"hello".padEnd(8) // "hello   " 
+"hello".padEnd(8, '!') // hello!!!
+"\u1E9B\u0323".normalize("NFC")
+```
+
+
