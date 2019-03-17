@@ -3,6 +3,7 @@ names:
   - Container
   - FreeBSD
   - IDE
+  - Java
   - Kafka
   - Linux
   - macOS
