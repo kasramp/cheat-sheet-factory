@@ -62,3 +62,38 @@ Shortcuts
     }
 ```
 
++ Adding performance test on Junit tests,
+
+```java
+    @Test(timeout=100)
+    public void testPerformance() {
+    } 
+```
+
++ Creating parameterized tests,
+
+```cpp
+    @RunWith(Parameterized.class)
+    public class TestClass {
+        private String input;
+        private String output;
+    
+        public TestClass(String input, String output) {
+            this.input = input;
+            this.output = output;
+        }
+    
+        @Parameters
+        public Collection<String[]> testConditions() {
+            String[][] expectedOutputs = {{"Input1", "Output1"}, {"Input2", "Output2"}}
+            return Arrays.asList(expectedOutputs);
+        }
+    
+        @Test
+        public void testDoWhatever() {
+            assertEquals(output, myClass.doSomething(input));
+        } 
+    }
+```
+
+
