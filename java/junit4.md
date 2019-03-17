@@ -24,7 +24,7 @@ Shortcuts
 
 + To run a method before and after each test, can use `@Before` and `@After` annotations,
    
-```java 
+```bash
 @Before
 public void setup() {
     // do something before each unit test runs
@@ -38,7 +38,7 @@ public void teardown() {
 
 + To limit running `@Before` and `@After` to the entire class, we can use `@BeforeClass` and `@AfterClass` which execute one time when a unit test class running.
     
-```java
+```bash
 @BeforeClass
 public static void setup() {
     // do something before the unit test class runs
@@ -50,14 +50,15 @@ public static void teardown() {
 } 
 ```
 
-```js
-"hello".repeat(3)
-"hello".includes("ll")
-"hello".startsWith("he")
-"hello".padStart(8) // "   hello"
-"hello".padEnd(8) // "hello   " 
-"hello".padEnd(8, '!') // hello!!!
-"\u1E9B\u0323".normalize("NFC")
-```
++ For comparing two arrays, use `assertArrayEquals`.
 
++ Testing an exception in Junit,
+
+```bash
+@Test(expected=NullPointerException.class)
+public void testSortClassNPE() {
+    int[] numbers = null;
+    Arrays.sort(numbers);
+}
+```
 
