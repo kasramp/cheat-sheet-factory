@@ -23,7 +23,7 @@ Shortcuts
 ```
 
 + To run a method before and after each test, can use `@Before` and `@After` annotations,
-    ```java
+    ```java* 
     @Before
     public void setup() {
         // do something before each unit test runs
