@@ -36,3 +36,17 @@ public void teardown() {
 }
 ```
 
++ To limit running `@Before` and `@After` to the entire class, we can use `@BeforeClass` and `@AfterClass` which execute one time when a unit test class running.
+    
+```java
+@BeforeClass
+public static void setup() {
+    // do something before the unit test class runs
+}
+
+@AfterClass
+public static void teardown() {
+    // do something after the unit test class ran
+} 
+```
+
