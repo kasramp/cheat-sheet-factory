@@ -3,10 +3,11 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-02-04
+updated: 2019-03-17
 keywords:
     - "python"
     - "python cheat sheet"
+prism_languages: [python]
 intro: |
   Python cheat sheet 
 ---
@@ -19,7 +20,7 @@ Shortcuts
 
 ### Import
 
-```bash
+```python
 #!/us/bin/python
 
 import gi # import a package
@@ -28,7 +29,7 @@ from games import NumberGuessing # import a class from 'games' package
 
 ### Print
 
-```bash
+```python
 text = "Hello World!"
 
 print(text*2) # print 'Hello World!' twice
@@ -41,7 +42,7 @@ print("Hello", name, "How are you?") # print Hello Mike How are you?
 
 ### String interpolation
 
-```bash
+```python
 value = 4 * 20
 
 print("The value is {value}".format(value=value)) # print 'The value is 80' 
@@ -71,7 +72,7 @@ print(a_str.format(**a_dict)) # print 'Hello Mike Miller. Your age is 30'
 
 ### List
 
-```bash
+```python
 lst = ["One", "Two", "Three", "Four", "Five"]
 
 # print a list elements one by one
@@ -101,7 +102,7 @@ lst.pop(0) # removes element "One" from the list
 
 ### Dictionary
 
-```bash
+```python
 a_dict = {
     1: "One",
     2: "Two",
@@ -142,7 +143,7 @@ for element in a_dict.copy().keys():
 
 ### Conditions
 
-```bash
+```python
 
 x = 10
 
@@ -173,7 +174,7 @@ elif number > 0 or number == 3:
 
 ### Loop
 
-```bash
+```python
 
 lst = ["One", "Two", "Three", "Four", "Five"]
 
@@ -197,7 +198,7 @@ while i < n:
 
 ### Class
 
-```bash
+```python
 
 # class creation
 class Person:
@@ -231,7 +232,7 @@ print(a_person.get_gender())
 
 ### Inheritance
 
-```bash
+```python
 class Mammal:
 
     __name = "Nothing"
@@ -291,7 +292,7 @@ print(developer.get_age())
 
 ### Abstract Base Class (ABC) or Interface
 
-```bash
+```python
 # Base class
 import abc
 
@@ -324,7 +325,7 @@ class NumberGuessing(Game):
 
 ### Get and initialize subclasses of a class
 
-```bash
+```python
 
 # Defining parent and child classes
 class Parent:
