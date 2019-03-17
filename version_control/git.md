@@ -3,7 +3,7 @@ title: git
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-01-13
+updated: 2019-03-17
 keywords:
     - "git"
     - "git cheat sheet"
@@ -119,4 +119,4 @@ If needed, have to force push: `git push -f origin master`
 
 ### Reference
 
-- Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf)
+- Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf), and [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20Sheet%20Linux%20Academy.pdf).
