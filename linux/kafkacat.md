@@ -11,7 +11,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-three-column}
+{: .-two-column}
 
 ### How to use
 
