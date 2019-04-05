@@ -2,7 +2,7 @@
 title: pacman
 category: Linux
 layout: 2017/sheet
-updated: 2019-01-12
+updated: 2019-04-05
 keywords:
     - "pacman"
     - "arch pacman"
@@ -20,6 +20,8 @@ Switches
 | `-Syy` | Update repository list |
 | `-Syu` | Upgrade packages |
 | `-Sy` | Install a package |
+| `-R` | Remove a package |
+| `-Rs` | Remove a package with deps not required by other packages |
 | `-Ss` | Search for a package |
 | `-Qq` | List of installed packages |
 {: .-shortcuts}
