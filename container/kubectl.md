@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2019-03-17
+updated: 2019-04-08
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
