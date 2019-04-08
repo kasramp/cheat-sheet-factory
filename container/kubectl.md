@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2019-03-17
+updated: 2019-04-08
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -28,7 +28,7 @@ Shortcuts
 | `kubectl delete pods [pod]` | Delete a pod |
 | `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
-
+| `kubectl port-forward [pod] 8888:8080 -n [namespace]` | Port forwarding |
 
 ### Kubectl config for multiple clusters
 
