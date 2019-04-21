@@ -6,7 +6,7 @@ updated: 2019-04-21
 keywords:
     - "shell"
     - "bash"
-prism_languages: [shell]
+prism_languages: [bash]
 intro: |
   List of bash useful commands 
 ---
