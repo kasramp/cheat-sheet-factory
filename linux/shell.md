@@ -35,7 +35,7 @@ Shortcuts
 | Bash delete to the end of a line: | `Ctrl + k` |
 | Bash delete to the end of a word: | `Alt + d` |
 | Bash reverse search: | `Ctrl + r` |
-| Mount flash drive: | `sudo fdisk -l &amp;&amp; udisksctl mount --block-device /dev/sd[b][1]` |
+| Mount flash drive: | `sudo fdisk -l && udisksctl mount --block-device /dev/sd[b][1]` |
 | Connect to WiFi: | `sudo nmtui` |
 | Convert tree command output to ASCII characters: | `tree | sed 's/â”œ/\+/g; s/â”€/-/g; s/â””/\\/g'` |
 | Epub reader: | `sudo apt install fbreader` |
@@ -50,8 +50,8 @@ Shortcuts
 | Push the path to stack: | `pushd $PWD` |
 | Processor info: | `cat /proc/cpuinfo` |
 | Found distro: | `more /etc/*release` |
-| Output command output to clipboard (Ctrl + v): | `ls &gt; xclip -selection clipboard` |
-| Output command output to clipboard (middle click): | `ls &gt; xclip` |
+| Output command output to clipboard (Ctrl + v): | `ls > xclip -selection clipboard` |
+| Output command output to clipboard (middle click): | `ls > xclip` |
 | Cancel the planned shutdown: | `shutdown -c` |
 | Shutdown in 15 minutes: | `shutdown -h 15` |
 | Show add drives with UUID an filesystem: | `blkid` |
@@ -63,13 +63,13 @@ Shortcuts
 | Which process using the Internet: | `nethogs` |
 | Merge Pdf files: | `pdfunite in.pdf in_1.pdf out.pdf` |
 | Access to SAMBA folders: | `/run/user/1000/gvfs` |
-| Play subdirectories files in Mplayer: | `mplayer -playlist &lt;(find "$PWD" -type f)` |
-| Convert Decimal to Hex &amp; Octal: | `printf "Octal: %o\n Hex: %x" 42 42` | 
+| Play subdirectories files in Mplayer: | `mplayer -playlist <(find "$PWD" -type f)` |
+| Convert Decimal to Hex & Octal: | `printf "Octal: %o\n Hex: %x" 42 42` | 
 | Convert Hex to Decimal: | `echo $((0xFF))` | 
 | Install JavaFx OpenJdk: | `sudo apt-get install openjfx` | 
 | Install pip3: | `sudo apt-get install python3-pip` | 
 | Install pip: | `sudo apt-get install python-pip` |
-| Convert .md file to html: | `pandoc README.md &gt; README.html` | 
+| Convert .md file to html: | `pandoc README.md > README.html` | 
 | Open formatted .md file: | `pandoc README.md | lynx -stdin` | 
 | Mv make directory: | `mkdir -P ~/temp; mv File $_` | 
 | Search in apt repositories: | `sudo apt-cache search [Keyword]` | 
@@ -85,7 +85,7 @@ Shortcuts
 | Identifying which port MySQL is running: | `sudo netstat -tlpn | grep mysql` | 
 | Automatically indent C/C++ code: | `indent MyCode.c` | 
 | Changing/removing passphrase from SSH private key: | `ssh-keygen -f id_dsa -p` | 
-| Run command upon SSH: | `ssh test@testserver 'ls &amp;&amp; rm -rvf tmp'` | 
+| Run command upon SSH: | `ssh test@testserver 'ls && rm -rvf tmp'` | 
 | SSH in reverse tunneling: | `ssh -fN -R 7000:localhost:22 username@yourMachine-ipaddress` | 
 | SSH in tunneling: | `ssh -fN -L 7000:localhost:22 username@yourMachine-ipaddress` | 
 | SSH in background : | `ssh -f test@testserver` | 
@@ -96,14 +96,14 @@ Shortcuts
 | Run GUI app on a remote PC using SSH : | `export DISPLAY=:0` | 
 | Scan computers open ports in a network : | `nmap XXX.YYY.ZZZ.*` | 
 | Getting a Heroku app live log : | `heroku logs -t --app APP_NAME` | 
-| Counting number of occurence of ';' char in each line of a file : | `while read line; do echo "$line" | tr -cd  ";" | wc -c; done &lt; 'FILE'` |
+| Counting number of occurence of ';' char in each line of a file : | `while read line; do echo "$line" | tr -cd  ";" | wc -c; done < 'FILE'` |
 | Removing space from a file : | `cat FILE | sed 's/ //g'` |
 | Randomly shuffling files in bash : | `cat FILE1 FILE2 | shuf` |
 | Updating Ubuntu packages in terminal : | `sudo apt-get upgrade` |
 | Removing old kernels in Ubuntu : | `sudo apt-get autoremove` |
-| Add word prediction to Vim permanently : | `echo set complete+=kspell &gt;&gt; ~/.vimrc` |
-| Add permanent spell checking for Vi for .txt files : | `echo autocmd BufRead,BufNewFile *.txt setlocal spell &gt;&gt; ~/.vimrc` |
-| Add line number permanently to Vi : | `echo set number &gt;&gt; ~/.vimrc` |
+| Add word prediction to Vim permanently : | `echo set complete+=kspell >> ~/.vimrc` |
+| Add permanent spell checking for Vi for .txt files : | `echo autocmd BufRead,BufNewFile *.txt setlocal spell >> ~/.vimrc` |
+| Add line number permanently to Vi : | `echo set number >> ~/.vimrc` |
 | Find wireless card chipset information : | `lspci | grep -i wireless` |
 | Making soft link without giving full path : | `ln -s [$(pwd)/fileName] [des path]` |
 | Making soft link : | `ln -s [src path] [des path]` |
@@ -112,8 +112,8 @@ Shortcuts
 | Mounting Virtualbox share folder : | `mount -t vboxsf [Share folder name] [Mount point]` |
 | Search for package in Apt : | `apt-cache search [Keyword]` |
 | Accessing ssh with key : | `ssh -i [Public key] user@domain` |
-| Accessing [new] sftp with key : | `sftp -i [Public key] user@domain` |
-| Accessing [old] sftp with key : | `sftp -o IdentityFile=[Public Key] user@domain` |
+| Accessing *new* sftp with key : | `sftp -i [Public key] user@domain` |
+| Accessing *old* sftp with key : | `sftp -o IdentityFile=[Public Key] user@domain` |
 | Comparing text files : | `vimdiff [File1] [File2]` |
 | Sync files (copy) : | `rsync -avh --progress [source] [destination]` |
 | Move progress bar : | `rsync -avh --progress --remove-source-files [source] [destination]` |
@@ -137,7 +137,7 @@ Shortcuts
 | Removing vocal from song : | `sox 1.mp3 1_no_vocal.mp3 oops` |
 | Gray Scaling picture : | `convert IMAGE.png -colorspace Gray IMAGE1.png` |
 | Resizing picture : | `convert IMAGE.png -resize 200x100 IMAGE1.png` |
-| Sorting &amp; getting unique values of 31th column of a CSV file : | `awk -F ',' '{print $31}' FILE.csv | sort | uniq` |
+| Sorting & getting unique values of 31th column of a CSV file : | `awk -F ',' '{print $31}' FILE.csv | sort | uniq` |
 | Sorting 31th column of a CSV file : | `awk -F ',' '{print $31}' FILE.csv | sort` |
 | Filtering 3rd and 31th columns of a CSV file based on a string : | `awk -F ',' '{print $6, $31}' FILE.csv | grep 'STRING'` |
 | Getting 3rd and 31th columns from a CSV file : | `awk -F ',' '{print $6, $31}' FILE.csv` |
@@ -155,7 +155,7 @@ Shortcuts
 | Looking for a file : | `find / -name foo` |
 | Sort lines of text files : | `sort 1.txt` |
 | Sort lines of text files : | `sort 1.txt` |
-| Execute command after exit Shell : | `nohup command-name &amp;` |
+| Execute command after exit Shell : | `nohup command-name &` |
 | Counting number of <strong>line</strong> in a file : | `wc -l FileName` |
 | Counting number of <strong>word</strong> in a file : | `wc -w FileName` |
 | Counting number of <strong>character</strong> in a file : | `wc -m FileName` |
@@ -177,6 +177,6 @@ Shortcuts
 | Executing multiple commands with sudo : | `sudo -- sh -c 'rm -rvf /root/test123; whoami; mkdir /root/tpx'` |
 | Shutdown pc : | `shutdown -h now` |
 | Getting kernel version : | `uname -r` |
-| Getting distro &amp; release version : | `lsb_release -a` |
+| Getting distro & release version : | `lsb_release -a` |
 | Getting a website ip address : | `nslookup www.google.com` |
 | Getting a domain information : | `whois www.google.com` |
