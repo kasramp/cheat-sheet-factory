@@ -117,6 +117,17 @@ If needed, have to force push: `git push -f origin master`
 + `git remote add [a name] [destination url]`
 + `git push --mirror [a name]`
 
+### Archive a branch
+
+#### Creating a tag
+
++ `git tag archive/[branch name] [branch name]`
++ `git branch -d [branch name]`
+
+#### Restore the tag as branch
+
++ `git checkout -b [branch name] archive/[branch name]`
+
 ### Reference
 
 - Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf), and [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20Sheet%20Linux%20Academy.pdf).
