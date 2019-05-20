@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Command & Conquer: Tiberian Sun | `sudo snap install cnctsun` |
 | Create a useless process: | `tail -f /dev/null` |
 | Change timezone (Debian based only): | `sudo dpkg-reconfigure tzdata` |
 | Copy symlinks: | `cp -a` |
