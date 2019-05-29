@@ -3,7 +3,7 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-03-17
+updated: 2019-05-29
 keywords:
     - "python"
     - "python cheat sheet"
@@ -348,4 +348,12 @@ children = [cls() for cls in Parent.__subclasses__()]
 
 for child in children:
     child.printHello() # prints 'Hallo' and 'Hola!'
+```
+
+### Interaction with pip
+
+```bash
+$ pip install [package name] # install system-wide
+$ pip install [package name] --user # install per user
+$ pip uninstall [package name] # remove a package
 ```
