@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2019-04-21
+updated: 2019-06-01
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Search for a package | `aptitude search mpv` |
 | Command & Conquer: Tiberian Sun | `sudo snap install cnctsun` |
 | Create a useless process: | `tail -f /dev/null` |
 | Change timezone (Debian based only): | `sudo dpkg-reconfigure tzdata` |
