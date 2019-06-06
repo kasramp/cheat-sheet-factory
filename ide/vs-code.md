@@ -2,7 +2,7 @@
 title: Visual Studio Code
 category: IDE
 layout: 2017/sheet
-updated: 2018-11-14
+updated: 2019-06-06
 keywords:
     - "VS Code"
     - "Visual Studio Code"
@@ -25,6 +25,28 @@ Visual Studio Code
 | `^N` | Open a new unsaved file |
 
 {: .-shortcuts}
+
+### Handy Shortcuts (Mac)
+
+| `⌘ p` | Go to file |
+| `⌘ w` | Close a tab |
+| `⌘ K ⌘ S` | Shortcuts list |
+| `⌥ ⌘ F` | Replace |
+| `⇧ ⌥ F` | Code format |
+| `F12` | Go to definition (interface, implementation) |
+| `⌘ click` | Go to definition (interface, implementation) |
+| `⌘ ⌥ click` | Go to definition in split |
+| `⌥ F12` | Find the callers |
+| `⇧ F12` | Find the callers |
+| `F2` | Rename |
+| `⌘ T` | Go to files including frameworks |
+| `⌃G` | Go to line |
+| `⇧ ⌘ F` | Search in all files | 
+| `⌘ b` | Open close side bar |
+
+### Hacks
+
++ `"workbench.editor.enablePreview": false` - `⌘ click` new tab
 
 ### Complete shortcut list
 
