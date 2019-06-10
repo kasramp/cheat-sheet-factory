@@ -3,7 +3,7 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-05-29
+updated: 2019-06-10
 keywords:
     - "python"
     - "python cheat sheet"
@@ -348,6 +348,15 @@ children = [cls() for cls in Parent.__subclasses__()]
 
 for child in children:
     child.printHello() # prints 'Hallo' and 'Hola!'
+```
+
+### Get type and type comparison
+```python
+tup = (1, 2, 3, 4)
+type(tup) # prints <class 'tuple'>
+isinstance(tup, tuple) # prints 'True'
+isinstance(tup, dict) # prints 'False'
+isinstance(tup, list) # prints 'False'
 ```
 
 ### Interaction with pip
