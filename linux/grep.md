@@ -13,7 +13,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-three-column}
+{: .-one-column}
 
 ### OR
 
