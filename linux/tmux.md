@@ -33,6 +33,7 @@ Shortcuts
 | `Ctrl + b + p` | Backs to the previous window |
 | `Ctrl + b + n` | Go to the next window |
 | `Ctrl + b + [0-9]` | Jump to a window number |
+| `Ctrl + b + s` | Shows all tmux windows and sessions |
 
 ### Attaching/detaching 
 
