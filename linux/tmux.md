@@ -89,7 +89,7 @@ Shortcuts
 ### Miscs
 
 | `Ctrl + b + t` | Show time |
-| `Ctrl + b [` | Enter scrolling mode |
+| `Ctrl + b + [` | Enter scrolling mode |
 | `q` | Exits scrolling mode |
 
 ### Copy
