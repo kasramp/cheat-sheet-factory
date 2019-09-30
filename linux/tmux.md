@@ -2,7 +2,7 @@
 title: tmux
 category: Linux
 layout: 2017/sheet
-updated: 2018-12-25
+updated: 2019-09-30
 keywords:
     - "tmux"
     - "tmux cheat sheet"
@@ -32,6 +32,7 @@ Shortcuts
 | `Ctrl + b + c` | Creates a new window |
 | `Ctrl + b + p` | Backs to the previous window |
 | `Ctrl + b + n` | Go to the next window |
+| `Ctrl + b + [0-9]` | Jump to a window number |
 
 ### Attaching/detaching 
 
@@ -75,6 +76,20 @@ Shortcuts
 
 | `Ctrl + b + d` | Detach tmux |
 | `tmux attach` | Attach tmux |
+| `tmux attach -t [session number]` | Attach to a particular session |
+
+
+
+### Maximize and minimize
+
+| `Ctrl + b + z` | Maximize a normal window |
+| `Ctrl + b + z` | Minimize the current maximize window |
+
+### Miscs
+
+| `Ctrl + b + t` | Show time |
+| `Ctrl + b [` | Enter scrolling mode |
+| `q` | Exits scrolling mode |
 
 ### Copy
 
