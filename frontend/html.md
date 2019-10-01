@@ -121,6 +121,51 @@ Shortcuts
 </table>
 ```
 
+### List
+
+```html
+<h2>An Unordered List</h2>
+
+<ul>
+  <li>John Wick</li>
+  <li>The Equalizer</li>
+  <li>Suicide Squad</li>
+</ul>  
+
+<h2>An Ordered List</h2>
+
+<ol>
+  <li>Night Wish</li>
+  <li>Eminem</li>
+  <li>LP</li>
+</ol> 
+```
+
+### Section
+
++ Between `header` and `footer` can place `main` tag which will refer to `main` section.
++ `main` can have multiple `section` tags.
+
+```html
+<body>
+    <header>
+        Header here
+    </header>
+
+    <main>
+        <section>
+            <article>Article one</article>
+        </section>
+    </main>
+
+    <footer>
+        Footer here
+    </footer>
+</body>
+```
+
+
+
 ### Notes
 
 + HTML 5 introduces two new elements call `header` and `footer`
@@ -131,3 +176,4 @@ Shortcuts
 + `padding` is the space between the element and border
 + `margin` is the space between margin and border
 + By default we should only manipulate padding unless want to change the inner element alignment
++ for article, summary or post can use `article` tag instead of `div`
