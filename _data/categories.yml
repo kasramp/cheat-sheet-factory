@@ -2,6 +2,7 @@ enabled: true
 names:
   - Container
   - FreeBSD
+  - Front-end
   - IDE
   - Java
   - Kafka
