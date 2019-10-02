@@ -2,7 +2,7 @@
 title: HTML 
 category: Front-end
 layout: 2017/sheet
-updated: 2019-10-01
+updated: 2019-10-02
 keywords:
     - "HTML"
     - "HTML cheat sheet"
@@ -164,7 +164,72 @@ Shortcuts
 </body>
 ```
 
+### Pre formated text
 
+```html
+<pre>This is a preformatted text</pre>
+```
+
+### Typewriter text
+
+```html
+<tt>This is a text for testing purposes only</tt>
+```
+
+### Code block
+
+```html
+<code>
+    echo "Hello World!"
+</code>
+```
+
+### Citation
+
+```html
+<cite>
+    Citation text. In Italics
+</cite>
+```
+
+### Address
+
+```html
+<address>
+My home, address, is here
+</address>
+```
+
+### Italics
+
+```html
+<em>Italics text</em>
+```
+
+### Bold
+
+```html
+<strong>Bold text</strong>
+```
+
+### Font tag
+
+```html
+<!-- Font size -->
+<font size="10px"></font> 
+<!-- Font color -->
+<font color="red"></font>
+<!-- Font style -->
+<font face="Open Sans"> </font>
+```
+
+### Link tag
+
+```html
+<a href="https://google.com">Google</a>
+<a href="mailto:test@test.com">Mail me</a>
+<a href="#id">Anchor within a doc</a>
+```
 
 ### Notes
 
