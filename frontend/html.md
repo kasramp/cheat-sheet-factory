@@ -276,6 +276,27 @@ My home, address, is here
 <font face="Open Sans"> </font>
 ```
 
+### Abbr tag
+
+```html
+<abbr title="Cascading Style Sheets">CSS</abbr>
+```
+
+### ‌Base tag
+
+```html
+<!-- Defines a base URL for all links in the page -->
+<base href="http://www.example.com/">
+```
+
+### Text direction
+
+```html
+<p>This paragraph will go left-to-right.</p>
+<!-- Direction right to left -->
+<p><bdo dir="rtl">This paragraph will go right-to-left.</bdo></p>
+```
+
 ### Formatting
 
 ```html
@@ -300,6 +321,11 @@ My home, address, is here
 <span>
     To format inline content
 </span>
+
+<!-- Strikethrough text -->
+<del>This is outdated information</del>
+
+
 ```
 
 ### Link tag
@@ -355,3 +381,4 @@ My home, address, is here
 ### Reference
 
 + Some more details, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/HTML%20Cheat%20Sheet.pdf)
++ HTML 5 cheat sheet, [here]()
