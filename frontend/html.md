@@ -179,7 +179,6 @@ Shortcuts
   <li>Eminem</li>
   <li>LP</li>
 </ol> 
-```
 
 <h2>Definition list, definition term and definition description</h2>
 <!-- Definition list -->
@@ -193,6 +192,7 @@ Shortcuts
   <dt>Hallo</dt>
   <dd>Germany greeting</dd>
 </dl>
+```
 
 ### Section
 
