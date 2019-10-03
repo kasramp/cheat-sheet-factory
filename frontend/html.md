@@ -126,7 +126,7 @@ Shortcuts
 
     <!-- Color picker -->
     <input type="color" value="#e66465" name="favorite-color"> 
-    
+
     <input type="reset">
 
     <button type="submit">Submit</button>
@@ -351,3 +351,7 @@ My home, address, is here
 + `margin` is the space between margin and border
 + By default we should only manipulate padding unless want to change the inner element alignment
 + for article, summary or post can use `article` tag instead of `div`
+
+### Reference
+
++ Some more details, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/HTML%20Cheat%20Sheet.pdf)
