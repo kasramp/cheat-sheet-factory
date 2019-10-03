@@ -84,11 +84,50 @@ Shortcuts
     <input name type="radio" name="gender" value="female"/>Female
 
     <select name="education">
-        <option value"highschool">High School</option>
+        <option value="highschool">High School</option>
         <option value="bachelors">Bachelors</option>
         <option value="masters">Masters</option>
         <option value="phd">PhD</option>
     </select>
+
+    <!-- Multiple selection show three item and then scroll -->
+    <select multiple name="favourite-animals" size="3">
+        <option value="dog">Dogs</option>
+        <option value="cat">Cats</option>
+        <option value="fish">Fish</option>
+        <option value="turtle">Turtles</option>
+        <option value="horse">Horses</option>
+        <option value="fox">Foxes</option>
+        <option value="cow">Cows</option>
+    </select>
+
+    <textarea name="description" cols="50" rows="10"></textarea>
+
+    <!-- Size in characters -->
+    <input type="text" name="country-code" size="30">
+
+    <!-- Submit button with image -->
+    <input type="image" name="submit" height="100px" width="100px" src="https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg"   border="5px" alt="btn">
+
+    <!-- Email input -->
+    <input type="email" name="email-address"> 
+
+    <!-- Number input -->
+    <input type="number" name="age">
+
+    <!-- Range/Volume input -->
+    <input type="range" name="happiness" min="0" max="100" value="60" step="5">
+
+    <!-- Date input -->
+    <input type="date" name="birthday" value="2019-10-04" min="1900-01-01" max="2019-12-31">
+
+    <!-- Time input -->
+    <input type="time" name="appointment" min="09:00" max="18:00" required>
+
+    <!-- Color picker -->
+    <input type="color" value="#e66465" name="favorite-color"> 
+
+    <input type="reset">
 
     <button type="submit">Submit</button>
 </form>
@@ -134,11 +173,25 @@ Shortcuts
 
 <h2>An Ordered List</h2>
 
-<ol>
+<!-- Starts at number 2 -->
+<ol start=2>
   <li>Night Wish</li>
   <li>Eminem</li>
   <li>LP</li>
 </ol> 
+
+<h2>Definition list, definition term and definition description</h2>
+<!-- Definition list -->
+<dl>
+  <!-- Definition term -->
+  <dt>Hello</dt>
+  <!-- Definition description -->
+  <dd>English greeting</dd>
+  <dt>Hola!</dt>
+  <dd>Spanish greeting</dd>
+  <dt>Hallo</dt>
+  <dd>Germany greeting</dd>
+</dl>
 ```
 
 ### Section
@@ -223,12 +276,68 @@ My home, address, is here
 <font face="Open Sans"> </font>
 ```
 
+### Formatting
+
+```html
+<!-- Paragraph -->
+<p>
+    This is a paragraph tag.
+</p>
+
+<!-- Line break -->
+<br>
+
+<!-- Quote with indentation on both side, a tab length -->
+<blockquote>
+    My quote goes here
+</blockquote>
+
+<!-- div and span -->
+<div>
+    To format block content
+</div>
+
+<span>
+    To format inline content
+</span>
+```
+
 ### Link tag
 
 ```html
 <a href="https://google.com">Google</a>
 <a href="mailto:test@test.com">Mail me</a>
 <a href="#id">Anchor within a doc</a>
+```
+
+### Horizontal line
+
+```html
+<hr>
+
+<!-- Thickness -->
+<hr size="5px">
+
+<!-- Length, starts in middle -->
+<hr width="20px">
+
+<!-- No shadow -->
+<hr noshade>
+```
+
+### Image
+
+```html
+
+<!-- Basic image -->
+<img  src="url" />
+
+<!--
+    Alignment: use CSS instead. Values: `left/right/center/bottom/top/middle`
+    Border: use CSS instead.
+    Alt: alternative when browser is not supporting image or when image is not available
+    -->
+<img src="https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg" align="center" border="2px" height="500px" width="600px" alt="flower" />
 ```
 
 ### Notes
@@ -242,3 +351,7 @@ My home, address, is here
 + `margin` is the space between margin and border
 + By default we should only manipulate padding unless want to change the inner element alignment
 + for article, summary or post can use `article` tag instead of `div`
+
+### Reference
+
++ Some more details, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/HTML%20Cheat%20Sheet.pdf)
