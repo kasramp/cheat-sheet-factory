@@ -381,4 +381,4 @@ My home, address, is here
 ### Reference
 
 + Some more details, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/HTML%20Cheat%20Sheet.pdf)
-+ HTML 5 cheat sheet, [here]()
++ HTML 5 cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/HTML5%20Cheat%20Sheet.pdf)
