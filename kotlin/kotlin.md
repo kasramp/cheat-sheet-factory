@@ -18,6 +18,12 @@ intro: |
 
 ## Basics
 
+### Kotlin REPL
+
+```bash
+$ kotlinc-jvm
+```
+
 ### Print
 
 ```kotlin
@@ -68,10 +74,275 @@ print("Hello $name. Welcome to Kotlin")
 
 ```kotlin
 val longText = """
+This is
+an example
+of a very
+long text
+in multiple line
+"""
+
+// Mult line with formatting
+
+val longText = """
 | This is
 | an example
 | of a very
 | long text
 | in multiple line
-"""
+""".trimMargin()
+```
+
+### Ternary operation
+
+```kotlin
+val randomNumber : Int = 11
+val isGreaterThanTen : Boolean  = if(randomNumber > 10) true else false
+```
+
+### Bitwise operations
+
+```kotlin
+val x : Boolean = true
+val y : Boolean = false
+
+x and y // false
+x or y // true
+x xor y // true
+32 shr 1 // shift right 16
+32 shl 2 // shift left 128
+-32 ushr 2 // shift right unsigned 1073741816
+```
+
+### Type checking
+
+```kotlin
+
+interface Vehicle {
+        fun getPlateNumber(): String
+}
+
+class Car(private val number: String, val seatNumber: Int) : Vehicle {
+    override fun getPlateNumber(): String {
+        return number
+    }
+}
+
+val randomVehicle : Vehicle = Car("ABX", 4)
+println(randomVehicle.getPlateNumber())
+if(randomVehicle is Car) {
+    val car : Car = randomVehicle
+    println(car.seatNumber)
+}
+```
+
+### Range condition
+
+```kotlin
+val number : Int = 100
+
+if(number in 1..100) {
+    println("Number is between 1 to 100")
+}
+```
+
+### When operation
+
+```kotlin
+val number : Int = 55
+when(number) {
+    in Int.MIN_VALUE .. -1 -> println("It's negative")
+    0 -> println("It's zero")
+    in 1..9 -> println("It's single positive digit")
+    in 10..99 -> println("It's double digit")
+    100 -> println("It's hundred")
+    else -> println("Something else!")
+}
+
+// Other form
+
+when {
+    number < 0 -> println("It's negative")
+    number == 0 -> println("It's zero")
+    number in 1..9 -> println("It's single positive digit")
+    number in 10..99 -> println("It's double digit")
+    number == 100 -> println("It's hundred")
+    else -> println("Something else!")
+}
+```
+
+### Looping
+
+```kotlin
+val x = 10
+// print 1 to 10
+for(i in 1..10) {
+    println(i)
+}
+
+// print 1 to 9
+for(i in 1 until 10) {
+    println(i)
+}
+
+// print 1, 3, 5, 7, 9
+for(i in 1..10 step 2) {
+    println(i)
+}
+
+// print 10 to 1
+for(i in 10 downTo 1) {
+    println(i)
+}
+
+// print 10, 8, 6, 4, 2
+for(i in 10 downTo 1 step 2) {
+    println(i)
+}
+
+val languages : Map<String, String> = mapOf("EN" to "Hello", "DE" to "Hallo", "FA" to "Salam")
+
+languages.forEach{ (languageCode, greeting) ->
+    println("Language: $languageCode - Greeting: $greeting")
+}
+
+for((languageCode, greeting) in languages) {
+    println("Language: $languageCode - Greeting: $greeting")
+}
+
+val myList : List<Int> = listOf(1, 10, 3, -500, 5, -1, 34, 44, -2)
+
+myList.filter { it > 0 }.sorted().forEach { println(it) }
+```
+
+### Collections
+
+#### Arrays
+
+```kotlin
+val arr = arrayOf("x", "y", "z")
+println(arr[0])
+
+val (key, value) = "EN=Hello".split("=")
+println("Language is $key, message is $value")
+```
+
+#### List
+
+```kotlin
+val lst : List<String> = listOf("One", "Two", "Three")
+```
+
+#### Map
+
+```kotlin
+val mp : Map<String, Int> = mapOf("One" to 1, "Two" to 2, "Three" to 3)
+mp.forEach { (k, v) -> println("$k = $v")}
+```
+
+### Methods
+
+```kotlin
+
+fun sum(val x: Int, val y: Int) : Int {
+    return x + y
+}
+
+fun sum(val x: Int, val y: Int) : Int = return x + y
+
+// varargs
+fun sum(vararg numbers: Int) : Int {
+    return numbers.sum()
+}
+```
+
+### Classes
+
+#### Java-like class
+
+```kotlin
+
+/* Class with empty constructor */
+
+class Book {
+    var name : String = ""
+    var author : String = ""
+    var isbn : String = ""
+}
+```
+
+#### Class with all constructor values
+
+```kotlin
+val book : Book = Book()
+book.name = "12 rules of life"
+book.author = "Jordan Peterson"
+book.isbn = "1234ABC"
+
+/* Class with all constructor values */
+
+class Book(val name: String, private val author: String, val isbn: String) {
+fun printAuthorName() {
+println(author)
+}
+fun getAuthorName(): String = author
+}
+
+val book = Book("12 rules for life", "Jordan Peterson", "ABC")
+book.printAuthorName()
+
+// book.author -> doesn't work since author is private
+book.getAuthorName()
+```
+
+#### Class with default value in constructor
+
+```kotlin
+class Book(val name: String, private val author: String, val isbn: String = "DEFAULT ISBN") {
+
+    fun printAuthorName() {
+        println(author)
+    }
+
+    fun getAuthorName(): String = author
+}
+
+// We do not pass ISBN, uses 'DEFAULT ISBN'
+val book = Book("12 rules for life", "Jordan Peterson")
+
+// We pass all values
+val bookWithIsnb = Book("12 rules for life", "Jordan Peterson", "ABCD")
+```
+
+#### Class with lazy value initialization
+
+```kotlin
+class Book(val name: String, private val author: String, var isbn: String = "DEFAULT ISBN") {
+
+    fun printAuthorName() {
+        println(author)
+    }
+
+    fun getAuthorName(): String = author
+    }
+}
+```
+
+#### Companion object
+
+```kotlin
+class Book(val name: String, private val author: String, var isbn: String = DEFAULT_ISBN) {
+
+    companion object {
+        const val DEFAULT_ISBN : String = "DEFAULT ISBN"
+        val logger : Logger = LoggerFactory.getLogger(Book.javaClass)
+    }
+
+
+    fun printAuthorName() {
+        logger.info("Author is $author")
+        println(author)
+    }
+
+    fun getAuthorName(): String = author
+}
 ```
