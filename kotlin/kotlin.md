@@ -3,7 +3,7 @@ title: kotlin
 category: Kotlin
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-10-15
+updated: 2019-10-16
 keywords:
   - "kotlin"
   - "kotlin cheat sheet"
