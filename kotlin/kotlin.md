@@ -346,3 +346,108 @@ class Book(val name: String, private val author: String, var isbn: String = DEFA
     fun getAuthorName(): String = author
 }
 ```
+
+#### Utility class with Java like static methods
+
+```kotlin
+class SomeUtility {
+    private constructor()
+
+    companion object {
+        fun doSomething() {
+
+        }
+
+        fun doOtherThing() {
+
+        }
+    }
+}
+```
+
+#### Class with custom getter and setter
+
+```kotlin
+class Book(val name: String, private val author: String, var isbn: String = DEFAULT_ISBN) {
+
+    private var nameA: String = ""
+        set(value) {
+            if (!value.isNotEmpty()) {
+                throw IllegalArgumentException("Title must not be empty")
+            }
+            field = value
+        }
+        get() {
+            return field
+        }
+
+    companion object {
+        const val DEFAULT_ISBN: String = "DEFAULT ISBN"
+        val logger: Logger = LoggerFactory.getLogger(Book.javaClass)
+    }
+}
+```
+
+#### Primary, secondary constructors
+
+```kotlin
+class Car(val name: String, val plateNo: String) {
+    var new: Boolean? = null
+    var colour: String = ""
+
+    constructor(name: String, plateNo: String, new: Boolean) : this(name, plateNo) {
+        this.new = new
+    }
+
+    constructor(name: String, plateNo: String, new: Boolean, colour: String ) :
+            this(name, plateNo, new) {
+        this.colour = colour
+    }
+}
+
+// directly calls primary constructor
+val car1 = Car("Peugeot 504", "XYZ234")
+// directly calls 1st sec. constructor
+val car2 = Car("Peugeot 504", "XYZ234", false)
+// directly calls last sec. constructor
+val car3 = Car("Peugeot 504", "XYZ234", false, "grey")
+```
+
+#### Adding functionalities to class without inheriting
+
+```kotlin
+fun Int.triple(): Int {
+  return this * 3
+}
+
+var result = 3.triple()
+```
+
+### Late initialization
+
+It is used when we want to postpone the object initialization to another stage.
+
+```kotlin
+internal lateinit var person: Person
+```
+
+And somewhere else in the code:
+
+```kotlin
+person = Person()
+```
+
+It's only applicable to `non-null var`.
+
+### Lazy initialization
+
+It's used when we want to defer the calling to an expensive call. For instance, hitting the database. It's the same concept as lazy loading. Means the object is not initialized until it's accessed for the first time.
+
+```kotlin
+private val bookService = BookService()
+val books : List<Book> by lazy {
+    bookService.getAllBook()
+}
+```
+
+It's only applicable to `val`.
