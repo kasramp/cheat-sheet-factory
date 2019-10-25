@@ -24,6 +24,12 @@ intro: |
 $ kotlinc-jvm
 ```
 
+Exit the REPL:
+
+```kotlin
+:quit
+```
+
 ### Print
 
 ```kotlin
