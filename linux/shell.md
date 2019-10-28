@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Get the next word in a matching pattern | `awk '{for(i=1;i<=NF;i++)if($i~/patternText/)print $(i+1)}'` |
 | Search for a package | `aptitude search mpv` |
 | Command & Conquer: Tiberian Sun | `sudo snap install cnctsun` |
 | Create a useless process: | `tail -f /dev/null` |
