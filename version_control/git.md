@@ -3,7 +3,7 @@ title: git
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-10-30
+updated: 2019-10-31
 keywords:
   - "git"
   - "git cheat sheet"
