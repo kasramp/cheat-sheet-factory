@@ -3,16 +3,16 @@ title: git
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-03-17
+updated: 2019-10-30
 keywords:
-    - "git"
-    - "git cheat sheet"
+  - "git"
+  - "git cheat sheet"
 intro: |
-    git cheat sheet
+  git cheat sheet
 ---
 
-Shortcuts
----------
+## Shortcuts
+
 {: .-two-column}
 
 ### Basics
@@ -48,7 +48,6 @@ Shortcuts
 | `git checkout -b [branch name]` | Branch out locally |
 | `git push -u origin [branch name]` | Push local branch to upstream |
 
-
 ### Delete a branch
 
 | `git branch -d [branch name]` | Delete a branch locally |
@@ -63,7 +62,6 @@ Shortcuts
 
 | `git commit --amend` | Amend commits message |
 
-
 ### Unstage local changes
 
 | `git reset` | Unstage local changes |
@@ -73,18 +71,16 @@ Shortcuts
 | `git cherry-pick [Commit hash]` | Cherry pick a commit |
 | `git cherry-pick [Commit hash] && git push` | Cherry pick a commit and pushes to upstream |
 
-
 ### Clean working directly
 
 | `git clean -xdf` | Remove all files not in remote |
-
 
 ### Tagging
 
 | `git tag` | Get tag list |
 | `git tag -a [Tag name]` | Create a new tag |
 | `git tag -d [Tag name]` | Delete a tag |
- 
+
 ### Get rid of local commits
 
 | `git reset --hard origin/[Branch name]` | Delete all local commits |
@@ -92,7 +88,6 @@ Shortcuts
 ### Revert
 
 | `git revert [Commit hash] && git push` | Revert commit hash and pushes changes to upstream |
-
 
 ### Uncommit local commits
 
@@ -104,30 +99,39 @@ Shortcuts
 
 ### Update a forked repository
 
-+ `git remote add upstream [repo]`
-+ `git fetch upstream`
-+ `git checkout master`
-+ `git rebase upstream/master`
+- `git remote add upstream [repo]`
+- `git fetch upstream`
+- `git checkout master`
+- `git rebase upstream/master`
 
 If needed, have to force push: `git push -f origin master`
 
 ### Import a project from a git server to another
 
-+ `git clone [source URL]`
-+ `git remote add [a name] [destination url]`
-+ `git push --mirror [a name]`
+- `git clone [source URL]`
+- `git remote add [a name] [destination url]`
+- `git push --mirror [a name]`
 
 ### Archive a branch
 
 #### Creating a tag
 
-+ `git tag archive/[branch name] [branch name]`
-+ `git branch -d [branch name]`
+- `git tag archive/[branch name] [branch name]`
+- `git branch -d [branch name]`
 
 #### Restore the tag as branch
 
-+ `git checkout -b [branch name] archive/[branch name]`
+- `git checkout -b [branch name] archive/[branch name]`
+
+### Submodule
+
+| `git submodule add [submodule repo] [path]` | Add a submodule |
+| `git submodule update` | Update a submodule |
+| `git submodule update --init` | Add and update a submodule |
+| `git submodule update --init --recursive` | Add and update recusively, submodule inside submodule |
+| `git submodule update --remote --merge` | Merge submodule |
 
 ### Reference
 
 - Full cheat sheet, [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20sheet.pdf), and [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/Git%20Cheat%20Sheet%20Linux%20Academy.pdf).
+- Submodule, [here](https://gist.github.com/kasramp/9908bfecc173eb6f425062f8acd24dcf)
