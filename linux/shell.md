@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2019-06-01
+updated: 2019-11-07
 keywords:
     - "shell"
     - "bash"
