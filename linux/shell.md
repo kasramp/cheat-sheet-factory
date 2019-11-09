@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2019-11-07
+updated: 2019-11-09
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Manjaro package manager | `pamac-manager` |
 | Shell script code analyzer | `shell [filename]` |
 | Get the next word in a matching pattern | `awk '{for(i=1;i<=NF;i++)if($i~/patternText/)print $(i+1)}'` |
 | Search for a package | `aptitude search mpv` |
