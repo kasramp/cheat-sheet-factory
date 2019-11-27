@@ -3,7 +3,7 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-06-10
+updated: 2019-11-26
 keywords:
     - "python"
     - "python cheat sheet"
@@ -365,4 +365,22 @@ isinstance(tup, list) # prints 'False'
 $ pip install [package name] # install system-wide
 $ pip install [package name] --user # install per user
 $ pip uninstall [package name] # remove a package
+```
+
+### Reading file line by line
+
+```python
+with open('file.txt') as f:
+    lines = f.readlines()
+for line in lines:
+    print(line)
+f.close()
+```
+
+### Write to file
+
+```python
+o = open("file.txt", "a")
+o.write("{colum1}, {column2}, {column3}\n".format(column1="A", column2="B", column3="C"))
+o.close()
 ```
