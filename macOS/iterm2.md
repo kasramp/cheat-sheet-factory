@@ -3,7 +3,7 @@ title: iTerm2
 category: macOS
 layout: 2017/sheet
 tags: [Featured]
-updated: 2018-10-17
+updated: 2019-12-07
 keywords:
     - "iTerm2 cheat sheet"
     - "iTerm2 key bindings"
@@ -21,6 +21,7 @@ iTerm2
 | `⌘1, 2, 3, ...` | Switch tabs |
 | `⌘⇧←→` | Change tab position |
 | `⌃u` | Clear line from cursor to left |
+| `⌘/` | Highlights the cursor position |
 {: .-shortcuts}
 
 ### Basics
