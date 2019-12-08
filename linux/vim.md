@@ -3,11 +3,12 @@ title: vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-02-21
+updated: 2019-12-08
 keywords:
     - "vim"
     - "vim cheat sheet"
     - "vim key bindings"
+prism_languages: [vim]
 intro: |
   Vim Key Bindings 
 ---
@@ -243,3 +244,51 @@ Including inserting a *line* and switching to *insert* mode
 
 | `gt` | Go to the next tab |
 | `gT` | Go to the previous tab | 
+
+## Vim no plugin (file browser, find, auto completion, etc.)
+
+```
+" disable vi compatibility layer
+set nocompatible
+
+" enable syntax highlighting
+syntax enable
+
+" for fuzzy file search. 
+" use `:find filename`, tab for autocompletion
+" to fuzzy search just add * beginning or end of filename
+filetype plugin on
+set path+=**
+" fuzzy search result in a menu using tab or shift + tab
+" ^^ can use `:ls` to see open files in buffer and switch between them using `:b filename`.
+set wildmenu
+" ignores /target directory of maven project
+set wildignore+=**/target/**
+
+" tags for jumping here and there in the code where the definition is using
+" ctrl + ] go to tag
+" ctrl + t back to original place, stack supported. means multiple jump works
+" g + ctrl + ] to be able to select implementation instead of interface
+command! MakeTags !ctags -R .
+
+" autocompletion in insert mode ctrl + n, ctrl + p
+" ctrl + x ctrl + n limit autocompletion to the currenct one
+" ctrl + x + ctrl + f  autocompletion of file name. e.g., /home ctrl + x + ctrl + f
+
+" file browser
+let g:netrw_banner=0
+let g:netrw_browser_split=4
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+" :edit -> open a folder. e.g., :edit .
+" v/t open in h-split v-split tab
+
+" :read filename -> reads a file and add it to the current buffer/screen
+
+" show line number
+set number
+
+" open terminal :ter
+```
