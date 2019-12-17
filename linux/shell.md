@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2019-12-07
+updated: 2019-12-17
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Put the system in stand by | `systemctl suspend` |
 | Count number of lines in a project | `find . -name '*.java' | xargs wc -l` |
 | Manjaro package manager | `pamac-manager` |
 | Shell script code analyzer | `shell [filename]` |
