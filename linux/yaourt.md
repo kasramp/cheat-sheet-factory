@@ -2,7 +2,7 @@
 title: yaourt
 category: Linux
 layout: 2017/sheet
-updated: 2018-11-04
+updated: 2020-01-03
 keywords:
     - "yaourt"
     - "arch yaourt"
@@ -18,6 +18,10 @@ Switches
 ### Installation
 
 + `sudo pacman -Sy yaourt` 
+
+### Upgrade all yaourt packages
+
++ `yaourt -Syu --aur`
 
 ### Common switches
 
