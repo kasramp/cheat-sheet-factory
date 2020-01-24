@@ -3,7 +3,7 @@ title: javascript
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-01-03
+updated: 2020-01-24
 keywords:
   - "javascript"
   - "javascript cheat sheet"
