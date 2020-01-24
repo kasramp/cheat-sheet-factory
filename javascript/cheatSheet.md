@@ -5,15 +5,15 @@ layout: 2017/sheet
 tags: [Featured]
 updated: 2020-01-03
 keywords:
-    - "javascript"
-    - "javascript cheat sheet"
+  - "javascript"
+  - "javascript cheat sheet"
 prism_languages: [javascript]
 intro: |
-  Javascript cheat sheet 
+  Javascript cheat sheet
 ---
 
-Shortcuts
----------
+## Shortcuts
+
 {: .-two-column}
 
 ## Basics
@@ -314,6 +314,127 @@ console.log(rectObject.width);
 
 ```javascript
 parseInt("10"); // returns 10
+```
+
+### Strict mode
+
+Use `"use strict";` to catch common mistake. Can be added on the top of the file or at the function level.
+
+### Read only variable
+
+```javascript
+const LOCAL_EN = "EN";
+```
+
+### Block object manipulation
+
+```javascript
+function Person(firstName, age, gender) {
+  this.firstName = firstName;
+  this.age = age;
+  this.gender = gender;
+}
+
+let johnProfile = new Person("John", 35, "Male");
+
+console.log(johnProfile); // prints `Person { firstName: 'John', age: 35, gender: 'Male' }`
+
+Object.freeze(johnProfile);
+
+johnProfile.age = 10;
+
+console.log(johnProfile); // prints `Person { firstName: 'John', age: 35, gender: 'Male' }` ignores the changes applied
+```
+
+### Anonymous function
+
+Without using arrow (lambda),
+
+```javascript
+let sum = function(x, y) {
+  return x + y;
+};
+```
+
+With arrow,
+
+```javascript
+let sum = (x, y) => {
+  return x + y;
+};
+
+let sum = (x, y) => x + y;
+```
+
+### Higher order function (Filter and map)
+
+```javascript
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
+
+let arr = [10, 20, 0, 50, -100, -21, 9, 8, 5, 3, 1];
+
+// filter
+console.log(arr.filter(x => x > 0 && x % 2 === 0));
+
+let people = [
+  new Person("John", "Wick", 40),
+  new Person("Kasra", "Mp", 30),
+  new Person("David", "Moron", 45)
+];
+
+// map
+let fullNames = people.map(person => `${person.firstName} ${person.lastName}`);
+
+console.log(fullNames);
+```
+
+### Default parameter
+
+```javascript
+function Person(firstName, lastName, age = -1) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
+
+let personNoLastname = new Person("John", "Wick");
+
+console.log(personNoLastname);
+```
+
+**Note:** The default parameter should be the last one always.
+
+### Reduce
+
+```javascript
+function sum(...args) {
+  return args.reduce((a, b) => a + b, 0);
+}
+
+console.log(sum(10, 20, 30));
+```
+
+### Clone
+
+```javascript
+let arr0 = ["Hello", "Hi", "Hey", "Salute"];
+
+let arr1 = arr0;
+arr1[0] = "XYZ";
+
+console.log(arr0);
+arr0 = ["Hello", "Hi", "Hey", "Salute"];
+
+// to avoid side effect, can use rest operator to clone
+let arr2 = [...arr0];
+
+arr2[0] = "Hallo";
+
+console.log(arr0);
 ```
 
 ## References
