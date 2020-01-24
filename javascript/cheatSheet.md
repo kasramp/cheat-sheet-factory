@@ -437,6 +437,169 @@ arr2[0] = "Hallo";
 console.log(arr0);
 ```
 
+### Object destructuring
+
+```javascript
+let objs = { 1: "One", 2: "Two", 3: "Three" };
+
+let { 1: oneVariable } = objs;
+
+console.log(oneVariable);
+
+let people = {
+  kasra: {
+    name: "Kasra",
+    age: 30
+  },
+  john: {
+    name: "John",
+    age: 45
+  }
+};
+
+let {
+  john: { age: johnAge }
+} = people;
+
+console.log(johnAge);
+```
+
+### Array destructuring
+
+```javascript
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+let [, , , , five, , , eight] = arr; // gets 5 and 8
+
+console.log(five, eight);
+
+(() => {
+  [five, eight] = [eight, five]; //swap
+})();
+
+let [, , ...greatherThanThree] = arr;
+console.log(greatherThanThree); // prints [ 3, 4, 5, 6, 7, 8 ]
+```
+
+### Object destructuring on functions
+
+```javascript
+function Person(firstName, lastName, age, gender) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.gender = gender;
+}
+
+let printFullName = ({ firstName, lastName }) =>
+  console.log(`${firstName} ${lastName}`);
+
+let john = new Person("John", "Wick", 40, "Male");
+
+printFullName(john);
+```
+
+### A different way of creating object
+
+```javascript
+let Person = (name, age) => ({ name, age });
+
+let john = Person("John", 45);
+console.log(john);
+```
+
+### Class
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+let john = new Person("John Wick", 40);
+```
+
+### Encapsulation
+
+```javascript
+function createPerson() {
+  class Person {
+    constructor(name, age) {
+      this._name = name;
+      this._age = age;
+    }
+
+    get name() {
+      return this._name;
+    }
+
+    set name(name) {
+      this._name = name;
+    }
+
+    get age() {
+      return this._age;
+    }
+
+    set age(age) {
+      this._age = age;
+    }
+  }
+  return Person;
+}
+
+const Person = createPerson();
+
+let john = new Person("John", 40);
+
+let age = john.age;
+
+john.age = ++age;
+
+console.log(john);
+```
+
+### Import and export
+
+Export:
+
+```javascript
+export const isBlank = str => str === undefined || str.length === 0;
+```
+
+Import:
+
+```javascript
+import { isBlank } from "./stringUtils";
+
+console.log(isBlank("test"));
+```
+
+Import everything:
+
+```javascript
+import * as strUtil from "./stringUtils";
+```
+
+Default export:
+
+It allows the module to be exported at function, or class level.
+
+```javascript
+export default const isBlank = str => str === undefined || str.length === 0;
+```
+
+Default import:
+
+Allos a single function to be imported from a file.
+
+```javascript
+import isBlank from "./stringUtils";
+```
+
 ## References
 
 - [Java To JavaScript Cheat Sheet](https://techgarage.io/index.php/2017/02/06/java-to-javascript-cheat-sheet/)
+- [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg)
