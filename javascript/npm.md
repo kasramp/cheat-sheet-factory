@@ -79,4 +79,3 @@ And then add the below line to `package.json` under `script` section,
 
 Lastly, run the app `npm run start`
 
-### 
