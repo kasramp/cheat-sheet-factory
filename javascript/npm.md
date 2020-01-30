@@ -3,7 +3,7 @@ title: npm
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-01-27
+updated: 2020-01-30
 keywords:
   - "npm"
   - "npm cheat sheet"
@@ -66,6 +66,7 @@ $ npm install babel-cli --save # compile ES6 to ES5
 $ npm install babel-preset-es2015 --save # compile ES6 to ES5
 $ echo '{ "presets": ["es2015"] }' >> .babelrc
 $ npm install nodemon --save-dev # for live reload
+$ npm install --save body-parser # to parse request body
 ```
 
 And then add the below line to `package.json` under `script` section,
