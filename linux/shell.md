@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2019-12-18
+updated: 2020-02-08
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Network bandwidth monitor: | `sudo apt install bmon` |
 | Allow user write to mounted partition: | `sudo chown -v [username]:[username] /media/[username]/[disk_name]` |
 | Put the system in stand by: | `systemctl suspend` |
 | Count number of lines in a project: | `find . -name '*.java' | xargs wc -l` |
