@@ -2,7 +2,7 @@
 title: kafkacat
 category: Linux
 layout: 2017/sheet
-updated: 2019-04-03
+updated: 2020-03-03
 keywords:
     - "kafkacat"
 intro: |
