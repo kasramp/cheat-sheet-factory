@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2020-02-08
+updated: 2020-03-07
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,7 @@ Shortcuts
 
 ### Commands
 
+| Convert .bin/.cue to .iso: | `bchunk IMAGE.bin IMAGE.cue IMAGE.iso` |
 | Network bandwidth monitor: | `sudo apt install bmon` |
 | Allow user write to mounted partition: | `sudo chown -v [username]:[username] /media/[username]/[disk_name]` |
 | Put the system in stand by: | `systemctl suspend` |
