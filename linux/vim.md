@@ -292,3 +292,7 @@ set number
 
 " open terminal :ter
 ```
+
+## Set column marker to 80 columns
+
++ `:set colorcolumn=80`
