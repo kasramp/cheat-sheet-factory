@@ -3,7 +3,7 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-11-26
+updated: 2020-03-20
 keywords:
     - "python"
     - "python cheat sheet"
@@ -384,3 +384,9 @@ o = open("file.txt", "a")
 o.write("{colum1}, {column2}, {column3}\n".format(column1="A", column2="B", column3="C"))
 o.close()
 ```
+
+### Working with pip
+
+| `pip install --user youtube-dl` | Installs Youtube-dl in user space |
+| `pip install --user --upgrade youtube-dl` | Updates Youtube-dl |
+| `pip uninstall youtube-dl` | Removes Youtube-dl |
