@@ -1,5 +1,5 @@
 ---
-title: Lnyx Shortcuts
+title: Lynx Shortcuts
 category: Linux
 layout: 2017/sheet
 updated: 2020-04-10
