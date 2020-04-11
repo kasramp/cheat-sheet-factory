@@ -3,7 +3,7 @@ title: npm
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-01-30
+updated: 2020-04-10
 keywords:
   - "npm"
   - "npm cheat sheet"
@@ -35,6 +35,12 @@ $ npm install
 
 ```bash
 $ npm install express # installs express
+```
+
+### Add package globally (don't use it)
+
+```bash
+$ sudo npm install -g express
 ```
 
 ### Add package (development env only)
@@ -80,3 +86,16 @@ And then add the below line to `package.json` under `script` section,
 
 Lastly, run the app `npm run start`
 
+### Scaffold express app with express-generator
+
+```bash
+$ npx express-generator my_new_fancy_app
+$ express my_new_fancy_app
+```
+
+### Remove a dependency
+
+```bash
+$ npm uninstall jade
+$ npm prune 
+```
