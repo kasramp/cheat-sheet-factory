@@ -3,7 +3,7 @@ title: kotlin
 category: Kotlin
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-10-25
+updated: 2020-04-13
 keywords:
   - "kotlin"
   - "kotlin cheat sheet"
@@ -457,3 +457,18 @@ val books : List<Book> by lazy {
 ```
 
 It's only applicable to `val`.
+
+### Try resource (with use)
+
+```kotlin
+val file = File("test.csv")
+file.bufferedReader().use {
+    println(it.readText())
+}
+```
+
+### Immutable list to mutable
+
+```kotlin
+listOf("One", "Two", "Three").toMutableList().add("Four")
+```
