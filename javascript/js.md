@@ -3,7 +3,7 @@ title: javascript
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-01-24
+updated: 2020-04-16
 keywords:
   - "javascript"
   - "javascript cheat sheet"
@@ -597,6 +597,97 @@ Allos a single function to be imported from a file.
 
 ```javascript
 import isBlank from "./stringUtils";
+```
+
+### Class vs Constructor Function vs Factory Function
+
+```javascript
+// class
+class ClassCar {
+  drive () {
+    console.log('Vroom!');
+  }
+}
+
+const car1 = new ClassCar();
+console.log(car1.drive());
+
+
+// constructor
+function ConstructorCar () {}
+
+ConstructorCar.prototype.drive = function () {
+  console.log('Vroom!');
+};
+
+const car2 = new ConstructorCar();
+console.log(car2.drive());
+
+
+// factory
+const proto = {
+  drive () {
+    console.log('Vroom!');
+  }
+};
+
+const factoryCar = () => Object.create(proto);
+
+const car3 = factoryCar();
+console.log(car3.drive());
+```
+
+- [Read more](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
+
+### Event listener
+
+```javascript
+// const Emitter = require('events').EventEmitter;
+import EventEmitter as Emitter from events;
+const studentEventEmitter = new Emitter();
+
+// emit an event
+studentEventEmitter.emit("registered", student);
+
+// event listener
+studentEventEmitter.on("registered", (registeredStudent) => {
+  console.log(`Student with id ${registeredStudent.id} is registered!`);
+});
+```
+
+### Read file with stream
+
+```javascript
+// const fs = require("fs");
+import fs from "fs";
+const fis = fs.createReadStream("file.txt");
+fis.on("data", (content) => {
+  console.log(content.toString());
+});
+
+// pause an stream
+fis.pause(); 
+
+// end event
+fis.on("end", () => {
+  console.log("Stream has ended");
+});
+```
+
+### Copying file
+
+```javascript
+// const fs = require("fs");
+import fs from "fs";
+
+const fis = fs.createReadStream("file.txt");
+const fos = fs.createWriteStream("copy_file.txt");
+
+// print the file content
+fis.pipe(process.stdout);
+
+// pipe the stream to write stream [make copy literally]
+fis.pipe(fos);
 ```
 
 ## References
