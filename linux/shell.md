@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2020-03-21
+updated: 2020-04-26
 keywords:
     - "shell"
     - "bash"
@@ -23,7 +23,7 @@ Shortcuts
 | Allow user write to mounted partition: | `sudo chown -v [username]:[username] /media/[username]/[disk_name]` |
 | Put the system in stand by: | `systemctl suspend` |
 | Count number of lines in a project: | `find . -name '*.java' | xargs wc -l` |
-| Manjaro package manager: | `pamac-manager` |
+| Manjaro GUI package manager: | `pamac-manager` |
 | Shell script code analyzer: | `shell [filename]` |
 | Get the next word in a matching pattern: | `awk '{for(i=1;i<=NF;i++)if($i~/patternText/)print $(i+1)}'` |
 | Search for a package: | `aptitude search mpv` |
