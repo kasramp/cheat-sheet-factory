@@ -3,7 +3,7 @@ title: python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-03-20
+updated: 2020-05-01
 keywords:
     - "python"
     - "python cheat sheet"
@@ -383,6 +383,19 @@ f.close()
 o = open("file.txt", "a")
 o.write("{colum1}, {column2}, {column3}\n".format(column1="A", column2="B", column3="C"))
 o.close()
+```
+
+### Difference between `class Name:` and `class Name(object):`
+
+```python
+# the old syntax prior to python 2.2
+class Test:
+
+# new synatx recommended after python 2.2
+# supports metadata
+# supports getters and setter
+class Test(object): 
+
 ```
 
 ### Working with pip
