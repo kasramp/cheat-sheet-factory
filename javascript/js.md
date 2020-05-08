@@ -3,7 +3,7 @@ title: javascript
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-04-16
+updated: 2020-05-08
 keywords:
   - "javascript"
   - "javascript cheat sheet"
@@ -134,6 +134,47 @@ printFullName("Kasra"); // since only one argument has passed, it prints 'FirstN
 
 **Note:** If you don't define a return value, the default value is undefined.
 
+### Function parameters
+
+JS function can have as many parameters as we want in the method declaration. And when call just pass one or two:
+
+```javascript
+function printFullName(firstName, lastName) {
+    console.log(firstName, lastName);
+}
+
+printFullName("Kasra");
+```
+
+The above code throws an error because we use the second param as well. To make the method call working it has to be modified to:
+
+```javascript
+function printFullName(firstName, lastName) {
+    if(typeof lastName !== "undefined") {
+        console.log(firstName, lastName);
+    } else {
+        console.log(firstName);
+    }
+}
+
+printFullName("Kasra");
+```
+
+### Function inside of a function
+
+It's possible to define a function inside of a function. But the inner function will not be accessible to outside and only the parent function can access it.
+
+```javascript
+function printFullName(firstName, lastName) {
+    console.log(firstName, lastName);
+
+    function printLength(firstName, lastName) {
+        console.log(firstName.length + lastName.length);
+    }
+    printLength();
+}
+```
+
 ### Strings
 
 #### Length
@@ -200,6 +241,38 @@ let johnProfile = people.shift();
 
 ```javascript
 people.unshift(["Bean", 60, "Male"]);
+```
+
+#### Getting index number
+
+```javascript
+people.indexOf("Hello");
+```
+
+#### Removing elements
+
+```javascript
+array.splice(2, 1); // Removes index 2 and 1 element only
+```
+
+#### Natural sorting
+
+```javascript
+let arr = [100, 20, 30, 5, 60]
+arr.sort() // returns alphabetic sort which will be wrong for number
+// to fix it
+
+arr.sort(function(a,b) { return a - b });
+```
+
+#### Looping
+
+```javascript
+let games = ["Counter Strike", "Delta Force", "Red Alert", "NFS"];
+
+games.foreach((gameName, index) => {
+console.log(gameName);
+});
 ```
 
 ### Equality and strict equality
@@ -282,7 +355,27 @@ Square.prototype.render = function() {
 square.render();
 ```
 
-## Private fields, functions
+### Inheritance
+
+```javascript
+class Animal {
+    constructor(gender, age, size) {
+         this.gender = gender;
+         this.age = age;
+         this.size = size
+    }
+}
+
+class Human extends Animal {
+     constructor(firstName, lastName, gender, age, size) {
+          super(gender, age, size);
+          this.firstName = firstName;
+          this.lastName = lastName;
+     }
+}
+```
+
+### Private fields, functions
 
 ```javascript
 var rectObject = (function() {
@@ -653,6 +746,22 @@ studentEventEmitter.emit("registered", student);
 studentEventEmitter.on("registered", (registeredStudent) => {
   console.log(`Student with id ${registeredStudent.id} is registered!`);
 });
+```
+
+### Event listener for HTML
+
+```javascript
+let btn = document.getElementById("btn");
+
+function printHello() {
+    console.log("Hello");
+    btn.removeEventListener("click", printHello);
+    document.getElementById("msg-box").innerHTML="Hello World";
+}
+
+btn.addEventListener("click", printHello);
+
+// <div id="msg-box">This is a message</div> HTML
 ```
 
 ### Read file with stream
