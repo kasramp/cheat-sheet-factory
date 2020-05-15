@@ -17,7 +17,9 @@ Shortcuts
 
 ### Commands
 
+| Open a file with the default app from terminal: | `xdg-open test.html` |
 | Get audio and video file details: | `mediainfo file.mp3` |
+| Pulse audio terminal mixer: | `pulsemixer` |
 | Convert .bin/.cue to .iso: | `bchunk IMAGE.bin IMAGE.cue IMAGE.iso` |
 | Network bandwidth monitor: | `sudo apt install bmon` |
 | Allow user write to mounted partition: | `sudo chown -v [username]:[username] /media/[username]/[disk_name]` |
