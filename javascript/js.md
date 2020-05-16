@@ -3,7 +3,7 @@ title: javascript
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-05-08
+updated: 2020-05-17
 keywords:
   - "javascript"
   - "javascript cheat sheet"
@@ -690,6 +690,31 @@ Allos a single function to be imported from a file.
 
 ```javascript
 import isBlank from "./stringUtils";
+```
+
+When importing `class` or `function` can use `default` keyword.
+
+For `function` and `variables` both import and export should be wrapped around `{}`,
+
+```javascript
+// TestModule.js
+class Test {
+
+}
+
+const testFunction = () => {
+  // do whatever
+}
+
+export default Test
+
+export {testFunction} // notice `{}`
+```
+
+```javascript
+
+import Test from './TestModule';
+import {testFunction} from './TestModule'; // again notice `{}`
 ```
 
 ### Class vs Constructor Function vs Factory Function
