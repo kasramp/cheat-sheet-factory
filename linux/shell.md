@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2020-04-26
+updated: 2020-06-05
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,8 @@ Shortcuts
 
 ### Commands
 
+| Battery fine-tuning: | `sudo tlp-stat -b && sudo tlp recalibrate` |
+| Htop like battery draining report: | `powertop` |
 | Open a file with the default app from terminal: | `xdg-open test.html` |
 | Get audio and video file details: | `mediainfo file.mp3` |
 | Pulse audio terminal mixer: | `pulsemixer` |
