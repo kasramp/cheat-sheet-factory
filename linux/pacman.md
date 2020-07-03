@@ -2,7 +2,7 @@
 title: pacman
 category: Linux
 layout: 2017/sheet
-updated: 2019-04-05
+updated: 2020-07-03
 keywords:
     - "pacman"
     - "arch pacman"
@@ -14,6 +14,12 @@ intro: |
 Switches
 ---------
 {: .-three-column}
+
+### Update mirror list
+
+```bash
+$ sudo pacman-mirrors -g
+```
 
 ### Common switches
 
