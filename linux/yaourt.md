@@ -2,7 +2,7 @@
 title: yaourt
 category: Linux
 layout: 2017/sheet
-updated: 2020-01-03
+updated: 2020-07-09
 keywords:
     - "yaourt"
     - "arch yaourt"
@@ -29,4 +29,9 @@ Switches
 | `-Sy` | Sync database |
 | `-R` | Remove a package |
 | `-S [package] --noconfirm` | Install without confirmation |
+| `-Ss [keyword]` | Search for a package |
+| `-Si [keyword]` | Get info about a certain keyword |
+| `-Rcs [package]` | Remove a package with all dependencies |
+| `-Syu --noconfirm` | Upgrades all packages without asking for confirmation |
+
 {: .-shortcuts}
