@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2019-04-17
+updated: 2020-08-29
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -15,8 +15,38 @@ Shortcuts
 ---------
 {: .-one-column}
 
+### Basics
+
+Kubernetes is a container orchestration service. It has a master node which we can communicate with it through `kubectl`.
+The master node manages other nodes that run pods. `kubectl` will be run on nodes by the master node. Each node can run
+multiple pods, and each pod runs a container. 
+
+Master node components consist of:
+
+- `Store (etcd)` - like a database, stores information on which node to track
+- `Controller Manager` - to manage request. Whenever a request comes-in, the manager control and schedules it
+- `Scheduler` - determines when a pod comes to live or goes a way
+- `API server` - a set of rest APIs to interact with Kubernetes master node, usually through `kubectl`. It accepts `YAML` or `JSON`
+
+To have pods up and running we need to have `deployment` scripts which effectively are blueprint of pods. To have each
+pod communicate with each other or even expose out of the cluster, we need to have Kubernetes `service` to manage that.
+
+A Kubernetes node consists of the followings:
+
+- `Kubelet agent` - it's used by the master node to execute commands on and manage the node
+- `Container runtime` - to run containers
+- `Kube-proxy` - for networking and for example assign IP address to the pod
+ 
 ### Handy kubectl commands
 
+| `kubectl version` | Get version |
+| `kubectl cluster-info` | Get information about the cluster |
+| `kubect get all` | All information about pod, services, deployments, etc. |
+| `kubectl run [container-name] --image=[image-name]` | To create a deployment and get a pod up and running |
+| `kubectl port-forward [pod] [ports]` | Forward a port for external access |
+| `kubectl expose [pod] [ports]` | Expose a port for a deployment, pod |
+| `kubectl create [resource]` | Create a resource |
+| `kubectl apply [resource]` | Create a resource if not exists or modify the existing |
 | `kubectl get pods -n [namespace]` | List pods |
 | `kubectl get pods -o wide -n [namespace]` | List pods with nodes information |
 | `kubectl logs -n [namespace] [podname] -f` | Tail logs for a pod in a namespace |
@@ -56,6 +86,11 @@ kubectl config current-context # get current context in use
 kubectl config use-context stage-cluster # switch to `stage-cluster` context
 kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ```
+
+### Run Kubernetes in local
+
+- `minikube`
+- `docker desktop` (is only available for mac and Windows)
 
 ### Reference
 
