@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-08-29
+updated: 2020-09-22
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -42,7 +42,7 @@ A Kubernetes node consists of the followings:
 | `kubectl version` | Get version |
 | `kubectl cluster-info` | Get information about the cluster |
 | `kubect get all` | All information about pod, services, deployments, etc. |
-| `kubectl run [container-name] --image=[image-name]` | To create a deployment and get a pod up and running |
+| `kubectl run [pod-name] --image=[image-name]` | To create a deployment and get a pod up and running |
 | `kubectl port-forward [pod] [ports]` | Forward a port for external access |
 | `kubectl expose [pod] [ports]` | Expose a port for a deployment, pod |
 | `kubectl create [resource]` | Create a resource |
@@ -57,11 +57,14 @@ A Kubernetes node consists of the followings:
 | `kubectl get pods --all-namespaces` | List all pods in all namespaces |
 | `kubectl get deployment my-dep` | List a particular deployment |
 | `kubectl scale --replicas=3 rs/foo` | Scale a replicaset named 'foo' to 3 |
-| `kubectl delete pods [pod]` | Delete a pod |
+| `kubectl delete pods [pod]` | Delete a pod (then it will be recreated) |
+| `kubectl delete deployment [name-of-deployment]` | Delete pods without recreation |
 | `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
 | `kubectl port-forward [pod] 8888:8080 -n [namespace]` | Port forwarding |
 | `kubectl create --dry-run --validate -f pod-dummy.yaml -n [namespace]` | Dry run of pod |
+| `kubectl -n [namespace] create -f [pod-file.yaml]` | Create a pod from a yaml file, throws error if pod already exists |
+| `kubectl -n [namespace] apply -f [pod-file.yaml]` | Create or update a pod (Better replacement of the above) |
 | `kubectl -n [namespace] scale deployment [podname] --replicas=0` | Scale down to zero instances |
 | `kubectl -n [namespace] scale deployment [podname] --replicas=2` | Scale to two instances |
 | `kubectl -n [namespace] get deployment [servicename] -o yaml` | Get deployment details |
@@ -76,6 +79,8 @@ A Kubernetes node consists of the followings:
 | `kubectl -n [namespace] get secret` | Get secret list |
 | `kubectl -n [namespace] get secret --export -o yaml [secretname] > ~/secret.txt` | Export a secret |
 | `kubectl -n [namespace] create secret generic [secretname] --from-file=~/secret.txt` | Create a secret |
+| `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
+
 
 ### Kubectl config for multiple clusters
 
@@ -91,6 +96,20 @@ kubectl config use-context prod-cluster # switch to `prod-cluster` context
 
 - `minikube`
 - `docker desktop` (is only available for mac and Windows)
+
+### Enable Web UI (dashboard)
+
+To have an overview and a nice UI for K8s, you can enable Web UI dashboard as following,
+
+```bash
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+$ kubectl describe secret -n kube-system # adds the token and get the token
+$ kubectl proxy # give a url
+```
+
+Then go to the url and past the token.
+
+More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 ### Reference
 
