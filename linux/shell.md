@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2020-06-05
+updated: 2020-09-27
 keywords:
     - "shell"
     - "bash"
@@ -17,6 +17,8 @@ Shortcuts
 
 ### Commands
 
+| Extracts a 5 seconds video from 3-8: | `ffmpeg -ss 00:00:03 -t 00:00:08 -i input.mp4 -async 1 cut.mp4` |
+| Cuts first X seconds from a video: | `ffmpeg -ss 10 -i input.mp4 -async 1 cut.mp4` |
 | Battery fine-tuning: | `sudo tlp-stat -b && sudo tlp recalibrate` |
 | Htop like battery draining report: | `powertop` |
 | Open a file with the default app from terminal: | `xdg-open test.html` |
