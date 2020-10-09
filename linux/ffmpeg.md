@@ -11,7 +11,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-two-column}
+{: .-one-column}
 
 ## Cut videos
 
