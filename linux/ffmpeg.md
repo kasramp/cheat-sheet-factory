@@ -43,7 +43,7 @@ $ ffmpeg -i original_video.mkv -i clean_audio.mp3 -c:v copy -c:a flac -map 0:v:0
 $ ffmpeg -y -f x11grab -s `xdpyinfo | grep 'dimensions:'| awk '{print $2}'` -i :0.0 -f pulse -i default -c:v libx264 -r 48 -c:a flac out.mkv
 ```
 
-### Screencasting (hard encoding) with provided screen size (2 monitors)
+### Screencasting (hard encoding) with provided screen size
 
 ```bash
 $ ffmpeg -f alsa -i default -c:a flac \
