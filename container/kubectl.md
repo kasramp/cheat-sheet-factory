@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-09-22
+updated: 2020-10-10
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -18,8 +18,10 @@ Shortcuts
 ### Basics
 
 Kubernetes is a container orchestration service. It has a master node which we can communicate with it through `kubectl`.
-The master node manages other nodes that run pods. `kubectl` will be run on nodes by the master node. Each node can run
-multiple pods, and each pod runs a container. 
+
+The master node manages other nodes that run pods. `kubectl` will be run on nodes by the master node. Each node can run multiple pods, and each pod runs a container. 
+
+Deployment and service files can be generated using Helm, handcrafted manually, or using [Kompose](https://github.com/kubernetes/kompose) to convert docker-compose files to Kubernetes deployment files.
 
 Master node components consist of:
 
@@ -28,14 +30,20 @@ Master node components consist of:
 - `Scheduler` - determines when a pod comes to live or goes a way
 - `API server` - a set of rest APIs to interact with Kubernetes master node, usually through `kubectl`. It accepts `YAML` or `JSON`
 
-To have pods up and running we need to have `deployment` scripts which effectively are blueprint of pods. To have each
-pod communicate with each other or even expose out of the cluster, we need to have Kubernetes `service` to manage that.
+To have pods up and running we need to have `deployment` scripts which effectively are blueprint of pods. To have each pod communicate with each other or even expose out of the cluster, we need to have Kubernetes `service` to manage that.
 
 A Kubernetes node consists of the followings:
 
 - `Kubelet agent` - it's used by the master node to execute commands on and manage the node
 - `Container runtime` - to run containers
 - `Kube-proxy` - for networking and for example assign IP address to the pod
+
+Kubernetes support multiple deployment strategies:
+
+- `rolling update` - zero downtime on upgrading new versions
+- `blue-green` - multiple environments running exactly the same time, once it's proven the new one is good, switch all traffic to the new one
+- `canary` - a very small amount of traffic goes to the new deployment, once it's proven, swithc all traffic to the new one
+- `rollback` - when deploy a new version and doesn't work, so rollbacking to the previous version
  
 ### Handy kubectl commands
 
@@ -56,14 +64,16 @@ A Kubernetes node consists of the followings:
 | `kubectl get services` | List all services in the namespace |
 | `kubectl get pods --all-namespaces` | List all pods in all namespaces |
 | `kubectl get deployment my-dep` | List a particular deployment |
-| `kubectl scale --replicas=3 rs/foo` | Scale a replicaset named 'foo' to 3 |
+| `kubectl get deployments` | List all deployments |
+| `kubectl get deployment --show-labels` | List labels for all deployments |
+| `kubectl scale --replicas=3 [name-of-deployment]` | Scale a replicaset to 3 |
 | `kubectl delete pods [pod]` | Delete a pod (then it will be recreated) |
 | `kubectl delete deployment [name-of-deployment]` | Delete pods without recreation |
 | `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
 | `kubectl port-forward [pod] 8888:8080 -n [namespace]` | Port forwarding |
 | `kubectl create --dry-run --validate -f pod-dummy.yaml -n [namespace]` | Dry run of pod |
-| `kubectl -n [namespace] create -f [pod-file.yaml]` | Create a pod from a yaml file, throws error if pod already exists |
+| `kubectl -n [namespace] create -f [pod-file.yaml]` | Create a pod/deployment from a yaml file, throws error if pod already exists |
 | `kubectl -n [namespace] apply -f [pod-file.yaml]` | Create or update a pod (Better replacement of the above) |
 | `kubectl -n [namespace] scale deployment [podname] --replicas=0` | Scale down to zero instances |
 | `kubectl -n [namespace] scale deployment [podname] --replicas=2` | Scale to two instances |
@@ -80,6 +90,7 @@ A Kubernetes node consists of the followings:
 | `kubectl -n [namespace] get secret --export -o yaml [secretname] > ~/secret.txt` | Export a secret |
 | `kubectl -n [namespace] create secret generic [secretname] --from-file=~/secret.txt` | Create a secret |
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
+| `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 
 
 ### Kubectl config for multiple clusters
