@@ -2,7 +2,7 @@
 title: helm
 category: Container
 layout: 2017/sheet
-updated: 2019-07-31
+updated: 2019-10-10
 keywords:
     - "helm"
     - "helm package manager"
@@ -16,6 +16,7 @@ Shortcuts
 
 ### Handy helm commands
 
+| `helm create hello-world` | Create a Helm chart (contain deployment.yml and serivce.yml) |
 | `helm list` | List installed releases |
 | `helm list --tiller-namespace [namespace]` | List installed releases for that namespace |
 | `helm history --tiller-namespace [namespace] [project name]` | List all releases for that app in a namespace |
