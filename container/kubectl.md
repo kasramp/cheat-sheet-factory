@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-10-10
+updated: 2020-10-13
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -22,6 +22,8 @@ Kubernetes is a container orchestration service. It has a master node which we c
 The master node manages other nodes that run pods. `kubectl` will be run on nodes by the master node. Each node can run multiple pods, and each pod runs a container. 
 
 Deployment and service files can be generated using Helm, handcrafted manually, or using [Kompose](https://github.com/kubernetes/kompose) to convert docker-compose files to Kubernetes deployment files.
+
+A deployment is a blue print of a pod.
 
 Master node components consist of:
 
@@ -44,6 +46,15 @@ Kubernetes support multiple deployment strategies:
 - `blue-green` - multiple environments running exactly the same time, once it's proven the new one is good, switch all traffic to the new one
 - `canary` - a very small amount of traffic goes to the new deployment, once it's proven, swithc all traffic to the new one
 - `rollback` - when deploy a new version and doesn't work, so rollbacking to the previous version
+
+Pods live and die so their IP addresses will be changed. Services abstract pod IP addresses from consumers and allow them to access pods without the hassle of figuring out the IP address or anything else.
+
+Different Kuberentes service types:
+
+- `ClusterIP` - expose a service on a cluster-internal IP (default)
+- `NodePort` - expose a service on each Node's IP at a static port (allows external access to a node on random 31XXX port)
+- `LoadBalancer` - sits in front of nodes and provisions an external IP to act as a load balancer for the service (allows external access to a service with `localhost` and custom port set in service yaml file)
+- `ExternalName` - map a service to a DNS name
  
 ### Handy kubectl commands
 
@@ -51,7 +62,6 @@ Kubernetes support multiple deployment strategies:
 | `kubectl cluster-info` | Get information about the cluster |
 | `kubect get all` | All information about pod, services, deployments, etc. |
 | `kubectl run [pod-name] --image=[image-name]` | To create a deployment and get a pod up and running |
-| `kubectl port-forward [pod] [ports]` | Forward a port for external access |
 | `kubectl expose [pod] [ports]` | Expose a port for a deployment, pod |
 | `kubectl create [resource]` | Create a resource |
 | `kubectl apply [resource]` | Create a resource if not exists or modify the existing |
@@ -63,6 +73,7 @@ Kubernetes support multiple deployment strategies:
 | `kubectl config view` | Show configurations |
 | `kubectl get services` | List all services in the namespace |
 | `kubectl get pods --all-namespaces` | List all pods in all namespaces |
+| `kubectl get deployments` | List all deployments |
 | `kubectl get deployment my-dep` | List a particular deployment |
 | `kubectl get deployments` | List all deployments |
 | `kubectl get deployment --show-labels` | List labels for all deployments |
@@ -71,7 +82,6 @@ Kubernetes support multiple deployment strategies:
 | `kubectl delete deployment [name-of-deployment]` | Delete pods without recreation |
 | `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
-| `kubectl port-forward [pod] 8888:8080 -n [namespace]` | Port forwarding |
 | `kubectl create --dry-run --validate -f pod-dummy.yaml -n [namespace]` | Dry run of pod |
 | `kubectl -n [namespace] create -f [pod-file.yaml]` | Create a pod/deployment from a yaml file, throws error if pod already exists |
 | `kubectl -n [namespace] apply -f [pod-file.yaml]` | Create or update a pod (Better replacement of the above) |
@@ -92,6 +102,10 @@ Kubernetes support multiple deployment strategies:
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 
+### Port forwarding
+
+| `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
+| `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
 ### Kubectl config for multiple clusters
 
