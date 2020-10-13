@@ -23,6 +23,8 @@ The master node manages other nodes that run pods. `kubectl` will be run on node
 
 Deployment and service files can be generated using Helm, handcrafted manually, or using [Kompose](https://github.com/kubernetes/kompose) to convert docker-compose files to Kubernetes deployment files.
 
+A deployment is a blue print of a pod.
+
 Master node components consist of:
 
 - `Store (etcd)` - like a database, stores information on which node to track
