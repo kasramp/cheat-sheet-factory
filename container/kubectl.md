@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-10-13
+updated: 2020-10-15
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -24,6 +24,8 @@ The master node manages other nodes that run pods. `kubectl` will be run on node
 Deployment and service files can be generated using Helm, handcrafted manually, or using [Kompose](https://github.com/kubernetes/kompose) to convert docker-compose files to Kubernetes deployment files.
 
 A deployment is a blue print of a pod.
+
+A pod can contain multiple containers.
 
 Master node components consist of:
 
@@ -107,6 +109,20 @@ Different Kuberentes service types:
 | `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
 | `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
+
+### Volumes
+
+There are multiple types of volumes:
+
+- `emptyDir` - it's for ephemeral/transient data (needed by pod during its life), useful for sharing files between multiple containers running in a pod. When a pod goes down, this volume will go away.
+- `hostPath` - pod mounts into a (worker) node's file system. Easy to set up but if the node goes down, the data will be lost.
+- `nfs` - Network File System where a pod's mounting to an NFS.
+- `configMap/secret` - it's for storing key value pairs and sensetive information.
+- `persistentVolumeClaim` - provides pods with a persistent option which is abstracted out from pods' point of view.
+- `cloud` - data is stored outside of the Kubernetes network.
+
+A persistentVolume can be set up manually (static) or dynamically using StorageClass (SC).
+
 ### Kubectl config for multiple clusters
 
 ```bash
@@ -138,6 +154,6 @@ More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/
 
 ### Reference
 
-[https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-
-[https://github.com/dennyzhang/cheatsheet-kubernetes-A4](https://github.com/dennyzhang/cheatsheet-kubernetes-A4)
+- [https://github.com/kubernetes/examples](https://github.com/kubernetes/examples)
+- [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [https://github.com/dennyzhang/cheatsheet-kubernetes-A4](https://github.com/dennyzhang/cheatsheet-kubernetes-A4)
