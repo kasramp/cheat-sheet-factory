@@ -342,7 +342,6 @@ spect:
           readOnly: true
 ```
 
-
 Miscellaneous
 ---------
 {: .-one-column}
