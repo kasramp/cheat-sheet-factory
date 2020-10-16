@@ -6,7 +6,7 @@ updated: 2020-10-16
 keywords:
   - kubectl
   - Kubernetes kubectl
-prism_languages: [bash]
+prism_languages: [bash, yml]
 ---
 
 Getting started
@@ -281,6 +281,67 @@ spect:
         - name: [volume-name]
           mountPath: [path] # /tmp
 ```
+
+Secrets
+---------
+{: .-one-column}
+
+### Creating literal secret
+
+```bash
+$ kubectl create secret generic [name-of-secret] 
+--from-literal=[secret-key-1]=[secret-value-1]
+--from-literal=[secret-key-2]=[secret-value-2]
+```
+
+### Creating secret from a file
+
+```bash
+$ kubectl create secret generic [name-of-secret] 
+--from-file=[secret-key-file-name-1]=[file-path-1]
+--from-file=[secret-key-file-name-2]=[file-path-2]
+```
+
+### Creating TLS secret
+
+```bash
+$ kubectl create secret tls tls-secret --cret=[path-to-cert] --key=[path-to-tls.key]
+```
+
+### Reading secrets as env vars
+
+Need to configure the pod as follow,
+
+```yml
+spec:
+  template: ...
+  spec:
+    containers: ...
+    env:
+    - name: [env-variable-name] # MY_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: [secret-name]
+          key: [secret-key]
+```
+
+### Load secrets as volumes
+
+```yml
+spect:
+  template: ...
+  spec: ...
+    volumes:
+      - name: [volume-name]
+        secret:
+          secretName: [secret-name]
+    containers:
+      volumeMounts:
+        - name: [volume-name]
+          mountPath: [path] # /tmp
+          readOnly: true
+```
+
 
 Miscellaneous
 ---------
