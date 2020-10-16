@@ -4,18 +4,16 @@ category: Container
 layout: 2017/sheet
 updated: 2020-10-16
 keywords:
-    - "kubectl"
-    - "Kubernetes kubectl"
+  - kubectl
+  - Kubernetes kubectl
 prism_languages: [bash]
-intro: |
-  Kubectl cheat sheet
 ---
 
-Shortcuts
+Getting started
 ---------
 {: .-one-column}
 
-## Basics
+### Basics
 
 Kubernetes is a container orchestration service. It has a master node which we can communicate with it through `kubectl`.
 
@@ -57,8 +55,12 @@ Different Kuberentes service types:
 - `NodePort` - expose a service on each Node's IP at a static port (allows external access to a node on random 31XXX port)
 - `LoadBalancer` - sits in front of nodes and provisions an external IP to act as a load balancer for the service (allows external access to a service with `localhost` and custom port set in service yaml file)
 - `ExternalName` - map a service to a DNS name
- 
-## Handy kubectl commands
+
+Commands
+---------
+{: .-one-column}
+
+### Handy kubectl commands
 
 | `kubectl version` | Get version |
 | `kubectl cluster-info` | Get information about the cluster |
