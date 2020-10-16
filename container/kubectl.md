@@ -2,16 +2,14 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-10-15
+updated: 2020-10-16
 keywords:
-    - "kubectl"
-    - "Kubernetes kubectl"
-prism_languages: [bash]
-intro: |
-  Kubectl cheat sheet
+  - kubectl
+  - Kubernetes kubectl
+prism_languages: [bash, yml]
 ---
 
-Shortcuts
+Getting started
 ---------
 {: .-one-column}
 
@@ -57,7 +55,11 @@ Different Kuberentes service types:
 - `NodePort` - expose a service on each Node's IP at a static port (allows external access to a node on random 31XXX port)
 - `LoadBalancer` - sits in front of nodes and provisions an external IP to act as a load balancer for the service (allows external access to a service with `localhost` and custom port set in service yaml file)
 - `ExternalName` - map a service to a DNS name
- 
+
+Commands
+---------
+{: .-one-column}
+
 ### Handy kubectl commands
 
 | `kubectl version` | Get version |
@@ -109,8 +111,11 @@ Different Kuberentes service types:
 | `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
 | `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
+Volumes
+---------
+{: .-one-column}
 
-### Volumes
+### Basics
 
 There are multiple types of volumes:
 
@@ -122,6 +127,224 @@ There are multiple types of volumes:
 - `cloud` - data is stored outside of the Kubernetes network.
 
 A persistentVolume can be set up manually (static) or dynamically using StorageClass (SC).
+
+ConfigMap
+---------
+{: .-one-column}
+
+### ConfigMaps Basics
+
+There are **four** ways to create a ConfigMap
+
+- `literal`
+- `manifesto`
+- `config file`
+- `env file`
+
+### Creating ConfigMap by defining key/value directly (literal)
+
+```bash
+$ kubectl create configmap [map-name]
+--from-literal=key1=value1
+--from-literal=key2=value2
+```
+
+### Creating ConfigMap with manifesto file
+
+Config map manifesto example,
+
+```yml
+appVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-configs
+  labels:
+    app: myapp-configs
+data:
+  key1: "value1"
+  key2: "value2"
+  specific.path.key: "value3"
+```
+
+### Creating ConfigMap using config file
+
+Config file example,
+
+```
+key1=value1
+key2=value2
+specific.path.key=value3
+```
+
+Then save it in a file `example.config` and apply it,
+
+```bash
+$ kubectl create configmap [map-name] --from-file=~/example.config
+```
+
+The output would be,
+
+```yml
+appVersion: v1
+kind: ConfigMap
+data:
+  example.config: |-
+    key1=value1
+    key2=value2
+    specific.path.key=value3
+```
+
+It puts the configuration as a blob with the key being the filename.
+
+### Creating ConfigMap using environment file
+
+Environment file example,
+
+```
+key1=value1
+key2=value2
+specific.path.key=value3
+```
+
+Then save it in a file `example.env` and apply it,
+
+```bash
+$ kubectl create configmap [map-name] --from-env-file=~/example.env
+```
+
+The output would be,
+
+```yml
+appVersion: v1
+kind: ConfigMap
+data:
+  key1=value1
+  key2=value2
+  specific.path.key=value3
+```
+
+### Reading ConfigMaps as Yaml
+
+```bash
+$ kubectl get cm [map-name] -o yaml
+```
+
+### Reading ConfigMaps as env vars
+
+Need to configure the pod as follow,
+
+```yml
+spec:
+  template: ...
+  spec:
+    containers: ...
+    env:
+    - name: [env-variable-name] # KEY1
+      valueFrom:
+        configMapKeyRef:
+          name: [config-map-name] # myapp-configs
+          key: [config-map-key] # key1
+```
+
+The above would be translated in an environment variable.
+
+### Load all ConfigMaps in one
+
+ConfigMaps as environment variables need to be imported one by one which can be tedious. To make it easier, all can be load in once,
+
+```yml
+spec:
+  template: ...
+  spec:
+    containers: ...
+      envFrom:
+      - configMapRef:
+        name: [config-map-name] # myapp-configs
+```
+
+Then the values of the ConfigMap would be accessible through environment variables.
+
+### Load ConfigMaps as volumes
+
+Each key would be converted to a file.
+
+```yml
+spect:
+  template: ...
+  spec: ...
+    volumes:
+      - name: [volume-name]
+        configMap:
+          name: [config-map-name] # myapp-configs
+    containers:
+      volumeMounts:
+        - name: [volume-name]
+          mountPath: [path] # /tmp
+```
+
+Secrets
+---------
+{: .-one-column}
+
+### Creating literal secret
+
+```bash
+$ kubectl create secret generic [name-of-secret] 
+--from-literal=[secret-key-1]=[secret-value-1]
+--from-literal=[secret-key-2]=[secret-value-2]
+```
+
+### Creating secret from a file
+
+```bash
+$ kubectl create secret generic [name-of-secret] 
+--from-file=[secret-key-file-name-1]=[file-path-1]
+--from-file=[secret-key-file-name-2]=[file-path-2]
+```
+
+### Creating TLS secret
+
+```bash
+$ kubectl create secret tls tls-secret --cret=[path-to-cert] --key=[path-to-tls.key]
+```
+
+### Reading secrets as env vars
+
+Need to configure the pod as follow,
+
+```yml
+spec:
+  template: ...
+  spec:
+    containers: ...
+    env:
+    - name: [env-variable-name] # MY_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: [secret-name]
+          key: [secret-key]
+```
+
+### Load secrets as volumes
+
+```yml
+spect:
+  template: ...
+  spec: ...
+    volumes:
+      - name: [volume-name]
+        secret:
+          secretName: [secret-name]
+    containers:
+      volumeMounts:
+        - name: [volume-name]
+          mountPath: [path] # /tmp
+          readOnly: true
+```
+
+Miscellaneous
+---------
+{: .-one-column}
 
 ### Kubectl config for multiple clusters
 
@@ -152,7 +375,8 @@ Then go to the url and past the token.
 
 More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
-### Reference
+## Reference
+{: .-one-column}
 
 - [https://github.com/kubernetes/examples](https://github.com/kubernetes/examples)
 - [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
