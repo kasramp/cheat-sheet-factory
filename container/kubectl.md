@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-10-15
+updated: 2020-10-16
 keywords:
     - "kubectl"
     - "Kubernetes kubectl"
@@ -122,6 +122,98 @@ There are multiple types of volumes:
 - `cloud` - data is stored outside of the Kubernetes network.
 
 A persistentVolume can be set up manually (static) or dynamically using StorageClass (SC).
+
+### ConfigMap
+
+#### Creating ConfigMaps
+
+##### Creating ConfigMap by defining key/value directly (literal)
+
+```bash
+$ kubectl create configmap [map-name]
+--from-literal=key1=value1
+--from-literal=key2=value2
+```
+
+##### Creating ConfigMap with manifesto file
+
+Config map manifesto example,
+
+```yml
+appVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-configs
+  labels:
+    app: myapp-configs
+data:
+  key1: "value1"
+  key2: "value2"
+  specific.path.key: "value3"
+```
+
+##### Creating ConfigMap using config file
+
+Config file example,
+
+```
+key1=value1
+key2=value2
+specific.path.key=value3
+```
+
+Then save it in a file `example.config` and apply it,
+
+```bash
+$ kubectl create configmap [map-name] --from-file=~/example.config
+```
+
+The output would be,
+
+```yml
+appVersion: v1
+kind: ConfigMap
+data:
+  example.config: |-
+    key1=value1
+    key2=value2
+    specific.path.key=value3
+```
+
+It puts the configuration as a blob with the key being the filename.
+
+##### Creating ConfigMap using environment file
+
+Environment file example,
+
+```
+key1=value1
+key2=value2
+specific.path.key=value3
+```
+
+Then save it in a file `example.env` and apply it,
+
+```bash
+$ kubectl create configmap [map-name] --from-env-file=~/example.env
+```
+
+The output would be,
+
+```yml
+appVersion: v1
+kind: ConfigMap
+data:
+  key1=value1
+  key2=value2
+  specific.path.key=value3
+```
+
+#### Using ConfigMaps
+
+```bash
+$ kubectl get cm [map-name] -o yaml
+```
 
 ### Kubectl config for multiple clusters
 
