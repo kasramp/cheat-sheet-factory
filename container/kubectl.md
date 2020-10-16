@@ -15,7 +15,7 @@ Shortcuts
 ---------
 {: .-one-column}
 
-# Basics
+## Basics
 
 Kubernetes is a container orchestration service. It has a master node which we can communicate with it through `kubectl`.
 
@@ -33,6 +33,7 @@ Master node components consist of:
 - `Controller Manager` - to manage request. Whenever a request comes-in, the manager control and schedules it
 - `Scheduler` - determines when a pod comes to live or goes a way
 - `API server` - a set of rest APIs to interact with Kubernetes master node, usually through `kubectl`. It accepts `YAML` or `JSON`
+
 To have pods up and running we need to have `deployment` scripts which effectively are blueprint of pods. To have each pod communicate with each other or even expose out of the cluster, we need to have Kubernetes `service` to manage that.
 
 A Kubernetes node consists of the followings:
@@ -57,7 +58,7 @@ Different Kuberentes service types:
 - `LoadBalancer` - sits in front of nodes and provisions an external IP to act as a load balancer for the service (allows external access to a service with `localhost` and custom port set in service yaml file)
 - `ExternalName` - map a service to a DNS name
  
-# Handy kubectl commands
+## Handy kubectl commands
 
 | `kubectl version` | Get version |
 | `kubectl cluster-info` | Get information about the cluster |
@@ -103,13 +104,13 @@ Different Kuberentes service types:
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 
-## Port forwarding
+### Port forwarding
 
 | `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
 | `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
 
-# Volumes
+## Volumes
 
 There are multiple types of volumes:
 
@@ -215,13 +216,68 @@ data:
   specific.path.key=value3
 ```
 
-#### Using ConfigMaps
+### Reading ConfigMaps
+
+#### Yaml output
 
 ```bash
 $ kubectl get cm [map-name] -o yaml
 ```
 
-# Kubectl config for multiple clusters
+#### As env vars
+
+Need to configure the pod as follow,
+
+```yml
+spec:
+  template: ...
+  spec:
+    containers: ...
+    env:
+    - name: [env-variable-name] # KEY1
+      valueFrom:
+        configMapKeyRef:
+          name: [config-map-name] # myapp-configs
+          key: [config-map-key] # key1
+```
+
+The above would be translated in an environment variable.
+
+#### Load all ConfigMaps in one
+
+ConfigMaps as environment variables need to be imported one by one which can be tedious. To make it easier, all can be load in once,
+
+```yml
+spec:
+  template: ...
+  spec:
+    containers: ...
+      envFrom:
+      - configMapRef:
+        name: [config-map-name] # myapp-configs
+```
+
+Then the values of the ConfigMap would be accessible through environment variables.
+
+#### Load ConfigMaps as volume
+
+Each key would be converted to a file.
+
+```yml
+spect:
+  template: ...
+  spec: ...
+    volumes:
+      - name: [volume-name]
+        configMap:
+          name: [config-map-name] # myapp-configs
+    containerS:
+      volumeMounts:
+        - name: [volume-name]
+          mountPath: [path] # /tmp
+```
+
+## Kubectl config for multiple clusters
 
 ```bash
 export KUBECONFIG='stage-cluster.kubeconfig:prod-cluster.kubeconfig' # export kube configs for multiple clusters
@@ -231,12 +287,12 @@ kubectl config use-context stage-cluster # switch to `stage-cluster` context
 kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ```
 
-# Run Kubernetes in local
+## Run Kubernetes in local
 
 - `minikube`
 - `docker desktop` (is only available for mac and Windows)
 
-# Enable Web UI (dashboard)
+## Enable Web UI (dashboard)
 
 To have an overview and a nice UI for K8s, you can enable Web UI dashboard as following,
 
@@ -250,7 +306,7 @@ Then go to the url and past the token.
 
 More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
-# Reference
+## Reference
 
 - [https://github.com/kubernetes/examples](https://github.com/kubernetes/examples)
 - [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
