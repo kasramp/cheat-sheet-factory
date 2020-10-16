@@ -115,7 +115,7 @@ Volumes
 ---------
 {: .-one-column}
 
-## Basics
+### Basics
 
 There are multiple types of volumes:
 
@@ -128,9 +128,11 @@ There are multiple types of volumes:
 
 A persistentVolume can be set up manually (static) or dynamically using StorageClass (SC).
 
-## ConfigMap
+ConfigMap
+---------
+{: .-one-column}
 
-### Creating ConfigMaps
+### ConfigMaps Basics
 
 There are **four** ways to create a ConfigMap
 
@@ -139,7 +141,7 @@ There are **four** ways to create a ConfigMap
 - `config file`
 - `env file`
 
-#### Creating ConfigMap by defining key/value directly (literal)
+### Creating ConfigMap by defining key/value directly (literal)
 
 ```bash
 $ kubectl create configmap [map-name]
@@ -147,7 +149,7 @@ $ kubectl create configmap [map-name]
 --from-literal=key2=value2
 ```
 
-#### Creating ConfigMap with manifesto file
+### Creating ConfigMap with manifesto file
 
 Config map manifesto example,
 
@@ -164,7 +166,7 @@ data:
   specific.path.key: "value3"
 ```
 
-#### Creating ConfigMap using config file
+### Creating ConfigMap using config file
 
 Config file example,
 
@@ -194,7 +196,7 @@ data:
 
 It puts the configuration as a blob with the key being the filename.
 
-#### Creating ConfigMap using environment file
+### Creating ConfigMap using environment file
 
 Environment file example,
 
@@ -221,15 +223,13 @@ data:
   specific.path.key=value3
 ```
 
-### Reading ConfigMaps
-
-#### Yaml output
+### Reading ConfigMaps as Yaml
 
 ```bash
 $ kubectl get cm [map-name] -o yaml
 ```
 
-#### As env vars
+### Reading ConfigMaps as env vars
 
 Need to configure the pod as follow,
 
@@ -248,7 +248,7 @@ spec:
 
 The above would be translated in an environment variable.
 
-#### Load all ConfigMaps in one
+### Load all ConfigMaps in one
 
 ConfigMaps as environment variables need to be imported one by one which can be tedious. To make it easier, all can be load in once,
 
@@ -264,7 +264,7 @@ spec:
 
 Then the values of the ConfigMap would be accessible through environment variables.
 
-#### Load ConfigMaps as volume
+### Load ConfigMaps as volumes
 
 Each key would be converted to a file.
 
