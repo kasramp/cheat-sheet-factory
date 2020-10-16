@@ -276,7 +276,7 @@ spect:
       - name: [volume-name]
         configMap:
           name: [config-map-name] # myapp-configs
-    containerS:
+    containers:
       volumeMounts:
         - name: [volume-name]
           mountPath: [path] # /tmp
