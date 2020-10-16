@@ -111,8 +111,11 @@ Commands
 | `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
 | `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
+Volumes
+---------
+{: .-one-column}
 
-## Volumes
+## Basics
 
 There are multiple types of volumes:
 
@@ -279,7 +282,11 @@ spect:
           mountPath: [path] # /tmp
 ```
 
-## Kubectl config for multiple clusters
+Miscellaneous
+---------
+{: .-one-column}
+
+### Kubectl config for multiple clusters
 
 ```bash
 export KUBECONFIG='stage-cluster.kubeconfig:prod-cluster.kubeconfig' # export kube configs for multiple clusters
@@ -289,12 +296,12 @@ kubectl config use-context stage-cluster # switch to `stage-cluster` context
 kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ```
 
-## Run Kubernetes in local
+### Run Kubernetes in local
 
 - `minikube`
 - `docker desktop` (is only available for mac and Windows)
 
-## Enable Web UI (dashboard)
+### Enable Web UI (dashboard)
 
 To have an overview and a nice UI for K8s, you can enable Web UI dashboard as following,
 
@@ -309,6 +316,7 @@ Then go to the url and past the token.
 More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 ## Reference
+{: .-one-column}
 
 - [https://github.com/kubernetes/examples](https://github.com/kubernetes/examples)
 - [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
