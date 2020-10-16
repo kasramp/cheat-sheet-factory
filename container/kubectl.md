@@ -15,7 +15,7 @@ Shortcuts
 ---------
 {: .-one-column}
 
-### Basics
+# Basics
 
 Kubernetes is a container orchestration service. It has a master node which we can communicate with it through `kubectl`.
 
@@ -33,7 +33,6 @@ Master node components consist of:
 - `Controller Manager` - to manage request. Whenever a request comes-in, the manager control and schedules it
 - `Scheduler` - determines when a pod comes to live or goes a way
 - `API server` - a set of rest APIs to interact with Kubernetes master node, usually through `kubectl`. It accepts `YAML` or `JSON`
-
 To have pods up and running we need to have `deployment` scripts which effectively are blueprint of pods. To have each pod communicate with each other or even expose out of the cluster, we need to have Kubernetes `service` to manage that.
 
 A Kubernetes node consists of the followings:
@@ -58,7 +57,7 @@ Different Kuberentes service types:
 - `LoadBalancer` - sits in front of nodes and provisions an external IP to act as a load balancer for the service (allows external access to a service with `localhost` and custom port set in service yaml file)
 - `ExternalName` - map a service to a DNS name
  
-### Handy kubectl commands
+# Handy kubectl commands
 
 | `kubectl version` | Get version |
 | `kubectl cluster-info` | Get information about the cluster |
@@ -104,13 +103,13 @@ Different Kuberentes service types:
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 
-### Port forwarding
+## Port forwarding
 
 | `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
 | `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
 
-### Volumes
+# Volumes
 
 There are multiple types of volumes:
 
@@ -123,11 +122,18 @@ There are multiple types of volumes:
 
 A persistentVolume can be set up manually (static) or dynamically using StorageClass (SC).
 
-### ConfigMap
+## ConfigMap
 
-#### Creating ConfigMaps
+### Creating ConfigMaps
 
-##### Creating ConfigMap by defining key/value directly (literal)
+There are **four** ways to create a ConfigMap
+
+- `literal`
+- `manifesto`
+- `config file`
+- `env file`
+
+#### Creating ConfigMap by defining key/value directly (literal)
 
 ```bash
 $ kubectl create configmap [map-name]
@@ -135,7 +141,7 @@ $ kubectl create configmap [map-name]
 --from-literal=key2=value2
 ```
 
-##### Creating ConfigMap with manifesto file
+#### Creating ConfigMap with manifesto file
 
 Config map manifesto example,
 
@@ -152,7 +158,7 @@ data:
   specific.path.key: "value3"
 ```
 
-##### Creating ConfigMap using config file
+#### Creating ConfigMap using config file
 
 Config file example,
 
@@ -182,7 +188,7 @@ data:
 
 It puts the configuration as a blob with the key being the filename.
 
-##### Creating ConfigMap using environment file
+#### Creating ConfigMap using environment file
 
 Environment file example,
 
@@ -215,7 +221,7 @@ data:
 $ kubectl get cm [map-name] -o yaml
 ```
 
-### Kubectl config for multiple clusters
+# Kubectl config for multiple clusters
 
 ```bash
 export KUBECONFIG='stage-cluster.kubeconfig:prod-cluster.kubeconfig' # export kube configs for multiple clusters
@@ -225,12 +231,12 @@ kubectl config use-context stage-cluster # switch to `stage-cluster` context
 kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ```
 
-### Run Kubernetes in local
+# Run Kubernetes in local
 
 - `minikube`
 - `docker desktop` (is only available for mac and Windows)
 
-### Enable Web UI (dashboard)
+# Enable Web UI (dashboard)
 
 To have an overview and a nice UI for K8s, you can enable Web UI dashboard as following,
 
@@ -244,7 +250,7 @@ Then go to the url and past the token.
 
 More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
-### Reference
+# Reference
 
 - [https://github.com/kubernetes/examples](https://github.com/kubernetes/examples)
 - [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
