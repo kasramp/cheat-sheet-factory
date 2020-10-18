@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-10-16
+updated: 2020-10-18
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -72,6 +72,7 @@ Commands
 | `kubectl get pods -n [namespace]` | List pods |
 | `kubectl get pods -o wide -n [namespace]` | List pods with nodes information |
 | `kubectl logs -n [namespace] [podname] -f` | Tail logs for a pod in a namespace |
+| `kubectl logs -n [namespace] [podname] -c [containername] -f` | Tail logs for a container of a pod in a namespace |
 | `kubectl logs -n [namespace] [podname] -p` | Get logs for a previous deployment |
 | `kubectl config view` | Show configurations |
 | `kubectl config view` | Show configurations |
@@ -104,6 +105,7 @@ Commands
 | `kubectl -n [namespace] get secret --export -o yaml [secretname] > ~/secret.txt` | Export a secret |
 | `kubectl -n [namespace] create secret generic [secretname] --from-file=~/secret.txt` | Create a secret |
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
+| `kubectl -n [namespace] describe pod [podname] -o yaml` | Describe a pod in Yaml |
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 
 ### Port forwarding
