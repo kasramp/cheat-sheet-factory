@@ -1,15 +1,15 @@
 ---
-title: javascript
-category: Javascript
+title: JavaScript
+category: JavaScript
 layout: 2017/sheet
 tags: [Featured]
 updated: 2020-05-17
 keywords:
-  - "javascript"
-  - "javascript cheat sheet"
+  - "JavaScript"
+  - "JavaScript cheat sheet"
 prism_languages: [javascript]
 intro: |
-  Javascript cheat sheet
+  JavaScript cheat sheet
 ---
 
 ## Shortcuts
