@@ -1,5 +1,5 @@
 ---
-title: postgreSQL
+title: PostgreSQL
 category: SQL
 layout: 2017/sheet
 updated: 2019-09-30

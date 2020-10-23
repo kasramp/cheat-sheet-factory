@@ -1,5 +1,5 @@
 ---
-title: FreeBSD getting started basics
+title: FreeBSD
 category: FreeBSD
 layout: 2017/sheet
 updated: 2019-01-02
@@ -7,7 +7,7 @@ keywords:
     - "freebsd"
     - "freebsd basics"
 intro: |
-    freebsd getting started basics
+    FreeBSD getting started basics
 ---
 
 Shortcuts

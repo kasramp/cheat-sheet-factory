@@ -1,5 +1,5 @@
 ---
-title: Lynx Shortcuts
+title: Lynx
 category: Linux
 layout: 2017/sheet
 updated: 2020-04-10
@@ -8,7 +8,7 @@ keywords:
     - "lynx key bindings"
 prism_languages: [bash]
 intro: |
-  List of lynx key bindings 
+  List of Lynx key bindings 
 ---
 
 Shortcuts

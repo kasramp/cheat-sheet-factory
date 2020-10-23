@@ -1,5 +1,5 @@
 ---
-title: git
+title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
@@ -8,7 +8,7 @@ keywords:
   - "git"
   - "git cheat sheet"
 intro: |
-  git cheat sheet
+  GIT cheat sheet
 ---
 
 ## Shortcuts

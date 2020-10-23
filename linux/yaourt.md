@@ -1,5 +1,5 @@
 ---
-title: yaourt
+title: Yaourt
 category: Linux
 layout: 2017/sheet
 updated: 2020-07-09

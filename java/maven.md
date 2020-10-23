@@ -1,5 +1,5 @@
 ---
-title: maven
+title: Maven
 category: Java
 layout: 2017/sheet
 updated: 2019-04-17

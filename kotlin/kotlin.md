@@ -1,5 +1,5 @@
 ---
-title: kotlin
+title: Kotlin
 category: Kotlin
 layout: 2017/sheet
 tags: [Featured]

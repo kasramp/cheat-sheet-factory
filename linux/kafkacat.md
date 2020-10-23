@@ -1,5 +1,5 @@
 ---
-title: kafkacat
+title: Kafkacat
 category: Linux
 layout: 2017/sheet
 updated: 2020-03-03

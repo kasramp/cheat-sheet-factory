@@ -1,5 +1,5 @@
 ---
-title: heroku
+title: Heroku
 category: SaaS
 layout: 2017/sheet
 updated: 2019-01-02

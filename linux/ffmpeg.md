@@ -1,5 +1,5 @@
 ---
-title: ffmpeg
+title: FFmpeg
 category: Linux
 layout: 2017/sheet
 updated: 2020-10-09
