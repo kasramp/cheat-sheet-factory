@@ -1,5 +1,5 @@
 ---
-title: junit4
+title: JUnit 4
 category: Java
 layout: 2017/sheet
 updated: 2019-03-17

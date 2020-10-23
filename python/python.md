@@ -1,5 +1,5 @@
 ---
-title: python
+title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]

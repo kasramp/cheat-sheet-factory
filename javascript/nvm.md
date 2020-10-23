@@ -1,5 +1,5 @@
 ---
-title: nvm
+title: NVM
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]

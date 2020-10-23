@@ -1,5 +1,5 @@
 ---
-title: npm
+title: NPM
 category: Javascript
 layout: 2017/sheet
 tags: [Featured]

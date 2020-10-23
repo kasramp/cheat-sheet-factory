@@ -1,5 +1,5 @@
 ---
-title: tmux
+title: Tmux
 category: Linux
 layout: 2017/sheet
 updated: 2019-09-30

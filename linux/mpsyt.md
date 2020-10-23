@@ -1,5 +1,5 @@
 ---
-title: mpsyt
+title: Mpsyt
 category: Linux
 layout: 2017/sheet
 updated: 2018-11-15

@@ -1,5 +1,5 @@
 ---
-title: w3m Shortcuts
+title: W3m Shortcuts
 category: Linux
 layout: 2017/sheet
 updated: 2019-03-17
@@ -8,7 +8,7 @@ keywords:
     - "w3m key bindings"
 prism_languages: [bash]
 intro: |
-  List of w3m key bindings 
+  List of W3m key bindings 
 ---
 
 Shortcuts

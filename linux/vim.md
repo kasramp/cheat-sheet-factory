@@ -1,5 +1,5 @@
 ---
-title: vim
+title: Vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]

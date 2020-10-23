@@ -1,5 +1,5 @@
 ---
-title: kafka connect rest
+title: Kafka connect rest
 category: Kafka
 layout: 2017/sheet
 updated: 2019-01-29
