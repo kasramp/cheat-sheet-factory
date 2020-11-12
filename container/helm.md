@@ -28,6 +28,11 @@ Shortcuts
 | `helm status [release/service name]` | Show the status |
 | `helm get all [release/service name]` | Get all details |
 | `helm uninstall [release/service name]` | Uninstall a chart |
+| `helm get manifesti [release/service name]` | Shows K8s objects created by the chart | 
+
+### Notes
+
+- `charts` directory can host sub/child charts.
 
 ### Reference
 
