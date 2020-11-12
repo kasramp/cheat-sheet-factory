@@ -2,7 +2,7 @@
 title: Helm
 category: Container
 layout: 2017/sheet
-updated: 2019-10-10
+updated: 2020-11-12
 keywords:
     - "helm"
     - "helm package manager"
@@ -23,7 +23,11 @@ Shortcuts
 | `helm rollback --tiller-namespace [namespace] [project name] [revision]` | Rollback an app in a namespace to a specific version|
 | `helmfile --selector app=[name] sync --args --recreate-pods` | Pod recreation for an app, with downtime |
 | `helmfile --selector app=[name] sync` | Restart an app without down time, hot swap |
-
+| `helm upgrade --namespace=[namespace] --wait --install [release/service name] -i [chart name]` | Upgrade a release and waiting til deployment is done |
+| `helm install [release/service name] -i [chart name]` | Install a release |
+| `helm status [release/service name]` | Show the status |
+| `helm get all [release/service name]` | Get all details |
+| `helm uninstall [release/service name]` | Uninstall a chart |
 
 ### Reference
 
