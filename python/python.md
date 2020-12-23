@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-05-01
+updated: 2020-12-23
 keywords:
     - "python"
     - "python cheat sheet"
@@ -18,6 +18,17 @@ Shortcuts
 
 ## Basics
 
+### ABC Basics
+
+```python
+name = input() # gets input from a user
+len("Hello") # prints a string length
+str(20) # converts number to string
+int("20") # converts string to number
+float("20.5") # converts string to float
+```
++ `None` datatype is equal to `null` in Java.
+
 ### Import
 
 ```python
@@ -25,6 +36,28 @@ Shortcuts
 
 import gi # import a package
 from games import NumberGuessing # import a class from 'games' package 
+```
+
+### Multi Import
+
+```python
+import random, sys, os, math
+```
+
+### Different Import approaches
+
+```python
+import random
+
+random.randint(1, 20)
+```
+
+or
+
+```python
+from random import *
+
+randin(1, 200)
 ```
 
 ### Print
@@ -70,6 +103,156 @@ a_str = "Hello {firstName} {lastName}. Your age is {age}"
 print(a_str.format(**a_dict)) # print 'Hello Mike Miller. Your age is 30'
 ```
 
+### String manipulation
+
+```python
+st = '''
+Here goes
+multiple line
+of a string
+'''
+
+print(r 'John\'s house') # raw prints John\'s house instead of John's house
+
+# Multiline comment
+"""
+Some comments
+to add here
+"""
+
+hello_str = "Hello World"
+
+hello_str[0:5] # sub string, returns 'Hello'
+
+"Hello" in hello_str # search in a string, returns true
+hello_str.upper() # to uppercase
+hello_str.lower() # to lowercase
+hello_str.isupper() # check whether a string is in uppercase
+hello_str.islower() # check whether a string is in lowercase
+hello_str.isalpha() # whether a string is all alphabet and is not blank
+hello_str.isalnum() # whether a string is alphanumeric and is not blank
+hello_str.isdecimal() # whether a string is only consists of number and is not blank
+hello_str.isspace() # whether a string only consists of whitespaces
+hello_str.istitle() # whether a string has first character of each word in uppercase like 'Hello World'
+hello_str.startswith("Hello") # whether a string starts with a certain substring
+hello_str.endswith("World") # whether a string ends with a certain substring
+hello_str.split() # split a string to a list base on space ['Hello', 'World'], also can pass separator as argument .split("\t")
+", ".join(['Hello', 'World']) # converts a list to a string and use ',' as delimiter
+hello_str.strip() # removes all whitespaces from left and right sides of a string
+hello_str.lstrip() # removes all whitespaces from left side of a string
+hello_str.rstrip() # removes all whitespaces from right side of a string
+
+# clipboard 
+import pyperclip
+pyperclip.copy('Hello world!')
+pyperclip.paste()
+```
+
+### Pattern matching
+
+```python
+import re
+regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # match number in 123-456-7890 format
+m = regex.search('My number is 123-567-4242.')
+print(m.group()) # prints 123-567-4242
+re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)') # separating area code
+m = regex.search('My number is 123-567-4242.')
+print(m.group(1)) # 123
+print(m.group(2)) # 567-4242
+print(m.group()) # 123-567-4242
+regex = re.compile(r'(\(\d\d\d\)) (\d\d\d-\d\d\d\d)') # parentheses support
+m = regex.search('My number is (021) 123-4567')
+print(m.group(1)) # (021)
+print(m.group(2)) # 123-4567
+print(m.group()) # (021) 123-4567
+regex = re.compile(r'John|Jacob') # either or matches the first only
+m = regex.search('John and Jacob are friends')
+print(m.group()) # John
+lst = regex.findall('John and Jacob are friends') # find all occurrences
+print(lst) # ['John', 'Jacob']
+regex = re.compile(r'John (Wick|Anderson|Smith)') # match first should be John and (Wick or Anderson or Smith)
+m = regex.search('Johns are friends, especially John Wick and John Smith')
+print(m.group) # prints John wick
+batRegex = re.compile(r'Bat(wo)?man') # optional either should match Batman or Batwoman `(wo)?` indicates `wo` is optional
+m = batRegex.search('The Adventures of Batman')
+print(m.group()) # prints Batman
+
+batRegex = re.compile(r'Bat(wo)*man') # optional either should match Batman or Batwoman or Batwowowoman `(wo)*` 
+# indicates either zero or more instance `wo` is matching
+m = batRegex.search('The Adventures of Batman')
+print(m.group()) # prints Batman
+m = batRegex.search('The Adventures of Batwoman')
+print(m.group()) # prints Batwoman
+m = batRegex.search('The Adventures of Batwowoman')
+print(m.group()) # prints Batwowoman
+m = batRegex.search('The Adventures of Batwowowoman')
+print(m.group()) # prints Batwowowoman
+
+batRegex = re.compile(r'Bat(wo)+man') # optional either should match Batwoman or Batwowowoman `(wo)+` 
+# but no Batman. Indicates at least one instance `wo` is matching
+m = batRegex.search('The Adventures of Batman') # matches nothing
+m = batRegex.search('The Adventures of Batwoman')
+print(m.group()) # prints Batwoman
+m = batRegex.search('The Adventures of Batwowoman')
+print(m.group()) # prints Batwowoman
+m = batRegex.search('The Adventures of Batwowowoman')
+print(m.group()) # prints Batwowowoman
+
+regex = re.compile(r'(Ha){3}') # repetition match, indicates `Ha` strings repeated EXACTLY three times
+m = regex.search('HaHa') # matches nothing
+m = regex.search('HaHaHa')
+print(m.group()) # prints HaHaHa
+m = regex.search('HaHaHaHa') # matches nothing
+
+regex = re.compile(r'(Ha){3,5}') # repetition match, indicates `Ha` string repeated between three to five times
+m = regex.search('HaHa') # matches nothing
+m = regex.search('HaHaHa')
+print(m.group()) # prints HaHaHa
+m = regex.search('HaHaHaHa')
+print(m.group()) # prints HaHaHaHa which is greedy
+# none greedy
+regex = re.compile(r'(Ha){3,5}?')
+m = regex.search('HaHaHaHa')
+print(m.group()) # prints HaHaHa which is none greedy
+
+# character classes
+# \d Any numeric digit from 0 to 9
+# \D Any character that is not a numeric digit from 0 to 9 
+# \w Any letter, numeric digit, or the underscore character (word)
+# \W Any character that is not a letter, numeric digit, or the underscore character
+# \s Any space, tab, or newline character. (Think of this as matching “space” characters.)
+# \S Any character that is not a space, tab, or newline.
+
+# custom character class
+regex = re.compile(r'[2468]') # match only odd number
+m = regex.findall('12 3456 7890') # matches ['2', '4', '6', '8']
+
+regex = re.compile(r'[^02468]') # not condition which essentially matches odd numbers and any other characters like space
+
+regex = re.compile(r'^hello') # means hello should be at the begining
+m = regex.search('hello world') # returns hello
+m = regex.search('world! hello') # returns nothing
+regex = re.compile(r'hello$') # means hello should be at the end
+m = regex.search('hello world') # returns nothing
+m = regex.search('world! hello') # returns hello
+
+atRegex = re.compile(r'.at') # matches anything at has at in it
+atRegex.findall('The cat in the hat sat on the flat mat.') # returns ['cat', 'hat', 'sat', 'lat', 'mat']
+
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)') # match anything started with First Name: and then anything 
+# and then followed by Last Name: anything
+m = nameRegex.search('First Name: Al Last Name: Sweigart')
+print(m.group(0)) # prints Al
+print(m.group(1)) # prints Sweigart
+
+noNewlineRegex = re.compile('.*') # newline match
+
+regex = re.compile(r'hello', re.I) # ignore case
+
+namesRegex = re.compile(r'Agent \w+') # string substitution
+namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.') # 'CENSORED gave the secret documents to CENSORED.'
+```
+
 ### List
 
 ```python
@@ -98,6 +281,18 @@ lst.append("Six") # append a new element to a list
 two = lst.pop(1) # get and remove "Two" from the list
 
 lst.pop(0) # removes element "One" from the list
+
+lst = ['Hello', 'Hallo', 'Howdy']
+lst1 = ['A', 'B', 'C']
+del lst[0] # remove 'Hello'
+lst.remove('Howdy')
+new_lst = lst + lst1 # concat list
+lst = lst + "XXX"
+'Howdy' in lst # search for an element in list
+lst1.sort() # sort a list
+import copy
+lst_copy = copy.copy(lst) # create a copy with different reference
+lst_copy_deep = copy.deepcopy(lst) # create a deep copy which supports inner lists and objects with different references
 ```
 
 ### Dictionary
@@ -139,6 +334,18 @@ for element in a_dict.copy().keys():
     if isinstance(element, str):
         a_dict.pop(element)
         str_lst.append(element)
+```
+
+### keys(), values(), items(), get(), setdefault() in a dictionary
+
+```python
+d = { "first_name": "John", "last_name": "Wick", "age": 44}
+
+d.keys() # return first_name, last_name, age
+d.values() # return John, Wick, 44
+d.items() # return a dict_items of tuple ([('first_name', 'John'), ('last_name', 'Wick'), ('age', 44)])
+d.get("first_name") # return John
+d.setdefault("first_name", "David") # tries to get the value of first_name key, if doesn't exist set the default
 ```
 
 ### Conditions
@@ -403,3 +610,8 @@ class Test(object):
 | `pip install --user youtube-dl` | Installs Youtube-dl in user space |
 | `pip install --user --upgrade youtube-dl` | Updates Youtube-dl |
 | `pip uninstall youtube-dl` | Removes Youtube-dl |
+
+
+### Sources
+
++ [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
