@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-12-23
+updated: 2020-12-24
 keywords:
     - "python"
     - "python cheat sheet"
@@ -14,7 +14,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-two-column}
+{: .-one-column}
 
 ## Basics
 
@@ -574,22 +574,77 @@ $ pip install [package name] --user # install per user
 $ pip uninstall [package name] # remove a package
 ```
 
-### Reading file line by line
+### Working with files
+
+#### OS path
 
 ```python
+import os
+os.path.join("home", "John", "Desktop") # returns a joined path of /home/John/Desktop
+os.getcwd() # get current directy
+os.chdir("/usr/bin") # change directory
+os.path.basename("/home/john/notes.txt") # gets filename `notes.txt`
+os.path.dirname("/home/john/notes.txt") # gets path excluding the filename `/home/john`
+os.path.split("/home/john/notes.txt") # splits the path to a list of [filename, file path]
+os.path.getsize("notes.txt") # get file size in byte
+os.listdir(os.getcwd()) # ls of the current directory
+os.path.exists(path) # checks a path exists
+os.path.isdir(path) 
+os.path.isfile(path)
+```
+
+#### Open/Read/Write file
+
+```python
+# read file
+file = open("notes.txt")
+content = file.read()
+file.close()
+
+# read line by lines
+file = open("notes.txt")
+content = file.readlines()
+for line in content:
+    print(line)
+file.close()
+
+# alternative reading file line by line
+
 with open('file.txt') as f:
     lines = f.readlines()
 for line in lines:
     print(line)
 f.close()
-```
 
-### Write to file
+# write to file
+file = open("notes.txt", "w")
+file.write("Something") # it overwrites all the content
+file.close()
 
-```python
+# alternative write to file
 o = open("file.txt", "a")
 o.write("{colum1}, {column2}, {column3}\n".format(column1="A", column2="B", column3="C"))
 o.close()
+
+# append to file
+file = open("notes.txt", "a")
+file.write("Append") # it appends to the current file and not overwriting the content
+file.close()
+```
+
+#### Shelve configuration files
+
+```python
+import shelve
+
+sfile = shelve.open('config')
+sfile['key'] = ['v1', 'v2', 'v3']
+sfile.close()
+
+list(sfile.keys()) # returns `key`
+list(sfile.values()) # returns `['v1', 'v2', 'v3']`
+sfile.get('key') # returns `['v1', 'v2', 'v3']`
+sfile.pop('key') # returns `['v1', 'v2', 'v3']` and remove the entery from the file
 ```
 
 ### Difference between `class Name:` and `class Name(object):`
