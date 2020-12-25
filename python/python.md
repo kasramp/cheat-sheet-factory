@@ -740,6 +740,62 @@ logging.disable(logging.DEBUG) # disable debug log
 | `pip uninstall youtube-dl` | Removes Youtube-dl |
 
 
+### Scaffold a project with pip
+
++ Install `virtualenv`
+
+```bash
+$ python3 -m pip install --user virtualenv
+```
+
++ Create project directory
+
+```bash
+$ mkdir myproject && cd myproject
+```
+
++ Create `virtualenv`
+
+```bash
+$ python3 -m venv env
+```
+
++ Activate `virtualenv`
+
+```bash
+$ source env/bin/activate
+```
+
++ Ensure `virtualenv` is working
+
+```bash
+$ which python # should point to a virtualenv path
+```
+
++ Install packages
+
+```bash
+$ pip3 install [package name] # e.g., pip3 install python-socketio
+```
+
++ Save installed packages to `requirements.txt` file
+
+```bash
+$ pip3 freeze > requirements.txt
+```
+
++ Install all packages from requirements.txt
+
+```bash
+$ pip3 install -r requirements.txt
+```
+
++ Leave `virtualenv`
+
+```bash
+$ deactivate
+```
+
 ### Sources
 
 + [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
