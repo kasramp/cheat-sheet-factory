@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-12-24
+updated: 2020-12-25
 keywords:
     - "python"
     - "python cheat sheet"
@@ -14,7 +14,7 @@ intro: |
 
 Shortcuts
 ---------
-{: .-one-column}
+{: .-two-column}
 
 ## Basics
 
@@ -647,6 +647,54 @@ sfile.get('key') # returns `['v1', 'v2', 'v3']`
 sfile.pop('key') # returns `['v1', 'v2', 'v3']` and remove the entery from the file
 ```
 
+#### Copy, move, delete, listing files
+
+```python
+import shutil
+import os
+
+shutil.copy("source", "target") # copy a file
+shutil.copytree("source", "target") # copy a directory recursive with all files and sub-directories
+shutil.move("source", "target")
+os.unlink("file") # permanently deletes a file
+os.rmdir("directory") # deletes an empty directory
+shutil.rmtree("directory") # deletes an entire directory with its contents
+
+# sending the file to trash
+import send2trash
+send2trash.send2trash("file")
+
+# walking path
+for directory_name, sub_directories, files in os.walk(os.getcwd()):
+    print("Current directory" + directory_name)
+    for sub_directory in sub_directories:
+        print("Sub directory of " + directory_name + " is : " + sub_directory)
+    for file in files:
+        print(directory_name + "/" + sub_directory + "/" + file)
+```
+
+#### Zip files
+
+```python
+import zipfile
+
+# read content of a zip file
+file = zipfile.ZipFile("test.zip")
+file.namelist()
+file.close()
+
+# extract zip file contents
+file = zipfile.ZipFile("z.zip")
+file.extractall()
+file.close()
+
+# creating a zip file
+file = zipfile.ZipFile("z.zip", "w")
+file.write("note.txt", compress_type=zipfile.ZIP_DEFLATED)
+file.write("picture.jpg", compress_type=zipfile.ZIP_DEFLATED)
+file.close()
+```
+
 ### Difference between `class Name:` and `class Name(object):`
 
 ```python
@@ -658,6 +706,31 @@ class Test:
 # supports getters and setter
 class Test(object): 
 
+```
+
+### Exception handling
+
+```python
+try:
+    raise Exception("A test exceptioin") # throw an exception
+except Exception as ex:
+    print(ex) # catches the exception and prints the message
+```
+
+### Logging
+
+```python
+import logging
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+# log to a file
+logging.basicConfig(filename = "prog.log", level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+
+logging.debug("DEBUG LOG")
+logging.info("INFO LOG")
+logging.warn("WARNING LOG")
+logging.error("ERROR LOG")
+logging.critical("FATAL LOG")
+logging.disable(logging.DEBUG) # disable debug log
 ```
 
 ### Working with pip
