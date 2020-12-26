@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-12-25
+updated: 2020-12-26
 keywords:
     - "python"
     - "python cheat sheet"
@@ -731,6 +731,39 @@ logging.warn("WARNING LOG")
 logging.error("ERROR LOG")
 logging.critical("FATAL LOG")
 logging.disable(logging.DEBUG) # disable debug log
+```
+
+### HTTP requests
+
+```python
+import requests
+
+# simple get request
+url = "http://weather-api.madadipouya.com/v1/weather/currentbyip"
+response = requests.get(url)
+if response.ok and response.status_code == 200:
+    json = response.json()
+    print(json['country'])
+
+# get request with param
+url = "http://weather-api.madadipouya.com/v1/weather/currentbyip"
+response = requests.get(url, params = {"fahrenheit": "true"})
+# it would be equal to http://weather-api.madadipouya.com/v1/weather/currentbyip?fahrenheit=true"
+
+# get request with custom headers
+url = "http://weather-api.madadipouya.com/v1/weather/currentbyip"
+response = requests.get(url, params = {"fahrenheit": "true"}, headers = {"user-agent": "my-app/0.0.1"})
+
+# post request (form)
+url = "https://httpbin.org/post"
+response = requests.post(url, data = {"first_name": "John", "last_name": "Wick", "age": 31}, params = {"page_number": 0})
+
+# post request (json)
+import json
+url = "https://httpbin.org/post"
+response = requests.post(url, data = json.dumps({"first_name": "John", "last_name": "Wick", "age": 31}), params = {"page_number": 0}, headers = {"user-agent": "Test"})
+# or added in version 2.4.2
+response = requests.post(url, json = {"first_name": "John", "last_name": "Wick", "age": 31}, params = {"page_number": 0}, headers = {"user-agent": "Test"})
 ```
 
 ### Working with pip
