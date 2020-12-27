@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-12-26
+updated: 2020-12-27
 keywords:
     - "python"
     - "python cheat sheet"
@@ -764,6 +764,59 @@ url = "https://httpbin.org/post"
 response = requests.post(url, data = json.dumps({"first_name": "John", "last_name": "Wick", "age": 31}), params = {"page_number": 0}, headers = {"user-agent": "Test"})
 # or added in version 2.4.2
 response = requests.post(url, json = {"first_name": "John", "last_name": "Wick", "age": 31}, params = {"page_number": 0}, headers = {"user-agent": "Test"})
+```
+
+### Working with CSV
+
+```python
+import csv
+
+file = open("file.csv")
+reader = csv.reader(file)
+content = list(reader) # content of csv file in list
+file.close()
+
+# reading csv line by line
+
+for line in reader:
+    print("line number: " + reader.line_num + " " + line)
+
+# writing to a csv file
+
+file = open("file.csv")
+writer = csv.writer(file)
+writer.writerow(['id', 'first_name', 'last_name'])
+writer.writerow(['1', 'John', 'Wick'])
+file.close()
+
+# custom delimiter
+cv.writer(file, delimiter='\t', lineterminator='\n\n')
+```
+
+### Working with JSON
+
+```python
+import json
+
+# string to json object
+json_string = '{"id": 1, "first_name": "John", "last_name": "Wick"}'
+json_object = json.loads(json_string)
+
+# json object to string
+new_json_string = json.dumps(json_object)
+isinstance(new_json_string, str) # returns true
+```
+
+### Reading terminal arguments
+
+```python
+import sys
+
+if len(sys.argv < 2):
+    print("No argument passed")
+    sys.exit()
+arg1 = sys.argv[1]
+arg_array = sys.argv[1:]
 ```
 
 ### Working with pip
