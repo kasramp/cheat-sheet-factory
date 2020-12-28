@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-12-27
+updated: 2020-12-28
 keywords:
     - "python"
     - "python cheat sheet"
@@ -26,6 +26,8 @@ len("Hello") # prints a string length
 str(20) # converts number to string
 int("20") # converts string to number
 float("20.5") # converts string to float
+round(33.33333, 2) # round a number to two decimal places
+bool("true") # string to boolean
 ```
 + `None` datatype is equal to `null` in Java.
 
@@ -817,6 +819,63 @@ if len(sys.argv < 2):
     sys.exit()
 arg1 = sys.argv[1]
 arg_array = sys.argv[1:]
+```
+
+### Date and Time
+
+```python
+import time
+import datetime
+time.time() # epoch time in seconds
+time.sleep(5) # sleeps for 5 seconds
+
+dt = datetime.datetime.now()
+dt.year
+dt.month
+dt.day
+dt.hour
+dt.minute
+dt.second
+old_dt = datetime.datetime(2000, 12, 27, 22, 10, 30)
+old_dt > dt # return false
+
+duration = datetime.timedelta(days=20, hours=1, minutes=2, seconds=40)
+delta.total_seconds() # returns the duration in seconds
+dt = datetime.datetime.strptime('2015/10/21 16:29:00', '%Y/%m/%d %H:%M:%S') # string to date time
+```
+
+### Multithreading
+
+```python
+import threading
+
+def print_hello_world():
+    print("Hello World!")
+
+def multiple(x, y):
+    print(x*y)
+thread_hello = threading.Thread(target=print_hello_world)
+thread_hello.start()
+thread_multiple = threading.Thread(target=multiple, args = [10, 20])
+thread_multiple.start()
+
+# thread join
+threads = [thread_hello, thread_multiple]
+for thread in threads:
+    thread.join()
+
+# thread pooling
+from concurrent.futures.thread import ThreadPoolExecutor
+thread_pool = ThreadPoolExecutor(5)
+thread_pool.submit(print_hello_world)
+thread_pool.submit(multiple, 10, 20)
+
+# subprocess
+import subprocess
+chromium = subprocess.Popen("chromium-browser") # opens chromium
+subprocess.Popen(["chromium-browser", "youtube.com"]) # subprocess with argument
+chromium.wait() # waits until chromium to close
+chromium.poll() # whether the subprocess is still running
 ```
 
 ### Working with pip
