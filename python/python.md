@@ -3,7 +3,7 @@ title: Python
 category: Python
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-12-28
+updated: 2020-12-29
 keywords:
     - "python"
     - "python cheat sheet"
@@ -876,6 +876,36 @@ chromium = subprocess.Popen("chromium-browser") # opens chromium
 subprocess.Popen(["chromium-browser", "youtube.com"]) # subprocess with argument
 chromium.wait() # waits until chromium to close
 chromium.poll() # whether the subprocess is still running
+```
+
+### Mouse and keyboard control
+
+```python
+import pyautogui
+pyautogui.size() # get screen size
+pyautogui.moveTo(100, 200, duration=0.25) # move a mouse
+pyautogui.position() # mouse position x, y coordinates
+pyautogui.click(button='left') # mouse left click current coordinates
+pyautogui.click(200, 250, button='left') # mouse left click custom coordinates
+pyautogui.click(200, 250, button='right') # mouse right click
+pyautogui.dragTo() # drag and drop
+pyautogui.dragRel() # drag and drop
+pyautogui.scroll(50) # scroll
+im = pyautogui.screenshot() # take screen shot
+
+# click on an icon that we only have image of it
+coordinates = pyautogui.locateOnScreen('submit.png') # pass icon image for getting its coordinates with image recognition (10, 20, 50, 100)
+center = pyautogui.center(coordinates) # get center of the icon (70, 20)
+pyautogui.click(center)
+
+# typing with keyboard
+pyautogui.typewrite("HI")
+pyautogui.typewrite(["Hello", "enter", "shiftleft", "world"]) # prints Hello \n World
+pyautogui.keyDown("shift")
+pyautogui.press("4")
+pyautogui.keyUp("shift")
+pyautogui.hotkey("altleft", "f4") # executing a hotkey
+
 ```
 
 ### Working with pip
