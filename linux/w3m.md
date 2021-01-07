@@ -2,7 +2,7 @@
 title: W3m Shortcuts
 category: Linux
 layout: 2017/sheet
-updated: 2019-03-17
+updated: 2021-01-07
 keywords:
     - "w3m"
     - "w3m key bindings"
@@ -46,6 +46,9 @@ Shortcuts
 | `Esca` | To bookmark |
 | `<>` | Scroll left and right |
 | `o` | Open options/preferences |
+| `[number` | Go to link number |
+| `L`| List all links in page with urls |
+| `ESC-l` | List all links pop up |
 {: .-shortcuts}
 
 ### Misc
