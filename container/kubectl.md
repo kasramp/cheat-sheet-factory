@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2020-10-18
+updated: 2021-04-27
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -356,6 +356,18 @@ kubectl config get-contexts # get list of contexts
 kubectl config current-context # get current context in use
 kubectl config use-context stage-cluster # switch to `stage-cluster` context
 kubectl config use-context prod-cluster # switch to `prod-cluster` context
+```
+
+### Deploying a troubleshooting pod
+
+```bash
+$ kubectl -n [namespace] run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu -- bash
+```
+
+Once exited from the shell, remove the pod.
+
+```bash
+$ kubectl -n [namespace] delete pod my-shell
 ```
 
 ### Run Kubernetes in local
