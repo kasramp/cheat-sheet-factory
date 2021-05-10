@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-10-31
+updated: 2021-05-10
 keywords:
   - "git"
   - "git cheat sheet"
@@ -130,6 +130,13 @@ If needed, have to force push: `git push -f origin master`
 | `git submodule update --init` | Add and update a submodule |
 | `git submodule update --init --recursive` | Add and update recusively, submodule inside submodule |
 | `git submodule update --remote --merge` | Merge submodule |
+
+### Add existing project to Git
+
+- `git remote add origin [repo]`
+- `git remote -v`
+- `git add . && git commit -m "message"`
+- `git push origin master`
 
 ### Reference
 
