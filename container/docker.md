@@ -17,6 +17,7 @@ Shortcuts
 ### Handy Docker commands
 
 | `docker run -it ubuntu sh` | Run a container in interactive mode |
+| `docker exec -it ubuntu sh` | SSH to a running container |
 | `docker image` | Lists all the docker images |
 | `docker rmi --force [image-name]` | Remove a docker container |
 | `docker ps` | Shows running containers |
