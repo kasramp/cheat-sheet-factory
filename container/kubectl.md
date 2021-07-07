@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2021-04-27
+updated: 2021-07-07
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -107,6 +107,12 @@ Commands
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
 | `kubectl -n [namespace] describe pod [podname] -o yaml` | Describe a pod in Yaml |
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
+
+
+### Copying file to/from K8s pods
+
+| `kubectl -n [namespace] cp /tmp/tmp.txt [namespace]/[pod]:/tmp` | Copy from local to a pod |
+| `kubectl -n [namespace] cp [namespace]/[pod]:/tmp/tmp.txt /tmp` | Copy from a pod to local |
 
 ### Port forwarding
 
