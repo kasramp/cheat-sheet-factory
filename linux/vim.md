@@ -3,7 +3,7 @@ title: Vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-12-08
+updated: 2021-07-20
 keywords:
     - "vim"
     - "vim cheat sheet"
@@ -95,6 +95,10 @@ Moving to *right*, *left*, *up*, and *down*
 
 | `%` | Move to the matching bracket or parentheses |
 
+### Moving *back* and *forth* in Insert mode
+
++ Just press `alt` with any key like (`i`, `j`, `k`, `l`). It quits the insert mode and goes to normal mode and does the action as well.
+
 ## Insertion
 
 Including inserting a *line* and switching to *insert* mode
@@ -158,6 +162,14 @@ Including inserting a *line* and switching to *insert* mode
 ### *Miscellaneous*
 
 | `J` | Joins the **next** line to the **current** line |
+
+### Moving screen without moving the cursor
+
++ It's used when reaching to a bottom of a file but want to bring the content of a file to the middle
+
+| `zz` | Bring the current line to the middle of the screen |
+| `zt` | Bring the current line to the top of the screen |
+| `zb` | Bring the current line to the bottom of the screen |
 
 ## Splitting
 
