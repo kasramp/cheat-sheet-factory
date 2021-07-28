@@ -2,7 +2,7 @@
 title: Tmux
 category: Linux
 layout: 2017/sheet
-updated: 2019-09-30
+updated: 2021-07-28
 keywords:
     - "tmux"
     - "tmux cheat sheet"
@@ -103,7 +103,7 @@ Shortcuts
 
 ### History
 
-+ Clipboard history: `Ctrl + b + b`
++ Clipboard history: `Ctrl + b + b` or `Ctrl + b + =`
 
 ### Mouse enable/disable
 
