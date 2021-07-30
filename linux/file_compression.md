@@ -42,115 +42,114 @@ $ sudo apt install tar gzip bzip2 xz-utils zip unzip rar unrar p7zip-full p7zip-
 ### .tar
 
 ```bash
-$ tar -cvf [file.tar] [files] # create
+$ tar -cvf [file.tar] [files/directories] # create
 $ tar -xvf [file.tar] # extract
 $ tar -xvf [file.tar] -C [/path] # extract to a location
 $ tar -xvf [file.tar] --overwrite # extract overwrite
-$ tar -tvf [file.tar] # list the content
+$ tar -tvf [file.tar] # list content
 ```
 
 ### .gz
 
 ```bash
-$ gzip [filenames] # create gzip of each file and removes the original file
-$ gzip -k [filenames] # create gzip of each file and keep the original files
-$ gzip -r [directory] # create gzip of directory
-$ gzip -d / gunzip [file.gz] # decompress file
-$ gzip -dr /gunzip [directory] # decompress directory
-$ gzip -dk [file.gz] # keep the original directory
-$ gzip -l [file.gz] # see the content
-$ gzip -df / gunzip -f [file.gz] # decompress overwrite
+$ gzip [files] # create .gz of each file (remove original files)
+$ gzip -k [files] # create .gz of each file (keep original files)
+$ gzip -r [directory] # create .gz of a directory files
+$ gzip -d / gunzip [file.gz] # extract
+$ gzip -dr / gunzip [directory] # extract a directory
+$ gzip -dk [file.gz] # keep the original file in a directory
+$ gzip -l [file.gz] # list content
+$ gzip -df / gunzip -f [file.gz] # extract overwrite
 ```
 
 ### .tar.gz
 
 ```bash
-$ tar -cvzf [file.tar.gz] [files] [directories] # create .tar.gz
-$ tar -xvzf [file.tar.gz]  # extract .tar.gz
+$ tar -cvzf [file.tar.gz] [files] [directories] # create
+$ tar -xvzf [file.tar.gz]  # extract
 $ tar -xvzf [file.tar.gz] -C [/path] # extract to a location
 $ tar -xvzf [file.tar.gz] --overwrite # extract overwrite
-$ tar -tvzf [file.tar.gz] # list the content
+$ tar -tvzf [file.tar.gz] # list content
 ```
 
 ### .bz2
 
 ```bash
-$ bzip2 -z [filenames] # create gzip of each file and removes the original file
-$ bzip2 -zk [filenames] # create gzip of each file and keep the original files - bzip2 has no directory support
-$ bzip2 -zd / bunzip2 [file.bzip2] # decompress file
-$ bzip2 -dk /bunzip2 -k [file.bzip2] # keep the original directory
-$ bzip2 -df / bunzip2 -f [file.bzip2] # decompress overwrite
+$ bzip2 -z [files] # create .bz2 of each file (remove original files)
+$ bzip2 -zk [files] # create gzip of each file (keep original files - no directory support)
+$ bzip2 -zd / bunzip2 [file.bzip2] # extract
+$ bzip2 -df / bunzip2 -f [file.bzip2] # extract overwrite
 ```
 
 ### tar.bz2
 
 ```bash
-$ tar -cvjf [file.tar.gz] [files] [directories] # create .tar.gz
-$ tar -xvjf [file.tar.gz]  # extract .tar.gz
+$ tar -cvjf [file.tar.gz] [files] [directories] # create
+$ tar -xvjf [file.tar.gz]  # extract
 $ tar -xvjf [file.tar.gz] -C [/path] # extract to a location
 $ tar -xvjf [file.tar.gz] --overwrite # extract overwrite
-$ tar -tvjf [file.tar.gz] # list the content
+$ tar -tvjf [file.tar.gz] # list content
 ```
 
 ### .xz
 
 ```bash
-$ xz -z [filenames] # create gzip of each file and removes the original file
-$ xz -zk [filenames] # create gzip of each file and keep the original files - bzip2 has no directory support
-$ xz -zd /unxz [file.gz] # decompress file
-$ xz -dk /unxz [file.gz] # keep the original directory
-$ xz -df /unxz [file.gaz] # decompress overwrite
+$ xz -z [files] # create .xz of each file (remove original files)
+$ xz -zk [files] # create .xz of each file (keep original files - no directory support)
+$ xz -zd /unxz [file.gz] # extract
+$ xz -df /unxz [file.gaz] # extract overwrite
 ```
 
 ### .tar.xz
 
 ```bash
-$ tar -cvJf [file.tar.gz] [files] [directories] # create .tar.xz
-$ tar -xvJf [file.tar.gz]  # extract .tar.xz
+$ tar -cvJf [file.tar.gz] [files] [directories] # create
+$ tar -xvJf [file.tar.gz]  # extract
 $ tar -xvJf [file.tar.gz] -C [/path] # extract to a location
 $ tar -xvJf [file.tar.gz]  --overwrite # extract overwrite
-$ tar -tvJf [file.tar.gz] # list the content
+$ tar -tvJf [file.tar.gz] # list content
 ```
 
 ### .zip
 
 ```bash
-$ zip [file.zip] [files/directories] # create a zip file
+$ zip [file.zip] [files] [directories] # create
 $ unzip -l [file.zip] # list content
-$ unzip [file.zip] # extract a file
-$ unzip [file.zip] -d [path] # unzip to a path
-$ zip -u [file.zip] [new_file] # add a new file
-$ zip -d [file.zip] [file] # remove a file
-$ unzip -o [file.zip] # unzip overwrite
-$ unzip -n [file.zip] # skip duplicates
-$ zip [file.zip] [files/directories] -e # create a password protected zip
+$ unzip [file.zip] # extract
+$ unzip [file.zip] -d [/path] # extract to a path
+$ zip -u [file.zip] [files] # add new files
+$ zip -d [file.zip] [files] # remove files
+$ unzip -o [file.zip] # extract overwrite
+$ unzip -n [file.zip] # extract skip duplicates
+$ zip [file.zip] [files] [directories] -e # create password protected
 ```
 
 ### .rar
 
 ```bash
-$ rar a [file.rar] [files/directories] # create a rar file
+$ rar a [file.rar] [files] [directories] # create
 $ rar l [file.rar] # list content
-$ unrar e [file.rar] # extract rar file, doesn't preserve the structure
-$ unrar x [file.rar] [path] # extract to a path, preserve structure as well
-$ rar u [file.rar] [new_file] # add a new file 
-$ rar d [file.rar] [file] # remove a file
-$ rar x [file.rar] -o+ # overwrite
-$ rar x [file.rar] -o- # skip duplicates
-$ rar p [file.rar] [files] # password protect
+$ unrar e [file.rar] # extract, doesn't preserve the structure
+$ unrar x [file.rar] # extract, preserve the structure
+$ unrar x [file.rar] [/path] # extract to a path, preserve structure
+$ rar u [file.rar] [files] # add new files
+$ rar d [file.rar] [files] # remove files
+$ rar x [file.rar] -o+ # extract overwrite
+$ rar x [file.rar] -o- # extract skip duplicates
+$ rar p [file.rar] [files] # create password protected
 ```
 
 ### .7z
 
 ```bash
-$ 7z a [file.7z] [files/directories] # create a 7z file
+$ 7z a [file.7z] [files] [directories] # create
 $ 7z l [file.7z] # list content
-$ 7z e [file.7z] # extract 7z file doesn't preserve structure
-$ 7z x [file.7z] # extract 7z file
-$ 7z x [file.7z] -o[path] # extract to a path (no space after `o`)
-$ 7z u [file.7z] [new_file] # add a new file 
-$ 7z d [file.7z] [file] # remove a file
-$ 7a x [file.7z] -aoa # overwrite  
-$ 7a x [file.7z] -aos # skip duplicates
-$ 7z a [file.7z] [files] -p # password protect
+$ 7z e [file.7z] # extract, doesn't preserve structure
+$ 7z x [file.7z] # extract, preserve structure
+$ 7z x [file.7z] -o[/path] # extract to a path (no space after `o`)
+$ 7z u [file.7z] [files] # add new files
+$ 7z d [file.7z] [files] # remove files
+$ 7a x [file.7z] -aoa # extract overwrite
+$ 7a x [file.7z] -aos # extract skip duplicates
+$ 7z a [file.7z] [files] -p # password protected
 ```
