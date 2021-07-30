@@ -2,7 +2,7 @@
 title: File Compression
 category: Linux
 layout: 2017/sheet
-updated: 2021-07-29
+updated: 2021-07-30
 keywords:
     - "file compression"
     - "tar.gz"
