@@ -2,7 +2,7 @@
 title: File Compression
 category: Linux
 layout: 2017/sheet
-updated: 2021-07-30
+updated: 2021-11-01
 keywords:
     - "file compression"
     - "tar.gz"
@@ -66,6 +66,7 @@ $ gzip -df / gunzip -f [file.gz] # extract overwrite
 
 ```bash
 $ tar -cvzf [file.tar.gz] [files] [directories] # create
+$ tar -C [/path] -cvzf [file.tar.gz] [files_in_path] # create without including the path
 $ tar -xvzf [file.tar.gz]  # extract
 $ tar -xvzf [file.tar.gz] -C [/path] # extract to a location
 $ tar -xvzf [file.tar.gz] --overwrite # extract overwrite
@@ -114,6 +115,7 @@ $ tar -tvJf [file.tar.gz] # list content
 
 ```bash
 $ zip [file.zip] [files] [directories] # create
+$ zip -j [file.zip] [/path/files] # create without including path
 $ unzip -l [file.zip] # list content
 $ unzip [file.zip] # extract
 $ unzip [file.zip] -d [/path] # extract to a path
