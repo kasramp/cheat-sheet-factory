@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2021-05-10
+updated: 2021-12-08
 keywords:
   - "git"
   - "git cheat sheet"
@@ -92,6 +92,7 @@ intro: |
 ### Uncommit local commits
 
 | `git reset HEAD~` | Uncommit local commit |
+| `git reset @~` | Uncommit last local commit |
 
 ### Change the URI for a remote repository
 
