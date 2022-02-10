@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2021-12-08
+updated: 2022-02-10
 keywords:
   - "git"
   - "git cheat sheet"
@@ -138,6 +138,10 @@ If needed, have to force push: `git push -f origin master`
 - `git remote -v`
 - `git add . && git commit -m "message"`
 - `git push origin master`
+
+## Change commit order
+
+In a branch run: `git rebase -i origin/master` and then in the editor change the commit orders
 
 ### Reference
 
