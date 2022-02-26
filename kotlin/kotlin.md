@@ -3,7 +3,7 @@ title: Kotlin
 category: Kotlin
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-04-13
+updated: 2022-02-26
 keywords:
   - "kotlin"
   - "kotlin cheat sheet"
@@ -472,3 +472,9 @@ file.bufferedReader().use {
 ```kotlin
 listOf("One", "Two", "Three").toMutableList().add("Four")
 ```
+
+### Any, Unit, and Nothing
+
+- `Any` equals to Java `Object`
+- `Unit` equals to Java `Void`
+- `Nothing` indicates a method never terminates normally (meaning it throws exception)
