@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2022-02-10
+updated: 2022-03-01
 keywords:
   - "git"
   - "git cheat sheet"
@@ -61,6 +61,10 @@ intro: |
 ### Amend commit message
 
 | `git commit --amend` | Amend commits message |
+
+### Amend author
+
+| `git commit --amend --author="NAME <AUTHOR_EMAIL>" | Amend authoor name and email |
 
 ### Unstage local changes
 
