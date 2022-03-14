@@ -3,7 +3,7 @@ title: Kotlin
 category: Kotlin
 layout: 2017/sheet
 tags: [Featured]
-updated: 2022-02-26
+updated: 2022-03-14
 keywords:
   - "kotlin"
   - "kotlin cheat sheet"
@@ -478,3 +478,42 @@ listOf("One", "Two", "Three").toMutableList().add("Four")
 - `Any` equals to Java `Object`
 - `Unit` equals to Java `Void`
 - `Nothing` indicates a method never terminates normally (meaning it throws exception)
+
+
+### Also, let, with, run
+
+Basically they all do similar thing but only differnt in how the context object is references and returned output.
+`apply`, `run`, `with` access context object with `this` whereas `also` or `let` access context object with `it`.
+`apply`, `also` return itself (original object) whereas `run`, `with`, `let` return result.
+
+```kotlin
+    @Test
+    fun `let vs also vs apply vs with vs run`() {
+        val str : String = "test"
+
+        var strUpper = str.let { it -> it.toUpperCase() }
+        assertThat(strUpper).isEqualTo("TEST")
+
+        strUpper = str.also { it -> it.toUpperCase() }
+        assertThat(strUpper).isEqualTo("test")
+
+        strUpper = str.run { this.toUpperCase() }
+        assertThat(strUpper).isEqualTo("TEST")
+
+        // with `with` we can access members of object
+        strUpper = with(str) {
+            println(length)
+            this.toUpperCase() // or just `toUpperCase()`
+        }
+        assertThat(strUpper).isEqualTo("TEST")
+
+        strUpper = str.apply { this.toUpperCase() }
+        assertThat(strUpper).isEqualTo("test")
+
+        // let can be used for null check
+        val str2 : String? = null
+        str2?.let {
+            println("$it is not null")
+        }
+    }
+```
