@@ -2,7 +2,7 @@
 title: Tmux
 category: Linux
 layout: 2017/sheet
-updated: 2021-07-28
+updated: 2022-05-21
 keywords:
     - "tmux"
     - "tmux cheat sheet"
@@ -101,9 +101,15 @@ Shortcuts
 
 + Paste from clipboard: `Ctrl + b + ]` or `Ctrl + b + p` or `Ctrl + b + P` to paste from custom clipboard stack
 
+### Search
+
++ First enter copy mode: `Ctrl + b + [`, then `Ctrl + s`
++ Next match: `n`
++ Previous match: `Shift + n`
+
 ### History
 
-+ Clipboard history: `Ctrl + b + b` or `Ctrl + b + =`
++ Clipboard history: `Ctrl + b + b` or `Ctrl + b + =` or `Ctrl + b + #`
 
 ### Mouse enable/disable
 
