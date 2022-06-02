@@ -3,7 +3,7 @@ title: Vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2021-07-20
+updated: 2022-04-22
 keywords:
     - "vim"
     - "vim cheat sheet"
@@ -308,3 +308,12 @@ set number
 ## Set column marker to 80 columns
 
 + `:set colorcolumn=80`
+
+## Vertical selection
+
++ `ctrl + v`
+
+## Show whitespaces
+
++ `:set list`
++ `:set nolist`

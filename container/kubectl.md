@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2021-07-07
+updated: 2022-04-07
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -62,6 +62,7 @@ Commands
 
 ### Handy kubectl commands
 
+| `kubectl api-resources` | List supported resources by K8s |
 | `kubectl version` | Get version |
 | `kubectl cluster-info` | Get information about the cluster |
 | `kubect get all` | All information about pod, services, deployments, etc. |
@@ -107,6 +108,8 @@ Commands
 | `kubectl -n [namespace] describe pod [podname]` | Describe a pod with useful information |
 | `kubectl -n [namespace] describe pod [podname] -o yaml` | Describe a pod in Yaml |
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
+| `kubectl -n [namespace] get cronjobs` | List cron jobs |
+| `kubectl -n [namespace] get jobs` | List jobs |
 
 
 ### Copying file to/from K8s pods

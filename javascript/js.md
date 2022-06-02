@@ -3,7 +3,7 @@ title: JavaScript
 category: JavaScript
 layout: 2017/sheet
 tags: [Featured]
-updated: 2020-05-17
+updated: 2021-12-20
 keywords:
   - "JavaScript"
   - "JavaScript cheat sheet"
@@ -129,7 +129,12 @@ function printFullName(firstName, lastName) {
   console.log("FirstName: " + firstName + "\n" + "LastName: " + lastName);
 }
 
+function printFullNameDefault(firstName, lastName = "Wick") {
+  printFullName(firstName, lastName);
+}
+
 printFullName("Kasra"); // since only one argument has passed, it prints 'FirstName: Kasra \n LastName: undefined'
+printFullNameDefault("Kasra"); // because lastName has default value like Python, it prints 'FirstName: Kasra \n LastName: Wick'
 ```
 
 **Note:** If you don't define a return value, the default value is undefined.
@@ -822,6 +827,81 @@ fis.pipe(process.stdout);
 
 // pipe the stream to write stream [make copy literally]
 fis.pipe(fos);
+```
+
+### Some ES6 (ECMAScript 2015) recommendations
+
+#### Don't use `var`, instead use `let` or `const`
+
+#### Don't use `function`, instead use `arrow function`
+
+```javascript
+// Don't use
+function doSomething(x) {
+  // Busincess logics
+}
+
+// Use
+const doSomething = (x) => {
+  // Business logics
+}
+const doSomething = x => // Business logics
+```
+
+#### Use `object literals`
+
+```javascript
+const prop = 'lastName';
+const age: 43;
+
+const obj = {
+  name: 'John',
+  getName: () => {},
+  [prop]: 'Wick', // Dynamic property, it will evaluate to `lastName` => obj.lastName
+  age: age
+}
+```
+
+#### Use new import/export syntax
+
+```javascript
+// import ES5 - Don't use
+var something = require('./something');
+
+// export ES5 - Don't use
+module.exports = something;
+
+// import ES6
+import something from './something';  // Import default
+import {anotherThing} from './something'; // Import a named export (any export that's not default)
+
+// export ES6
+const something = {
+// funcs and variables
+}
+export default something; // Default export
+export anotherthing = '1000'; // Named export
+export yetanotherthing = '101';
+```
+
+#### Use `async`, `await` over `then`
+
+```javascript
+// ES5 of waiting for a response AKA callback hell
+const getData = () => {
+	fetch('https://api.example.come').then(resp => {
+		resp.json().then(data => {
+			console.log(data);
+		});
+	});
+};
+
+// ES6 using async await that makes the function returns a promise
+const getDataPromise = async () => {
+	const resp = await fetch('https://api.example.com');
+	const data = await resp.json();
+	console.log(data);
+}
 ```
 
 ## References

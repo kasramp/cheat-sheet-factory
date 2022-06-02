@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2021-12-08
+updated: 2022-03-01
 keywords:
   - "git"
   - "git cheat sheet"
@@ -61,6 +61,10 @@ intro: |
 ### Amend commit message
 
 | `git commit --amend` | Amend commits message |
+
+### Amend author
+
+| `git commit --amend --author="NAME <AUTHOR_EMAIL>" | Amend authoor name and email |
 
 ### Unstage local changes
 
@@ -138,6 +142,10 @@ If needed, have to force push: `git push -f origin master`
 - `git remote -v`
 - `git add . && git commit -m "message"`
 - `git push origin master`
+
+## Change commit order
+
+In a branch run: `git rebase -i origin/master` and then in the editor change the commit orders
 
 ### Reference
 
