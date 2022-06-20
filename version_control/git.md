@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2022-03-01
+updated: 2022-06-16
 keywords:
   - "git"
   - "git cheat sheet"
@@ -142,6 +142,10 @@ If needed, have to force push: `git push -f origin master`
 - `git remote -v`
 - `git add . && git commit -m "message"`
 - `git push origin master`
+
+## Pull on forced push
+
+- `git pull --rebase`
 
 ## Change commit order
 

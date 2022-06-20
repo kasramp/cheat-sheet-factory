@@ -3,7 +3,7 @@ title: Vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2022-04-22
+updated: 2022-06-02
 keywords:
     - "vim"
     - "vim cheat sheet"
@@ -257,6 +257,24 @@ Including inserting a *line* and switching to *insert* mode
 | `gt` | Go to the next tab |
 | `gT` | Go to the previous tab | 
 
+## Go to (jump) to line
+
+| `46gg` | Go to line 46 |
+| `46G` | Go to like 46 |
+
+## Set column marker to 80 columns
+
++ `:set colorcolumn=80`
+
+## Vertical selection
+
++ `ctrl + v`
+
+## Show whitespaces
+
++ `:set list`
++ `:set nolist`
+
 ## Vim no plugin (file browser, find, auto completion, etc.)
 
 ```
@@ -304,16 +322,3 @@ set number
 
 " open terminal :ter
 ```
-
-## Set column marker to 80 columns
-
-+ `:set colorcolumn=80`
-
-## Vertical selection
-
-+ `ctrl + v`
-
-## Show whitespaces
-
-+ `:set list`
-+ `:set nolist`
