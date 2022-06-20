@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2022-04-07
+updated: 2022-06-20
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -88,6 +88,7 @@ Commands
 | `kubectl delete deployment [name-of-deployment]` | Delete pods without recreation |
 | `kubectl delete pods [pod] --grace-period=0 --force` | Force delete a pod |
 | `kubectl exec -it [pod] /bin/bash` | SSH to a pod |
+| `kubectl exec -it [pod] --container [container_name] bash` | SSH to a container inside of a pod |
 | `kubectl create --dry-run --validate -f pod-dummy.yaml -n [namespace]` | Dry run of pod |
 | `kubectl -n [namespace] create -f [pod-file.yaml]` | Create a pod/deployment from a yaml file, throws error if pod already exists |
 | `kubectl -n [namespace] apply -f [pod-file.yaml]` | Create or update a pod (Better replacement of the above) |
