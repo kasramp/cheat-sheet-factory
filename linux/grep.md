@@ -2,7 +2,7 @@
 title: grep
 category: Linux
 layout: 2017/sheet
-updated: 2019-09-27
+updated: 2022-06-22
 keywords:
     - "grep"
     - "grep cheatsheet"
@@ -33,4 +33,10 @@ $ cat file.txt | grep -E 'hello.*world'
 
 ```bash
 $ cat file.txt | grep -v 'hello' # search for all patterns that do not have 'hello'
+```
+
+### Ignore case
+
+```bash
+$ cat file.txt  | grep -i 'blah' # search for blah in any casing format
 ```
