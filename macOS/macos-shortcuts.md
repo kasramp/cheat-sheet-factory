@@ -2,7 +2,7 @@
 title: macOS Shortcuts
 category: macOS
 layout: 2017/sheet
-updated: 2019-01-23
+updated: 2022-07-04
 keywords:
     - "macOS keyboard shortcuts"
 intro: |
@@ -172,3 +172,9 @@ Shortcuts
 | `⌘D` | Add bookmark |
 | `⌥⌘B` | Edit bookmark |
 {: .-shortcuts}
+
+### Finder copy/cut/paste
+
+| `⌘c` | Copy |
+| `⌘v` | Paste |
+| `⌘⌥v` | Cut |
