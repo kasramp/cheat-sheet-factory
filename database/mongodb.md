@@ -2,7 +2,7 @@
 title: MongoDB
 category: NoSQL
 layout: 2017/sheet
-updated: 2022-07-18
+updated: 2022-09-08
 keywords:
     - "mongodb"
     - "mongo"
@@ -66,3 +66,12 @@ MongoDB guarantees atomicity at the individual document level.
 > db.user.find()
 > db.user.find().pretty()
 ```
+
+### Export a collection with `mongoexport`
+
+First, download [MongoDB Database Tools](https://www.mongodb.com/try/download/database-tools). Then, run:
+
+```bash
+$ mongoexport --uri [DB_URI] --collection [COLLECTION_NAME] --out [PATH_FILE_NAME]
+```
+
