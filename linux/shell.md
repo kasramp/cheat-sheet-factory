@@ -2,7 +2,7 @@
 title: shell
 category: Linux
 layout: 2017/sheet
-updated: 2020-10-09
+updated: 2022-10-10
 keywords:
     - "shell"
     - "bash"
@@ -195,3 +195,5 @@ Shortcuts
 | Getting distro & release version : | `lsb_release -a` |
 | Getting a website ip address : | `nslookup www.google.com` |
 | Getting a domain information : | `whois www.google.com` |
+| Ping a server with a port (TCP) : | `nc -vz 192.168.0.1 8080` |
+| Ping a server witha port (UDP) : | `nc -vz -u 192.168.0.1 8080` |
