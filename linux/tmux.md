@@ -2,7 +2,7 @@
 title: Tmux
 category: Linux
 layout: 2017/sheet
-updated: 2022-05-21
+updated: 2022-11-06
 keywords:
     - "tmux"
     - "tmux cheat sheet"
@@ -94,7 +94,7 @@ Shortcuts
 
 ### Copy
 
-+ Copy to clipboard: `Ctrl + b + [` or `Ctrl + b + Enter` to go to copy mode, then `Ctrl + Space` to select, and then `y` to yank, and then `Ctrl + w` to exit the copy mode 
++ Copy to clipboard: `Ctrl + b + [` or `Ctrl + b + Enter` to go to copy mode, then `Ctrl + Space` to select, and then `Ctrl + w` to yank 
 + Copy to clipboard: Use mouse to select and then press `Ctrl + b + y` to yank
 
 ### Paste
