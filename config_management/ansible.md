@@ -25,6 +25,13 @@ web02
 db[01:02]
 ```
 
+Dry run a single ansible inventory:
+
+```
+$ ansible [section] --limit [host] -m ping
+$ ansible databases --limit db01 -m ping
+```
+
 ### Configuration
 
 Ansible configuration file can be overwritten by setting `ANSIBLE_CONFIG` environment variable. Otherwise it looks at the files in the following orders:
@@ -48,4 +55,22 @@ become = true # automatically use root
 become_user = root
 become_method = sudo # how to escalate privilege
 become_ask_pass = false # don't ask password when switchin to root
+```
+
+To override configuration per host, one can create a `host_vars` directory and then create a directory named after each host in the `inventory` file like follow:
+
+```
+# file path and name: host_vars/web01
+---
+host: 192.168.0.3
+port: 33 # ssh port
+become_ask_pass: true
+# custom variable
+custom_db_port: 1234
+```
+
+Getting a diff between `/etc/ansible/ansible.cfg` and custom `ansible.cfg`:
+
+```
+$ ansible-config dump --only-changed
 ```
