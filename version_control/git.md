@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2023-04-02
+updated: 2023-04-08
 keywords:
   - "git"
   - "git cheat sheet"
@@ -110,6 +110,29 @@ intro: |
 - `git rebase upstream/master`
 
 If needed, have to force push: `git push -f origin master`
+
+### Pull changes from a PR to the fork
+
+Assuming, we forked a repository and now the upstream has an
+open Pull Request which we want to merge to our fork repository
+and not wait for the upstream.
+
+In this case go the repository directory and run,
+
+```bash
+$ git pull https://github.com/user-created-the-pr/repo.git branch
+```
+
+Example,
+
+```bash
+$ git pull https://github.com/nikitamos/aqemu.git master
+```
+
+The branch is often master. However, if the PR owner has created another
+branch, replace it with the branch name.
+
+More info, [here](https://stackoverflow.com/questions/6022302/how-to-apply-unmerged-upstream-pull-requests-from-other-forks-into-my-fork)
 
 ### Import a project from a git server to another
 
