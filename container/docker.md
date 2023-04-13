@@ -2,7 +2,7 @@
 title: Docker
 category: Container
 layout: 2017/sheet
-updated: 2023-03-02
+updated: 2023-04-13
 keywords:
     - "docker"
     - "docker container"
@@ -35,3 +35,30 @@ Shortcuts
 | `docker container ls` | List of running containers |
 | `docker container ls -a` | List of all ran containers |
 | `docker container rm` | Remove a ran container |
+
+### Image
+
+| `docker images` | List all of the images |
+| `docker image rm [IMG]` | Remove a docker image |
+
+### Volume
+
+| `docker volume ls` | List all volumes |
+| `docker volume rm [V_NAME]` | Remove a volume |
+| `docker volume prune` | Remove all unsed volumes |
+
+### Docker compose
+
+Assign a name to a docker compose container group,
+
+In docker-compose v1:
+
+```bash
+$ docker-compose -f docker-compose.yml -p CUSTOM_NAME up
+```
+
+In docker compose v2, add `name` after version and run:
+
+```bash
+$ docker compose -f docker-compose.yml up
+```
