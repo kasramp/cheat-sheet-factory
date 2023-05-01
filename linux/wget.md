@@ -2,7 +2,7 @@
 title: grep
 category: Linux
 layout: 2017/sheet
-updated: 2022-06-22
+updated: 2023-05-01
 keywords:
     - "wget"
     - "wget cheatsheet"
@@ -25,4 +25,10 @@ $ wget -r --no-parent http://firmware.openbsd.org/firmware/7.1/
 
 ```bash
 $ wget -r --no-parent -e robots=off https://ftp.openbsd.org/pub/OpenBSD/songs/
+```
+
+### Save to a custom path
+
+```bash
+$ wget -P "PATH" "DOWNLOAD_URL"
 ```
