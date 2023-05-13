@@ -2,7 +2,7 @@
 title: MongoDB
 category: NoSQL
 layout: 2017/sheet
-updated: 2023-05-12
+updated: 2023-05-13
 keywords:
     - "mongodb"
     - "mongo"
@@ -75,3 +75,23 @@ First, download [MongoDB Database Tools](https://www.mongodb.com/try/download/da
 $ mongoexport --uri=[DB_URI] --db=[DB_NAME] --collection=[COLLECTION_NAME] --out=[PATH_FILE_NAME]
 ```
 
+### Ensure a collection is a timeseries collection
+
+Timeseries is a special collection type that allows fast data aggregation, especially useful for stock market, weather, fleet, etc.
+
+```mongodb
+> db.getCollectionInfos({name:"quoteHistory"});
+```
+
+Should produce an output like this:
+
+```json
+[
+  {
+    name: 'quoteHistory',
+    type: 'timeseries',
+    options: { timeseries: [Object] },
+    info: { readOnly: false }
+  }
+]
+```
