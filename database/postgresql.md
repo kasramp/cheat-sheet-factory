@@ -1,8 +1,8 @@
 ---
 title: PostgreSQL
-category: SQL
+category: Database
 layout: 2017/sheet
-updated: 2019-09-30
+updated: 2023-05-22
 keywords:
     - "postgreSQL"
     - "postgres"

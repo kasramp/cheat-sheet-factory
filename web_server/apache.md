@@ -1,6 +1,6 @@
 ---
 title: Apache
-category: Web server
+category: Web Server
 layout: 2017/sheet
 updated: 2023-04-13
 keywords:

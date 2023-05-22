@@ -1,8 +1,8 @@
 ---
 title: MongoDB
-category: NoSQL
+category: Database
 layout: 2017/sheet
-updated: 2023-05-13
+updated: 2023-05-22
 keywords:
     - "mongodb"
     - "mongo"
