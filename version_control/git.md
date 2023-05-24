@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2023-04-08
+updated: 2023-05-25
 keywords:
   - "git"
   - "git cheat sheet"
@@ -133,6 +133,17 @@ The branch is often master. However, if the PR owner has created another
 branch, replace it with the branch name.
 
 More info, [here](https://stackoverflow.com/questions/6022302/how-to-apply-unmerged-upstream-pull-requests-from-other-forks-into-my-fork)
+
+### Checkout (pull) from a PR to verify
+
+Let's say someone has created a PR to our repository, and we would like to
+review the changes locally. For that, we need to pull the changes from
+a PR (Pull Request).
+
+```bash
+$ git fetch origin pull/[PR_ID]/head:[ARBITARY_BRANCH_NAME]
+$ git checkout [ARBITARY_BRANCH_NAME]
+```
 
 ### Import a project from a git server to another
 
