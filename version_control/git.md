@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2023-05-25
+updated: 2023-06-01
 keywords:
   - "git"
   - "git cheat sheet"
@@ -22,6 +22,13 @@ intro: |
 | `git checkout [commitHash] .` | Checkout to a particular commit |
 | `git rm [fileName]` | Remove a file |
 | `git revert [commitHash]` | Revert a commit |
+
+### Configuration
+
+```bash
+$ git config --global user.name "USERNAME"
+$ git config --global user.email "EMAIL_ADDRESS"
+```
 
 ### Git logs
 
