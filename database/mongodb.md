@@ -2,7 +2,7 @@
 title: MongoDB
 category: Database
 layout: 2017/sheet
-updated: 2023-05-22
+updated: 2023-06-20
 keywords:
     - "mongodb"
     - "mongo"
@@ -94,4 +94,45 @@ Should produce an output like this:
     info: { readOnly: false }
   }
 ]
+```
+
+### Group by (find duplicate by a key)
+
+```json
+db.COLLECTION_NAME.aggregate([
+  {
+    $group: {
+      _id: "$FIELD_NAME",
+      count: { $sum: 1 },
+      duplicates: { $addToSet: "$_id" }
+    }
+  },
+  {
+    $match: {
+      count: { $gt: 1 }
+    }
+  }
+], { allowDiskUse: true })
+```
+
+### Count group by
+
+```json
+db.COLLECTION_NAME.aggregate([
+  {
+    $group: {
+      _id: "$FIELD_NAME",
+      count: { $sum: 1 },
+      duplicates: { $addToSet: "$_id" }
+    }
+  },
+  {
+    $match: {
+      count: { $gt: 1 }
+    }
+  },
+  {
+    $count: "total"
+  }
+], { allowDiskUse: true })
 ```
