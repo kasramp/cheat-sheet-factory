@@ -1,7 +1,7 @@
 home:
   title: "Cheat Sheet Factory"
   tagline: |
-    A fork of <a href='https://devhints.io/'>devhints.io</a> with new cheat sheets written by <a href="http://blog.madadipouya.com">@kasra_mp</a>
+    A fork of <a href='https://devhints.io/'>devhints.io</a> with new cheat sheets written by <a href="https://geekyhacker.com">@GeekyHacker</a>
 
 top_nav:
   title: Cheat Sheet Factory
@@ -41,10 +41,10 @@ not_found:
   home: Back to home
 
 announcement:
-  id: 2018-10-14-twitter
+  id: 2023-07-05-twitter
   title: |
     New: We're on Twitter ♥️
   body: |
-    Follow [@kasra_mp](https://twitter.com/kasra_mp) on Twitter for daily "today I learned" snippets!
+    Follow [@GeekyHacker](https://twitter.com/GeekyHacker) on Twitter for daily "today I learned" snippets!
 
-    [![](https://img.shields.io/twitter/follow/kasra_mp.svg?style=social&label=@kasra_mp)](https://twitter.com/kasra_mp)
+    [![](https://img.shields.io/twitter/follow/GeekyHacker.svg?style=social&label=@GeekyHacker)](https://twitter.com/GeekyHacker)
