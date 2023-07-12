@@ -3,7 +3,7 @@ title: Vim
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2022-06-02
+updated: 2023-07-12
 keywords:
     - "vim"
     - "vim cheat sheet"
@@ -170,6 +170,12 @@ Including inserting a *line* and switching to *insert* mode
 | `zz` | Bring the current line to the middle of the screen |
 | `zt` | Bring the current line to the top of the screen |
 | `zb` | Bring the current line to the bottom of the screen |
+
+### Copying content of another file
+
++ It's used to copy the whole content of a file to the current open file
+
+| `:r another-file.txt` | Copies the whole content |
 
 ## Splitting
 
