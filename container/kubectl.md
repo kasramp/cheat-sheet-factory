@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2022-06-20
+updated: 2023-11-08
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -111,7 +111,8 @@ Commands
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 | `kubectl -n [namespace] get cronjobs` | List cron jobs |
 | `kubectl -n [namespace] get jobs` | List jobs |
-
+| `kubectl get ns` | Get list of namespaces |
+| `kubectl -n [namespace] get deployment` | List deployments |
 
 ### Copying file to/from K8s pods
 
