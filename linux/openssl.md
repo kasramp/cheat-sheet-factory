@@ -39,7 +39,7 @@ $ echo "CERTIFICATE_CONTENT" | base64 -d | openssl x509 -noout -enddate
 $ echo "CERTIFICATE_CONTENT" | openssl x509 -noout -text
 ```
 
-## Retrieve information of Certificate Signing Request (CSR)
+### Retrieve information of Certificate Signing Request (CSR)
 
 ```bash
 $ openssl req -in csr_req.csr -text -noout
@@ -81,7 +81,7 @@ $ openssl ca -cert ca.crt -keyfile ca.key -in csr_req.csr -out tls.crt
 
 If the CA is not available, can generate one (to create a self-signed cert which is not trusted by browsers).
 
-### Generating a self-signed CA
+## Generating a self-signed CA
 
 Creating the CA private key:
 
