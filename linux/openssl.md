@@ -1,5 +1,5 @@
 ---
-title: openssl
+title: OpenSSL
 category: Linux
 layout: 2017/sheet
 updated: 2024-01-03
