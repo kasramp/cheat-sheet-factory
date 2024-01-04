@@ -117,8 +117,10 @@ Commands
 | `kubectl -n [namespace] get certificates` | List all certificates |
 | `kubectl -n [namespace] describe certificates [certificate-name]` | Describes a certificate |
 | `kubectl -n [namespace] get secret [certificate-name] -o json > certificate.json` | Export a cert-manager certificate |
-| `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' | xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.tls\.crt}'` | Extracting `tls.crt` from a cert in base64 |
-| `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' | xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.ca\.crt}'` | Extracting `ca.crt` from a cert decoded from base64 |
+| `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' |
+   xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.tls\.crt}'` | Extracting `tls.crt` from a cert in base64 |
+| `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' | 
+   xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.ca\.crt}'` | Extracting `ca.crt` from a cert decoded from base64 |
 
 ### Copying file to/from K8s pods
 
