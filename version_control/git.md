@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2023-06-01
+updated: 2024-01-05
 keywords:
   - "git"
   - "git cheat sheet"
@@ -184,13 +184,41 @@ $ git checkout [ARBITARY_BRANCH_NAME]
 - `git add . && git commit -m "message"`
 - `git push origin master`
 
-## Pull on forced push
+### Pull on forced push
 
 - `git pull --rebase`
 
-## Change commit order
+### Change commit order
 
 In a branch run: `git rebase -i origin/master` and then in the editor change the commit orders
+
+### Patching
+
+To create a patch to submit via email from uncommitted local changes:
+
+```bash
+$ git diff > changes.patch
+```
+
+To apply the patch:
+
+```bash
+$ git apply < changes.patch
+```
+
+To create a patch from committed changes of a feature against master:
+
+```bash
+$ git format-patch origin/master..feature-branch-name
+```
+
+That generates patch files. One file per each commit.
+
+To apply the patches:
+
+```bash
+$ git apply < changes.patch
+```
 
 ### Reference
 
