@@ -2,7 +2,7 @@
 title: ufw
 category: Linux
 layout: 2017/sheet
-updated: 2024-01-19
+updated: 2024-01-22
 keywords:
     - "ufw"
     - "ufw firewall"
@@ -67,4 +67,19 @@ $ sudo ufw deny 8080/tcp
 
 ```bash
 $ sudo ufw reload
+```
+
+### Deleting a rule
+
+```bash
+$ sudo ufw status numbered
+$ sudo ufw delete [2]
+```
+
+### Operate with app names
+
+```bash
+$ sudo ufw status
+$ sudo ufw allow 'Apache Full'
+$ sudo ufw delete allow 'Apache'
 ```
