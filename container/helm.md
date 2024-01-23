@@ -2,7 +2,7 @@
 title: Helm
 category: Container
 layout: 2017/sheet
-updated: 2020-12-31
+updated: 2024-01-23
 keywords:
     - "helm"
     - "helm package manager"
@@ -41,7 +41,7 @@ Shortcuts
 | `helm search repo [chart name]` | Search for a chart |
 | `helm inspect [chart name]` | See a helm doc |
 | `helm fetch [chart name]` | Download a chart |
-| `
+| `helm lint [chart path]` | Lint a Helm char |
 
 ### Predefiend directives
 
