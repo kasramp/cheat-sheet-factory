@@ -27,6 +27,7 @@ $ curl -X GET "http://localhost:8080/api/v1/customers?p=1" -H "accept: applicati
 
 ```bash
 $ curl -X POST "http://localhost:8080/api/v1/customers" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"customer\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"registration\":\"2024-03-20 10:30\"}"
+```
 
 - PUT
 
