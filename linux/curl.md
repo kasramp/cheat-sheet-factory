@@ -45,3 +45,9 @@ Delete example,
 
 ```bash
 $ curl -X DELETE "http://localhost:8080/api/v1/customers/1234" -H  "accept: */*"```
+
+### cURL with certificates
+
+```bash
+$ curl --cacert ca.crt --cert client.crt --key client.key https://example.com
+```
