@@ -15,33 +15,33 @@ Shortcuts
 ---------
 {: .-one-column}
 
-### Basic GET, POST, PUT, and DELETE
+### Basics GET, POST, PUT, and DELETE
 
-- GET
+Get example,
 
 ```bash
 $ curl -X GET "http://localhost:8080/api/v1/customers?p=1" -H "accept: application/json"
 ```
 
-- POST
+Post example,
 
 ```bash
 $ curl -X POST "http://localhost:8080/api/v1/customers" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"customer\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"registration\":\"2024-03-20 10:30\"}"
 ```
 
-- PUT
+Put example,
 
 ```bash
 $ curl -X PUT "http://localhost:8080/api/v1/customers/1234" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"customer\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"registration\":\"2023-03-20 10:20\"}"
 ```
 
-- PATCH
+Patch example,
 
 ```bash
 $ curl -X PATCH "http://localhost:8080/api/v1/customers/1234" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"customerFirstName\":\"John\",\"customerLastName\":\"Doe\"}"
 ```
 
-- DELETE
+Delete example,
 
 ```bash
 $ curl -X DELETE "http://localhost:8080/api/v1/customers/1234" -H  "accept: */*"```
