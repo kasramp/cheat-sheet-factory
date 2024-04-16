@@ -2,7 +2,7 @@
 title: grep
 category: Linux
 layout: 2017/sheet
-updated: 2023-05-01
+updated: 2024-04-16
 keywords:
     - "wget"
     - "wget cheatsheet"
@@ -19,6 +19,12 @@ Shortcuts
 
 ```bash
 $ wget -r --no-parent http://firmware.openbsd.org/firmware/7.1/
+```
+
+### Recursive download (current directory) and specific file extension
+
+```bash
+$ wget -r --no-parent -A .tgz 'https://cdn.openbsd.org/pub/OpenBSD/7.5/amd64'
 ```
 
 ### Recursive download (no robots follow)
