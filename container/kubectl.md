@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2024-01-04
+updated: 2024-05-23
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -121,6 +121,12 @@ Commands
    xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.tls\.crt}'` | Extracting `tls.crt` from a cert in base64 |
 | `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' | 
    xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.ca\.crt}'` | Extracting `ca.crt` from a cert decoded from base64 |
+
+#### Deploying debug container (for installing tools to troubleshooting)
+
+```bash
+kubectl -n connector-oxxo-pay debug -it connector-oxxo-pay-6b856c4747-bf5hr --image=arunvelsriram/utils --target=connector-oxxo-pay -- /bin/bash
+```
 
 ### Copying file to/from K8s pods
 
