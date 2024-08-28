@@ -126,7 +126,7 @@ Commands
 #### Deploying debug container (for installing tools to troubleshooting)
 
 ```bash
-kubectl -n connector-oxxo-pay debug -it connector-oxxo-pay-6b856c4747-bf5hr --image=arunvelsriram/utils --target=connector-oxxo-pay -- /bin/bash
+kubectl -n [namespace] debug -it [podname] --image=arunvelsriram/utils --target=connector-oxxo-pay -- /bin/bash
 ```
 
 ### Copying file to/from K8s pods
@@ -387,7 +387,7 @@ kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ### Deploying a troubleshooting pod
 
 ```bash
-$ kubectl -n [namespace] run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu -- bash
+$ kubectl -n [namespace] run my-shell --rm -i --tty --image ubuntu -- bash
 ```
 
 Once exited from the shell, remove the pod.
