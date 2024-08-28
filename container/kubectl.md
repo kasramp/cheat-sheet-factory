@@ -126,7 +126,7 @@ Commands
 #### Deploying debug container (for installing tools to troubleshooting)
 
 ```bash
-kubectl -n [namespace] debug -it [podname] --image=arunvelsriram/utils --target=connector-oxxo-pay -- /bin/bash
+kubectl -n [namespace] debug -it [podname] --image=arunvelsriram/utils --target=[namespace] -- /bin/bash
 ```
 
 ### Copying file to/from K8s pods
