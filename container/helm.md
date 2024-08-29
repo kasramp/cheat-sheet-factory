@@ -2,7 +2,7 @@
 title: Helm
 category: Container
 layout: 2017/sheet
-updated: 2024-01-23
+updated: 2024-08-29
 keywords:
     - "helm"
     - "helm package manager"
@@ -148,6 +148,15 @@ spec:
 ### Notes
 
 - `charts` directory can host sub/child charts.
+
+### Resolve `another operation` issue
+
+```bash
+# get list of all releases
+$ helm ls -aA
+# uninstall the chart
+$ helm uninstall [release] -n [namespace]
+```
 
 ### Reference
 
