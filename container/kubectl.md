@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2024-01-04
+updated: 2024-08-28
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -112,6 +112,7 @@ Commands
 | `kubectl -n [namespace] get cronjobs` | List cron jobs |
 | `kubectl -n [namespace] get jobs` | List jobs |
 | `kubectl get ns` | Get list of namespaces |
+| `kubectl -n [namespace] describe externalsecret [secretname]` | Check status of secret sync from external (Secretmanager) |
 | `kubectl -n [namespace] get deployment` | List deployments |
 | `kubectl -n [namespace] rollout restart deployment` | Restarts pods one after another with no downtime |
 | `kubectl -n [namespace] get certificates` | List all certificates |
@@ -121,6 +122,12 @@ Commands
    xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.tls\.crt}'` | Extracting `tls.crt` from a cert in base64 |
 | `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' | 
    xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.ca\.crt}'` | Extracting `ca.crt` from a cert decoded from base64 |
+
+#### Deploying debug container (for installing tools to troubleshooting)
+
+```bash
+kubectl -n [namespace] debug -it [podname] --image=arunvelsriram/utils --target=[namespace] -- /bin/bash
+```
 
 ### Copying file to/from K8s pods
 
@@ -380,7 +387,7 @@ kubectl config use-context prod-cluster # switch to `prod-cluster` context
 ### Deploying a troubleshooting pod
 
 ```bash
-$ kubectl -n [namespace] run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu -- bash
+$ kubectl -n [namespace] run my-shell --rm -i --tty --image ubuntu -- bash
 ```
 
 Once exited from the shell, remove the pod.
