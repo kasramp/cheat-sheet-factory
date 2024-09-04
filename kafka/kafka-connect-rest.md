@@ -18,7 +18,7 @@ Shortcuts
 ### Rest APIs
 
 | `curl /connectors` | Get list of connectors |
-| `cur -X POST -H "Content-Type: application/json" /connectors -d 'json'` | Create a connector |
+| `curl -X POST -H "Content-Type: application/json" /connectors -d 'json'` | Create a connector |
 | `curl /connectors/[name]` | Get information about a single connector |
 | `curl /connectors/[name]/config` | Get config of a single connector |
 | `curl -X PUT -H "Content-Type: application/json" /connectors/[name]/config -d 'json` | Create or update a connector config |
