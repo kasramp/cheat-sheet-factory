@@ -19,10 +19,10 @@ Shortcuts
 | `docker swarm init` | Initialization of swarm mode |
 | `docker stack deploy -c docker-compose.yml [name-stack]` | Deploy a stack to Docker Swarm |
 | `docker service ls` | Check the services |
-| `docker service ps [name-stack]` | Check tasks (containers) |
-| `docker service scale [name-stack]=5` | Scale the service to five |
-| `docker service update --image [image:tag] [name-stack]` | Rolling update |
-| `docker service rm [name-stack]` | Remove a service |
+| `docker service ps [service-name]` | Check tasks (containers) |
+| `docker service scale [service-name]=5` | Scale the service to five |
+| `docker service update --image [image:tag] [service-name]` | Rolling update |
+| `docker service rm [service-name]` | Remove a service |
 | `docker stack rm [name-stack]` | Remove a stack |
 
 ### Service vs Stack
