@@ -3,7 +3,7 @@ title: Kotlin
 category: Kotlin
 layout: 2017/sheet
 tags: [Featured]
-updated: 2022-03-14
+updated: 2024-10-02
 keywords:
   - "kotlin"
   - "kotlin cheat sheet"
@@ -516,4 +516,31 @@ Basically they all do similar thing but only differnt in how the context object 
             println("$it is not null")
         }
     }
+```
+
+### Print a string character by character
+
+```kotlin
+val st = "Hello World!"
+for (ch in st) {
+    println(ch)
+}
+
+for (i in 0 until st.length) {
+    println(st[i])
+}
+
+// Print 0 to 10 (inclusive)
+for (i in 0..10) {
+    println(i)
+}
+```
+
+### IntArray
+
+```kotlin
+val x : IntArray = IntArray(10) // Size
+
+// initialize with value
+var x : IntArray = intArrayOf(10, 20, 30)
 ```
