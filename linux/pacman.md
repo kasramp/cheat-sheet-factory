@@ -2,7 +2,7 @@
 title: pacman
 category: Linux
 layout: 2017/sheet
-updated: 2020-07-03
+updated: 2025-01-28
 keywords:
     - "pacman"
     - "arch pacman"
@@ -19,6 +19,12 @@ Switches
 
 ```bash
 $ sudo pacman-mirrors -g
+```
+
+### Update keys
+
+```bash
+$ sudo pacman -Sy --needed archlinux-keyring
 ```
 
 ### Common switches
