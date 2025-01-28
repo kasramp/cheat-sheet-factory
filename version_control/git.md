@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2024-01-05
+updated: 2024-11-04
 keywords:
   - "git"
   - "git cheat sheet"
@@ -22,6 +22,7 @@ intro: |
 | `git checkout [commitHash] .` | Checkout to a particular commit |
 | `git rm [fileName]` | Remove a file |
 | `git revert [commitHash]` | Revert a commit |
+| `git add -p` | Add hunk-by-hunk |
 
 ### Configuration
 
