@@ -2,7 +2,7 @@
 title: Docker
 category: Container
 layout: 2017/sheet
-updated: 2023-04-13
+updated: 2025-03-12
 keywords:
     - "docker"
     - "docker container"
@@ -22,6 +22,12 @@ Shortcuts
 | `docker rmi --force [image-name]` | Remove a docker container |
 | `docker ps` | Shows running containers |
 | `docker pull [image:revision]` | Pulls a docker image |
+
+### Docker build from a Dockerfile
+
+```bash
+$ docker build -f path/Dockerfile -t imageName:lastest .
+```
 
 ### Pruning
 
