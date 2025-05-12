@@ -2,7 +2,7 @@
 title: kubectl
 category: Container
 layout: 2017/sheet
-updated: 2024-08-28
+updated: 2025-05-11
 keywords:
   - kubectl
   - Kubernetes kubectl
@@ -111,6 +111,7 @@ Commands
 | `kubectl -n [namespace] descirbe deployment [deployment name]` | Describe a deployment |
 | `kubectl -n [namespace] get cronjobs` | List cron jobs |
 | `kubectl -n [namespace] get jobs` | List jobs |
+| `kubectl -n [namespace] delete job [jobname]` | Deletes a cron job |
 | `kubectl get ns` | Get list of namespaces |
 | `kubectl -n [namespace] describe externalsecret [secretname]` | Check status of secret sync from external (Secretmanager) |
 | `kubectl -n [namespace] get deployment` | List deployments |
