@@ -3,7 +3,7 @@ title: GIT
 category: Version Control
 layout: 2017/sheet
 tags: [Featured]
-updated: 2024-11-04
+updated: 2026-04-27
 keywords:
   - "git"
   - "git cheat sheet"
@@ -219,6 +219,53 @@ To apply the patches:
 
 ```bash
 $ git apply < changes.patch
+```
+
+### Bisecting
+
+Bisecting is the task of figuring out a faulty commit between two commit
+points, known as good and bad. It uses binary search underneath.
+
+To start a bisect session:
+
+```bash
+$ git bisect start
+```
+
+Mark a commit as a bad
+
+```bash
+$ git bisect bad
+```
+
+Move to the next iteration and check whether the code works or not.
+If not, mark the commit as bad again:
+
+```bash
+$ git bisect bad
+```
+
+Repeat the process until you reach the so-called _good_ code. Once reached,
+
+```bash
+$ git bisect good
+```
+
+Then continue the process of marking a commit as bad `git bisect bad` until
+git prompts something like `[COMMIT_HASH] is the first bad commit`.
+
+Once figured out, can checkout a branch and do a fix.
+
+To reset a bisect process:
+
+```bash
+$ git bisect reset
+```
+
+To skip an irrelevant commit:
+
+```bash
+$ git bisect skip
 ```
 
 ### Reference
