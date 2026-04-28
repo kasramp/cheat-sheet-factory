@@ -1,5 +1,6 @@
 enabled: true
 names:
+  - Configure Management
   - Container
   - FreeBSD
   - Front-end
