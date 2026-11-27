@@ -1,7 +1,7 @@
 ---
 title: CnCNet Yuri's Revenge on Linux
 category: Linux
-logo: { src: /assets/logos/linux.svg }
+logo: { src: /assets/logos/redalert2.svg }
 updated: 2026-11-27
 keywords:
     - "CnCNet"
