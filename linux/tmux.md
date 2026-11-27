@@ -1,7 +1,6 @@
 ---
 title: Tmux
 category: Linux
-layout: 2017/sheet
 updated: 2022-11-06
 keywords:
     - "tmux"
@@ -11,9 +10,8 @@ intro: |
   Tmux shortcuts 
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ## Basic shortcuts
 
@@ -23,12 +21,16 @@ Shortcuts
 
 ### Splitting
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + "` | Create a new horizontal split |
 | `Ctrl + b + %` | Create a vertical split |
 | `Ctrl + b + arrow keys` | Traverse between the split |
 
 ### Windowing
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + c` | Creates a new window |
 | `Ctrl + b + p` | Backs to the previous window |
 | `Ctrl + b + n` | Go to the next window |
@@ -37,17 +39,23 @@ Shortcuts
 
 ### Attaching/detaching 
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + d` | Detach a tmux session |
 | `tmux attach`  | Attach a tmux session |
 | `tmux attach -t [session name/number]` | Attach to a tmux with a given name |
 
 ### Misc
 
+|  |  |
+| --- | --- |
 | `tmux ls` | Get a list of tmux session |
 | `tmux kill-session -t [session name/number]` | Kill a tmux session |
 
 ### Renaming
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + $` | Rename the tmux session |
 | `Ctrl + b + ,` | Rename the current window |
 | `tmux -s [session name]` | Create a session with custom name |
@@ -61,6 +69,8 @@ Shortcuts
 
 ### Splitting
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + %` | Vertical split |
 | `Ctrl + b + -` | Horizontal split |
 | `Ctrl + b` + `l`/`h` | Traverse vertical split |
@@ -68,6 +78,8 @@ Shortcuts
 
 ### Windowing
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + c` | Create a new window |
 | `Ctrl + b + l` | *Next window |
 | `Ctrl + b + h` | *Previous widow |
@@ -75,6 +87,8 @@ Shortcuts
 
 ### Attaching/detaching
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + d` | Detach tmux |
 | `tmux attach` | Attach tmux |
 | `tmux attach -t [session number]` | Attach to a particular session |
@@ -83,11 +97,15 @@ Shortcuts
 
 ### Maximize and minimize
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + z` | Maximize a normal window |
 | `Ctrl + b + z` | Minimize the current maximize window |
 
 ### Miscs
 
+|  |  |
+| --- | --- |
 | `Ctrl + b + t` | Show time |
 | `Ctrl + b + [` | Enter scrolling mode |
 | `q` | Exits scrolling mode |

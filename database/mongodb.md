@@ -1,7 +1,6 @@
 ---
 title: MongoDB
 category: Database
-layout: 2017/sheet
 updated: 2023-06-20
 keywords:
     - "mongodb"
@@ -12,9 +11,8 @@ intro: |
   List of useful MongoDB commands
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### MongoDB clients
 

@@ -1,7 +1,6 @@
 ---
 title: pacman
 category: Linux
-layout: 2017/sheet
 updated: 2025-01-28
 keywords:
     - "pacman"
@@ -11,9 +10,8 @@ intro: |
   Pacman switches 
 ---
 
-Switches
----------
-{: .-three-column}
+## Switches
+<!-- {: .-three-column} -->
 
 ### Update mirror list
 
@@ -29,6 +27,8 @@ $ sudo pacman -Sy --needed archlinux-keyring
 
 ### Common switches
 
+|  |  |
+| --- | --- |
 | `-Syy` | Update repository list |
 | `-Syu` | Upgrade packages |
 | `-Sy` | Install a package |
@@ -36,7 +36,7 @@ $ sudo pacman -Sy --needed archlinux-keyring
 | `-Rs` | Remove a package with deps not required by other packages |
 | `-Ss` | Search for a package |
 | `-Qq` | List of installed packages |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Reconfiguring mirrors
 

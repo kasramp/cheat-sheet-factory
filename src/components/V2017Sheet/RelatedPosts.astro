@@ -1,0 +1,151 @@
+---
+import cx from 'clsx'
+import type { SheetPage } from '~/lib/page'
+import {
+  getListedSheetCount,
+  getRelatedPages,
+  getTopPages
+} from '~/lib/page/queries'
+import PageListItem from '~/components/V2017Home/PageListItem.astro'
+import PushButton from '~/components/V2017/PushButton.astro'
+import Icon from '~/components/Icon.astro'
+
+export type Props = {
+  page: SheetPage
+  pages: Record<string, SheetPage>
+}
+
+const props = Astro.props as Props
+const page = props.page
+const pages = props.pages
+const sheetCount = getListedSheetCount(pages)
+
+const t = {
+  callout: {
+    description:
+      'Over {size} curated cheatsheets, by developers for developers.',
+    link: 'Cheat Sheet Factory home'
+  },
+
+  group: {
+    top: 'Top cheatsheets',
+    other: 'Other cheatsheets',
+    category: 'Other {category} cheatsheets'
+  }
+}
+
+const calloutDescription = t.callout.description.replace(
+  '{size}',
+  sheetCount.toString()
+)
+
+const category = page.frontmatter.category
+
+const categoryHeading = category
+  ? t.group.category.replace('{category}', category)
+  : t.group.other
+
+const relatedPages = getRelatedPages(pages, page, { maxCount: 6 })
+const topPages = getTopPages(pages, page, { maxCount: 6 })
+
+const column = cx(
+  'mt-0 mb-0 mr-[16px] ml-[16px]',
+  'max-[1265px]:mr-[8px] max-[1265px]:ml-[8px]',
+  'max-[481px]:mt-[8px] max-[481px]:mb-[8px]',
+  'min-[481px]:max-[769px]:mt-[8px] min-[481px]:max-[769px]:mb-[8px]'
+)
+
+const styles = {
+  area: 'RelatedPosts__area bg-muted py-[16px] min-[481px]:py-[64px]',
+  inner: 'RelatedPosts__inner mx-auto max-w-content px-[16px]',
+  section: cx(
+    'RelatedPosts__section',
+    'mx-[-16px] flex max-[1265px]:mx-[-8px]',
+    'max-[481px]:flex-wrap min-[481px]:max-[769px]:flex-wrap'
+  ),
+  callout: cx(
+    'RelatedPosts__callout',
+    column,
+    'flex flex-[1_1_33%]',
+    'max-[481px]:flex-[1_1_100%]',
+    'min-[481px]:max-[769px]:flex-[1_1_100%]'
+  ),
+  group: cx(
+    'RelatedPosts__group',
+    column,
+    'flex-[1_1_50%]',
+    'max-[481px]:flex-[1_1_100%]',
+    'min-[481px]:max-[769px]:flex-[1_1_40%]'
+  ),
+  calloutLink: cx(
+    'RelatedPosts__calloutLink',
+    'flex flex-[1_0_100%] items-center justify-center rounded-xl p-[32px] no-underline [box-shadow:var(--shadow-sm)]',
+    'bg-[image:var(--brand-gradient)]',
+    'text-primary-foreground visited:text-primary-foreground',
+    'hover:bg-none hover:bg-primary-solid-hover focus:bg-none focus:bg-primary-solid-hover',
+    '[text-shadow:0_1px_1px_var(--overlay)]'
+  ),
+  calloutText: 'RelatedPosts__calloutText m-auto text-center',
+  calloutIcon: cx(
+    'RelatedPosts__calloutIcon',
+    'mx-auto mb-[16px] grid size-[64px] place-items-center rounded-circle border-[2px] border-solid border-primary-foreground',
+    '[&>svg]:text-primary-foreground'
+  ),
+  description:
+    'RelatedPosts__description mb-[16px] block text-base font-light leading-[1.4]',
+  list: 'RelatedPosts__list grid grid-cols-1 gap-[8px] list-none p-0 min-[481px]:grid-cols-2',
+  item: cx(
+    'RelatedPosts__item grid min-w-0',
+    '[&>a]:border [&>a]:border-border [&>a]:bg-card'
+  ),
+  heading:
+    'RelatedPosts__heading m-0 mb-[16px] p-0 font-manrope text-base font-extrabold leading-[1.2] text-heading'
+}
+---
+
+<footer class={styles.area} id="related" data-js-no-preview>
+  <div class={styles.inner}>
+    <div class={styles.section}>
+      {/* Callout */}
+      <div class={styles.callout}>
+        <a class={styles.calloutLink} href="/">
+          <div class={styles.calloutText}>
+            <i class={styles.calloutIcon}>
+              <Icon name="ios-arrow-back" size={48} />
+            </i>
+            <span class={styles.description}>{calloutDescription}</span>
+            <PushButton variant="dark">{t.callout.link}</PushButton>
+          </div>
+        </a>
+      </div>
+
+      {/* Posts in the same category */}
+      <div class={styles.group}>
+        <div>
+          <h3 class={styles.heading}>{categoryHeading}</h3>
+        </div>
+        <ul class={styles.list}>
+          {relatedPages.map((page) => (
+            <li class={styles.item}>
+              <PageListItem page={page} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Top pages */}
+      <div class={styles.group}>
+        <div>
+          <h3 class={styles.heading}>{t.group.top}</h3>
+        </div>
+        <ul class={styles.list}>
+          {topPages.map((page) => (
+            <li class={styles.item}>
+              <PageListItem page={page} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

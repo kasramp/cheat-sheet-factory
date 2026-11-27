@@ -1,7 +1,6 @@
 ---
 title: Redis
 category: Database
-layout: 2017/sheet
 updated: 2025-07-24
 keywords:
     - "redis"
@@ -11,9 +10,8 @@ intro: |
   List of useful Redis commands
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Redis clients
 

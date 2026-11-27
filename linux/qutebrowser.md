@@ -1,7 +1,6 @@
 ---
 title: Qutebrowser
 category: Linux
-layout: 2017/sheet
 updated: 2024-09-02
 keywords:
     - "qutebrowser"
@@ -11,12 +10,13 @@ intro: |
   Qutebrowser cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Key bindings
 
+|  |  |
+| --- | --- |
 | `ctrl + shift + n` | Open incognito |
 | `:open -p` | Open incognito |
 

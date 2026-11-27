@@ -1,7 +1,6 @@
 ---
 title: JavaScript
 category: JavaScript
-layout: 2017/sheet
 tags: [Featured]
 updated: 2021-12-20
 keywords:
@@ -14,7 +13,7 @@ intro: |
 
 ## Shortcuts
 
-{: .-two-column}
+<!-- {: .-two-column} -->
 
 ## Basics
 

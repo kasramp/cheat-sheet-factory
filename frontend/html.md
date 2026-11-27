@@ -1,7 +1,6 @@
 ---
 title: HTML 
 category: Front-end
-layout: 2017/sheet
 updated: 2019-10-05
 keywords:
     - "HTML"
@@ -11,9 +10,8 @@ intro: |
     Cheat sheet for HTML
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Basic HTML document
 

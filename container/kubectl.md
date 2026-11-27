@@ -1,7 +1,6 @@
 ---
 title: kubectl
 category: Container
-layout: 2017/sheet
 updated: 2025-05-11
 keywords:
   - kubectl
@@ -9,9 +8,8 @@ keywords:
 prism_languages: [bash, yml]
 ---
 
-Getting started
----------
-{: .-one-column}
+## Getting started
+<!-- {: .-one-column} -->
 
 ### Basics
 
@@ -56,12 +54,13 @@ Different Kuberentes service types:
 - `LoadBalancer` - sits in front of nodes and provisions an external IP to act as a load balancer for the service (allows external access to a service with `localhost` and custom port set in service yaml file)
 - `ExternalName` - map a service to a DNS name
 
-Commands
----------
-{: .-one-column}
+## Commands
+<!-- {: .-one-column} -->
 
 ### Handy kubectl commands
 
+|  |  |
+| --- | --- |
 | `kubectl api-resources` | List supported resources by K8s |
 | `kubectl version` | Get version |
 | `kubectl cluster-info` | Get information about the cluster |
@@ -121,6 +120,8 @@ Commands
 | `kubectl -n [namespace] get secret [certificate-name] -o json > certificate.json` | Export a cert-manager certificate |
 | `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' |
    xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.tls\.crt}'` | Extracting `tls.crt` from a cert in base64 |
+|  |
+| --- |
 | `kubectl -n [namespace] get certificate [certificate-name] -o jsonpath='{.spec.secretName}' | 
    xargs -I {} kubectl -n [namespace] get secret {} -o jsonpath='{.data.ca\.crt}'` | Extracting `ca.crt` from a cert decoded from base64 |
 
@@ -132,17 +133,20 @@ kubectl -n [namespace] debug -it [podname] --image=arunvelsriram/utils --target=
 
 ### Copying file to/from K8s pods
 
+|  |  |
+| --- | --- |
 | `kubectl -n [namespace] cp /tmp/tmp.txt [namespace]/[pod]:/tmp` | Copy from local to a pod |
 | `kubectl -n [namespace] cp [namespace]/[pod]:/tmp/tmp.txt /tmp` | Copy from a pod to local |
 
 ### Port forwarding
 
+|  |  |
+| --- | --- |
 | `kubectl -n [namespace] port-forward pod/[podname] hostport:podport` | Port forward a single pod |
 | `kubectl -n [namespace] port-forward deployment/[deploymentname] hostport:podport` | Port forward a deployment |
 
-Volumes
----------
-{: .-one-column}
+## Volumes
+<!-- {: .-one-column} -->
 
 ### Basics
 
@@ -157,9 +161,8 @@ There are multiple types of volumes:
 
 A persistentVolume can be set up manually (static) or dynamically using StorageClass (SC).
 
-ConfigMap
----------
-{: .-one-column}
+## ConfigMap
+<!-- {: .-one-column} -->
 
 ### ConfigMaps Basics
 
@@ -311,9 +314,8 @@ spect:
           mountPath: [path] # /tmp
 ```
 
-Secrets
----------
-{: .-one-column}
+## Secrets
+<!-- {: .-one-column} -->
 
 ### Creating literal secret
 
@@ -371,9 +373,8 @@ spect:
           readOnly: true
 ```
 
-Miscellaneous
----------
-{: .-one-column}
+## Miscellaneous
+<!-- {: .-one-column} -->
 
 ### Kubectl config for multiple clusters
 
@@ -417,7 +418,7 @@ Then go to the url and past the token.
 More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 ## Reference
-{: .-one-column}
+<!-- {: .-one-column} -->
 
 - [https://github.com/kubernetes/examples](https://github.com/kubernetes/examples)
 - [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)

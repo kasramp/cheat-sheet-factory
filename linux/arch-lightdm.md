@@ -2,7 +2,6 @@
 
 title: Arch LightDM 
 category: Linux
-layout: 2017/sheet
 updated: 2021-08-01
 keywords:
     - "Arch"
@@ -14,9 +13,8 @@ intro: |
   How to set and customize LightDM on Arch Linux with Slick greeter
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ## Packages to install
 

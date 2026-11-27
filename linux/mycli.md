@@ -1,7 +1,6 @@
 ---
 title: mycli
 category: Linux
-layout: 2017/sheet
 updated: 2020-04-17
 keywords:
     - "mycli"
@@ -11,9 +10,8 @@ intro: |
   mycli
 ---
 
-Switches
----------
-{: .-two-column}
+## Switches
+<!-- {: .-two-column} -->
 
 ### Installation
 
@@ -37,4 +35,4 @@ Switches
 
 + [https://github.com/dbcli/mycli](https://github.com/dbcli/mycli)
 
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->

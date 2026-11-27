@@ -1,7 +1,6 @@
 ---
 title: PostgreSQL
 category: Database
-layout: 2017/sheet
 updated: 2023-05-22
 keywords:
     - "postgreSQL"
@@ -11,12 +10,13 @@ intro: |
   List of useful PostgreSQL commands
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Basics
 
+|  |  |
+| --- | --- |
 | `psql -U [postgres] -d [db] -h [host]` | Connect to a database |
 | `psql -U [postgres] [db]` | Connect to a database shorthand |
 | `\c [db] [username]` | Switch to a different database |
@@ -33,10 +33,12 @@ Shortcuts
 | `\i [file name]` | Execute queries from a file |
 | `\timing` | Turn query execution timing |
 | `\q` | Quit |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Create and drop database, table
 
+|  |  |
+| --- | --- |
 | `createdb [db name]` | Create a database |
 | `dropdb [db name]` | Drop a database |
 | `create table [table description]` | Create a table |
@@ -44,17 +46,23 @@ Shortcuts
 
 ### Add remove user
 
+|  |  |
+| --- | --- |
 | `createuser [user]` | Create a user |
 | `createuser -s [user]` | Create a super user |
 | `dropuser [user]` | Drop a user |
 
 ### Backup, restore
 
+|  |  |
+| --- | --- |
 | `pg_dump -O [db name] > backup.pg_dump` | Backup a database |
 | `psql -f backup.pg_dump [db name]` | Restore a database | 
 
 ### Start, stop and restart PostgreSQL
 
+|  |  |
+| --- | --- |
 | `/etc/init.d/postgresql stop` | Stop PostgreSQL |
 | `service postgresql stop` | Stop PostgreSQL |
 | `/etc/init.d/postgresql start` | Start PostgreSQL |

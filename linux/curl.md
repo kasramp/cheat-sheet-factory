@@ -1,7 +1,6 @@
 ---
 title: cURL
 category: Linux
-layout: 2017/sheet
 updated: 2024-03-22
 keywords:
     - "curl"
@@ -11,9 +10,8 @@ intro: |
   cURL cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Basics GET, POST, PUT, and DELETE
 

@@ -1,7 +1,6 @@
 ---
 title: shell
 category: Linux
-layout: 2017/sheet
 updated: 2022-10-10
 keywords:
     - "shell"
@@ -11,12 +10,13 @@ intro: |
   List of bash useful commands 
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Commands
 
+|  |  |
+| --- | --- |
 | Battery fine-tuning: | `sudo tlp-stat -b && sudo tlp recalibrate` |
 | Htop like battery draining report: | `powertop` |
 | Open a file with the default app from terminal: | `xdg-open test.html` |

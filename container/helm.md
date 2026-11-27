@@ -1,7 +1,6 @@
 ---
 title: Helm
 category: Container
-layout: 2017/sheet
 updated: 2024-08-29
 keywords:
     - "helm"
@@ -10,12 +9,13 @@ intro: |
   Helm Cheat sheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Handy helm commands
 
+|  |  |
+| --- | --- |
 | `helm create hello-world` | Create a Helm chart (contain deployment.yml and serivce.yml) |
 | `helm list` | List installed releases |
 | `helm list --tiller-namespace [namespace]` | List installed releases for that namespace |
@@ -60,6 +60,8 @@ List of functions from Sprig
 
 #### Functions
 
+|  |  |
+| --- | --- |
 | `default default_value value # == default(default_value, value)` | Default value |
 | `quote value` | Wrap a value in quote |
 | `upper value` | Uppercase a value |
@@ -70,6 +72,8 @@ List of functions from Sprig
 
 #### Pipes
 
+|  |  |  |
+| --- | --- | --- |
 | `value | default default_value` | Default value |
 | `value | quote` | Wrap a value in quote |
 | `value | upper` | Uppercase a value |
@@ -106,6 +110,8 @@ spec:
 
 ### Logical operators
 
+|  |  |
+| --- | --- |
 | `eq .Val1 .Val2` | Equal |
 | `ne .Val1 .Val2` | Not equal |
 | `gt .Val1 .Val2` | Greater than |

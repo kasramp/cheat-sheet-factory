@@ -1,7 +1,6 @@
 ---
 title: Docker Swarm
 category: Container
-layout: 2017/sheet
 updated: 2024-10-02
 keywords:
     - "docker"
@@ -10,12 +9,13 @@ intro: |
   Docker Swarm Cheat sheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Handy Docker Swarm commands
 
+|  |  |
+| --- | --- |
 | `docker swarm init` | Initialization of swarm mode |
 | `docker stack deploy -c docker-compose.yml [name-stack]` | Deploy a stack to Docker Swarm |
 | `docker service ls` | Check the services |

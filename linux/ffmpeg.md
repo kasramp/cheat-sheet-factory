@@ -1,7 +1,6 @@
 ---
 title: FFmpeg
 category: Linux
-layout: 2017/sheet
 updated: 2020-10-09
 keywords:
     - "ffmpeg"
@@ -9,9 +8,8 @@ intro: |
   FFmpeg useful commands for recording and video editing
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ## Cut videos
 

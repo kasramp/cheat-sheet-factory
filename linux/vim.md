@@ -1,7 +1,6 @@
 ---
 title: Vim
 category: Linux
-layout: 2017/sheet
 tags: [Featured]
 updated: 2023-07-12
 keywords:
@@ -13,9 +12,8 @@ intro: |
   Vim Key Bindings 
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 
 ## Movements
@@ -24,18 +22,24 @@ Moving to *right*, *left*, *up*, and *down*
 
 ### Moving *right*
 
+|  |  |
+| --- | --- |
 | `l` | Moves the cursor to *right* |
 | `2l` | Moves the cursor **two** characters to *right* |
 | `nl` | Moves the cursor **n** characters to *right* |
 
 ### Moving *left*
 
+|  |  |
+| --- | --- |
 | `h` | Moves the cursor to *left* |
 | `2h` | Moves the cursor **two** characters to *left* |
 | `nh` |Moves the cursor **n** characters to *left* |
 
 ### Moving *up*
 
+|  |  |
+| --- | --- |
 | `k` | Moves the cursor to *up* |
 | `2k` | Moves the cursor **two** characters to *up* |
 | `nk` | Moves the cursor **n** characters to *up* |
@@ -43,6 +47,8 @@ Moving to *right*, *left*, *up*, and *down*
  
 ### Moving *down*
 
+|  |  |
+| --- | --- |
 | `j` | Moves the cursor to *down* |
 | `2j` | Moves the cursor **two** characters to *down* |
 | `nj` | Moves the cursor **n** characters to *down* |
@@ -50,6 +56,8 @@ Moving to *right*, *left*, *up*, and *down*
 
 ### Moving to the *beginning* and the *end* of the *line/file*
 
+|  |  |
+| --- | --- |
 | `gg` | Jumps to the *beginning* of the file |
 | `G` | Jumps to the *end* of the file |
 | `I` | Jumps to the *beginning* of the line and switches to **insert** mode |
@@ -59,6 +67,8 @@ Moving to *right*, *left*, *up*, and *down*
 
 ### Moving *forward* and *backward* *word* by *word*
 
+|  |  |
+| --- | --- |
 | `w` | Moves **forward** by a *word* which cursor stops at the **first character** of the word |
 | `2w` | Moves **forward** **two** *words* which cursor stops at the **first character** of the word |
 | `nw` | Moves **forward** **n** *words* which cursor stops at the **first character** of the word |
@@ -71,16 +81,22 @@ Moving to *right*, *left*, *up*, and *down*
 
 ### Moving *forward* and *backward* *sentence* by *sentence*
 
+|  |  |
+| --- | --- |
 | `)` | Moves **forward** by a sentence without leaving normal mode |
 | `(` | Moves **backward** by a sentence without leaving normal mode |
 
 ### Moving *forward* and *backward* *paragraph* by *paragraph*
 
+|  |  |
+| --- | --- |
 | `}` | Moves **forward** by a paragraph without leaving normal mode |
 | `{` | Moves **backward** by a paragraph without leaving normal mode |
 
 ### Moving *forward* and *backward* *page* by *page*
 
+|  |  |
+| --- | --- |
 | `Ctrl + f` | Moves **forward** by a page without leaving normal mode |
 | `Ctrl + b` | Moves **backward** by a page without leaving normal mode |
 | `Ctrl + d` | Moves **forward** by a half page without leaving normal mode (page down) |
@@ -88,11 +104,15 @@ Moving to *right*, *left*, *up*, and *down*
 
 ### Moving *beginning* and *end* the document
 
+|  |  |
+| --- | --- |
 | `[` | Move to the **beginning** of the document |
 | `]` | Moves to the **end** of the document |
 
 ### Moving *back* and *forth* in code
 
+|  |  |
+| --- | --- |
 | `%` | Move to the matching bracket or parentheses |
 
 ### Moving *back* and *forth* in Insert mode
@@ -105,22 +125,30 @@ Including inserting a *line* and switching to *insert* mode
 
 ### *Line* insertion
 
+|  |  |
+| --- | --- |
 | `o` | Inserts a *line* **below** of the current line and moves the cursor to the *beginning* of the line |
 | `O` | Insert a *line* **above** of the current line and moves the cursor to the *beginning* of the line |
 | `r + enter` | Break the current line to the new line which moves all the text to the next line. It does not switch to insert mode |
 
 ### *Line* insertion *helper*
 
+|  |  |
+| --- | --- |
 | `Enter` | Insert a *line* **below** of the current line but **does not** switches to Insert mode |
 | `[ + Space` | Insert a *line* **above** of the current line but **does not** switches to Insert mode |
 
 ### Switching to *Insert* mode
 
+|  |  |
+| --- | --- |
 | `i` | Switches to *Insert* mode, **does not** change cursor position |
 | `a` | Switches to *Insert* mode, **moves** the cursor **one** character forward |
 
 ### *Indentation* insertion
 
+|  |  |
+| --- | --- |
 | `>` | Adds a tab, usually eight characters |
 | `<` | Removes a tab, usually eight characters |
 
@@ -128,6 +156,8 @@ Including inserting a *line* and switching to *insert* mode
 
 ### *Cut (Delete)*, *Copy (Yank)* and *Paste*
 
+|  |  |
+| --- | --- |
 | `yy` | Yanks the **current** *line* |
 | `2yy` | Yanks **two** *lines* |
 | `nyy` | Yanks **n** *lines* |
@@ -151,22 +181,30 @@ Including inserting a *line* and switching to *insert* mode
 
 ### *Selection* (Visual Mode)
 
+|  |  |
+| --- | --- |
 | `V` | Selects the **entire** of the **current** line |
 | `v` | Switches to **visual** mode |
 
 ### *Undo* and *Redo*
 
+|  |  |
+| --- | --- |
 | `u` | Does undo |
 | `Ctrl + r** or **.` | Does redo |
 
 ### *Miscellaneous*
 
+|  |  |
+| --- | --- |
 | `J` | Joins the **next** line to the **current** line |
 
 ### Moving screen without moving the cursor
 
 + It's used when reaching to a bottom of a file but want to bring the content of a file to the middle
 
+|  |  |
+| --- | --- |
 | `zz` | Bring the current line to the middle of the screen |
 | `zt` | Bring the current line to the top of the screen |
 | `zb` | Bring the current line to the bottom of the screen |
@@ -175,12 +213,16 @@ Including inserting a *line* and switching to *insert* mode
 
 + It's used to copy the whole content of a file to the current open file
 
+|  |  |
+| --- | --- |
 | `:r another-file.txt` | Copies the whole content |
 
 ## Splitting
 
 ### Create split
 
+|  |  |
+| --- | --- |
 | `Ctrl + w + s` | Horizontal split |
 | `:sp` | Horizontal split |
 | `:split` | Horizontal split |
@@ -190,11 +232,15 @@ Including inserting a *line* and switching to *insert* mode
 
 ### Split opening files
 
+|  |  |
+| --- | --- |
 | `:sp [fileName]` | Open a file in horizontal split |
 | `:vsp [fileName]` | Open a file in vertical split |
 
 ### Cycle through splits
 
+|  |  |
+| --- | --- |
 | `Ctrl + w + w` | Go to the next split |
 | `Ctrl + w + l` | Go to split on the right |
 | `Ctrl + w + h` | Go to split on the left |
@@ -206,6 +252,8 @@ Including inserting a *line* and switching to *insert* mode
 
 ### Resizing
 
+|  |  |
+| --- | --- |
 | `:resize 20` | Resize horizontally a split to 20 |
 | `:resize -20` | Resize horizontally a split to 20 less |
 | `:resize +20` | Resize horizontally a split to 20 more |
@@ -220,6 +268,8 @@ Including inserting a *line* and switching to *insert* mode
 
 ### Split placement
 
+|  |  |
+| --- | --- |
 | `Ctrl + w + x` | Swap the current split position with the next |
 | `:set splitright` | Open split on right side |
 | `Ctrl + w + r` | Rotate a split down |
@@ -229,6 +279,8 @@ Including inserting a *line* and switching to *insert* mode
 
 ### File opening
 
+|  |  |
+| --- | --- |
 | `o` | Open in prev window |
 | `go` | Preview |
 | `t` | Open in a new tab |
@@ -240,6 +292,8 @@ Including inserting a *line* and switching to *insert* mode
 
 ### File manager
 
+|  |  |
+| --- | --- |
 | `o` | Open and close a tree |
 | `t` | Open a new file manager in a new tab |
 | `T` | Open a new file manager in a new tab silently |
@@ -260,11 +314,15 @@ Including inserting a *line* and switching to *insert* mode
 
 ### Tab related key bindings
 
+|  |  |
+| --- | --- |
 | `gt` | Go to the next tab |
 | `gT` | Go to the previous tab | 
 
 ## Go to (jump) to line
 
+|  |  |
+| --- | --- |
 | `46gg` | Go to line 46 |
 | `46G` | Go to like 46 |
 

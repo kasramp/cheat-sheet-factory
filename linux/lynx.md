@@ -1,7 +1,6 @@
 ---
 title: Lynx
 category: Linux
-layout: 2017/sheet
 updated: 2020-04-10
 keywords:
     - "lynx"
@@ -11,12 +10,13 @@ intro: |
   List of Lynx key bindings 
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Common shortcuts
 
+|  |  |
+| --- | --- |
 | `up/down` | Go up/down |
 | `left` | Go to previous page |
 | `right` | Go to selected url |

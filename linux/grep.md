@@ -1,7 +1,6 @@
 ---
 title: grep
 category: Linux
-layout: 2017/sheet
 updated: 2022-06-22
 keywords:
     - "grep"
@@ -11,9 +10,8 @@ intro: |
   Grep cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### OR
 
