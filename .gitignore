@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # playwright
 test-results
+
+# IDE
+/.idea
