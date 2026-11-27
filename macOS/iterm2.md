@@ -1,6 +1,7 @@
 ---
 title: iTerm2
 category: macOS
+logo: { set: simple-icons, name: iterm2 }
 tags: [Featured]
 updated: 2019-12-07
 keywords:

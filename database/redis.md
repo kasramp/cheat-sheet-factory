@@ -1,6 +1,7 @@
 ---
 title: Redis
 category: Database
+logo: { src: /assets/logos/redis.svg }
 updated: 2025-07-24
 keywords:
     - "redis"

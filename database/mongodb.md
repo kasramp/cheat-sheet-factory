@@ -1,6 +1,7 @@
 ---
 title: MongoDB
 category: Database
+logo: { set: simple-icons, name: mongodb }
 updated: 2023-06-20
 keywords:
     - "mongodb"

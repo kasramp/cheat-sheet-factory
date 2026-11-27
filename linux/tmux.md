@@ -1,6 +1,7 @@
 ---
 title: Tmux
 category: Linux
+logo: { src: /assets/logos/tmux.svg }
 updated: 2022-11-06
 keywords:
     - "tmux"

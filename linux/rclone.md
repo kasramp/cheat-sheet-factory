@@ -1,6 +1,7 @@
 ---
 title: rclone
 category: Linux
+logo: { src: /assets/logos/rclone.svg }
 updated: 2026-11-27
 keywords:
     - "rclone"

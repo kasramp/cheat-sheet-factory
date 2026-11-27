@@ -1,6 +1,7 @@
 ---
 title: JavaScript
 category: JavaScript
+logo: { src: /assets/logos/javascript.svg }
 tags: [Featured]
 updated: 2021-12-20
 keywords:

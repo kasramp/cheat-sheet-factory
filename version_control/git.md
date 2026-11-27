@@ -1,6 +1,7 @@
 ---
 title: GIT
 category: Version Control
+logo: { src: /assets/logos/git.svg }
 tags: [Featured]
 updated: 2026-04-27
 keywords:

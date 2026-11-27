@@ -1,6 +1,7 @@
 ---
 title: mycli
 category: Linux
+logo: { src: /assets/logos/mysql.svg }
 updated: 2020-04-17
 keywords:
     - "mycli"

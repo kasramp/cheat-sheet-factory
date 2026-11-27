@@ -1,6 +1,7 @@
 ---
 title: IntelliJ IDEA
 category: IDE
+logo: { set: simple-icons, name: intellijidea }
 tags: [Featured]
 updated: 2018-10-18
 keywords:

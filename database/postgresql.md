@@ -1,6 +1,7 @@
 ---
 title: PostgreSQL
 category: Database
+logo: { src: /assets/logos/postgresql.svg }
 updated: 2023-05-22
 keywords:
     - "postgreSQL"

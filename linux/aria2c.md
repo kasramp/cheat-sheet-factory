@@ -1,6 +1,7 @@
 ---
 title: aria2c
 category: Linux
+logo: { set: icon-park-outline, name: download }
 updated: 2022-08-22
 keywords:
     - "aria2c"

@@ -1,6 +1,7 @@
 ---
 title: Mouse Acceleration
 category: macOS
+logo: { set: logos, name: macos-icon }
 updated: 2018-03-20
 weight: -1
 keywords:

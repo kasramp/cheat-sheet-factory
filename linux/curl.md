@@ -1,6 +1,7 @@
 ---
 title: cURL
 category: Linux
+logo: { src: /assets/logos/curl.svg }
 updated: 2024-03-22
 keywords:
     - "curl"

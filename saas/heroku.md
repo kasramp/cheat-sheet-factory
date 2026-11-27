@@ -1,6 +1,7 @@
 ---
 title: Heroku
 category: SaaS
+logo: { src: /assets/logos/heroku.svg }
 updated: 2019-01-02
 keywords:
     - "heroku"

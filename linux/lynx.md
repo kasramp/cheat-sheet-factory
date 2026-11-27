@@ -1,6 +1,7 @@
 ---
 title: Lynx
 category: Linux
+logo: { set: icon-park-outline, name: browser }
 updated: 2020-04-10
 keywords:
     - "lynx"

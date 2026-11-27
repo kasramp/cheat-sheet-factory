@@ -1,6 +1,7 @@
 ---
 title: Qutebrowser
 category: Linux
+logo: { set: icon-park-outline, name: keyboard-one }
 updated: 2024-09-02
 keywords:
     - "qutebrowser"

@@ -1,6 +1,7 @@
 ---
 title: W3m Shortcuts
 category: Linux
+logo: { set: icon-park-outline, name: terminal }
 updated: 2021-01-07
 keywords:
     - "w3m"

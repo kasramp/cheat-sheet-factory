@@ -1,6 +1,7 @@
 ---
 title: FFmpeg
 category: Linux
+logo: { src: /assets/logos/ffmpeg.svg }
 updated: 2020-10-09
 keywords:
     - "ffmpeg"

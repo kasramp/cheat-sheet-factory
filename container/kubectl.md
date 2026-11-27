@@ -1,6 +1,7 @@
 ---
 title: kubectl
 category: Container
+logo: { src: /assets/logos/kubernetes.svg }
 updated: 2025-05-11
 keywords:
   - kubectl

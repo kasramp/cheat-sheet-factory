@@ -1,6 +1,7 @@
 ---
 title: NVM
-category: Javascript
+category: JavaScript
+logo: { set: simple-icons, name: nvm }
 tags: [Featured]
 updated: 2020-04-09
 keywords:

@@ -1,6 +1,7 @@
 ---
 title: Vim
 category: Linux
+logo: { src: /assets/logos/vim.svg }
 tags: [Featured]
 updated: 2023-07-12
 keywords:

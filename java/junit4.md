@@ -1,6 +1,7 @@
 ---
 title: JUnit 4
 category: Java
+logo: { set: simple-icons, name: junit5 }
 updated: 2019-03-17
 keywords:
     - "junit4"

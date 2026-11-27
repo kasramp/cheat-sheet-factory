@@ -1,6 +1,7 @@
 ---
 title: shell
 category: Linux
+logo: { set: simple-icons, name: gnubash }
 updated: 2022-10-10
 keywords:
     - "shell"

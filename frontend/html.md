@@ -1,6 +1,7 @@
 ---
 title: HTML 
 category: Front-end
+logo: { src: /assets/logos/html.svg }
 updated: 2019-10-05
 keywords:
     - "HTML"

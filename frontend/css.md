@@ -1,6 +1,7 @@
 ---
 title: CSS 
 category: Front-end
+logo: { src: /assets/logos/css.svg }
 updated: 2020-05-18
 keywords:
     - "CSS"

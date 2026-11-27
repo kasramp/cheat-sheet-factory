@@ -1,6 +1,7 @@
 ---
 title: Terragrunt
 category: Ops
+logo: { src: /assets/logos/terraform.svg }
 updated: 2024-10-24
 keywords:
     - "terragrunt"

@@ -1,6 +1,7 @@
 ---
 title: Cmus
 category: Linux
+logo: { set: icon-park-outline, name: music }
 updated: 2018-10-16
 keywords:
     - "cmus"

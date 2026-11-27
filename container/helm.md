@@ -1,6 +1,7 @@
 ---
 title: Helm
 category: Container
+logo: { set: simple-icons, name: helm }
 updated: 2024-08-29
 keywords:
     - "helm"

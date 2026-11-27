@@ -1,6 +1,7 @@
 ---
 title: Apache
 category: Web Server
+logo: { set: simple-icons, name: apache }
 updated: 2023-04-13
 keywords:
     - "apache"

@@ -1,6 +1,7 @@
 ---
 title: ufw
 category: Linux
+logo: { src: /assets/logos/ubuntu.svg }
 updated: 2024-01-22
 keywords:
     - "ufw"

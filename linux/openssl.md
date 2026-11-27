@@ -1,6 +1,7 @@
 ---
 title: OpenSSL
 category: Linux
+logo: { set: simple-icons, name: openssl }
 updated: 2024-01-03
 keywords:
     - "openssl"

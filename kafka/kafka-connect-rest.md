@@ -1,6 +1,7 @@
 ---
 title: Kafka connect rest
 category: Kafka
+logo: { set: simple-icons, name: apachekafka }
 updated: 2019-01-29
 keywords:
     - "kafka connect"

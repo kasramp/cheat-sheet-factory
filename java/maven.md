@@ -1,6 +1,7 @@
 ---
 title: Maven
 category: Java
+logo: { set: simple-icons, name: apachemaven }
 updated: 2019-04-17
 keywords:
     - "maven"

@@ -1,6 +1,7 @@
 ---
 title: pacman
 category: Linux
+logo: { src: /assets/logos/archlinux.svg }
 updated: 2025-01-28
 keywords:
     - "pacman"

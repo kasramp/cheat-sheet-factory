@@ -1,6 +1,7 @@
 ---
 title: jQuery 
 category: Front-end
+logo: { src: /assets/logos/jquery.svg }
 updated: 2020-05-22
 keywords:
     - "jQuery"

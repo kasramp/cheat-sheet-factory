@@ -1,6 +1,7 @@
 ---
 title: Python
 category: Python
+logo: { src: /assets/logos/python.svg }
 tags: [Featured]
 updated: 2020-12-29
 keywords:

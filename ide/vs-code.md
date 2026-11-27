@@ -1,6 +1,7 @@
 ---
 title: Visual Studio Code
 category: IDE
+logo: { src: /assets/logos/vscode.svg }
 updated: 2019-06-06
 keywords:
     - "VS Code"

@@ -1,6 +1,7 @@
 ---
 title: Docker Swarm
 category: Container
+logo: { src: /assets/logos/docker.svg }
 updated: 2024-10-02
 keywords:
     - "docker"

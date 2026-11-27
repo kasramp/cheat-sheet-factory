@@ -1,6 +1,7 @@
 ---
 title: Docker
 category: Container
+logo: { src: /assets/logos/docker.svg }
 updated: 2025-03-12
 keywords:
     - "docker"

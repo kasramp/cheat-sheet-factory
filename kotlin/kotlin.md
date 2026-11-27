@@ -1,6 +1,7 @@
 ---
 title: Kotlin
 category: Kotlin
+logo: { src: /assets/logos/kotlin.svg }
 tags: [Featured]
 updated: 2024-10-02
 keywords:

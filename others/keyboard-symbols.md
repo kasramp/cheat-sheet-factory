@@ -1,6 +1,7 @@
 ---
 title: Keyboard Unicode Symbols
 category: Others
+logo: { src: /assets/logos/unicode.svg }
 updated: 2018-10-19
 keywords:
     - "Keyboard symbols"

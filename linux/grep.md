@@ -1,6 +1,7 @@
 ---
 title: grep
 category: Linux
+logo: { set: simple-icons, name: gnu }
 updated: 2022-06-22
 keywords:
     - "grep"

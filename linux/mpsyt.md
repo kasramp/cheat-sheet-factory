@@ -1,6 +1,7 @@
 ---
 title: Mpsyt
 category: Linux
+logo: { set: simple-icons, name: youtube }
 updated: 2018-11-15
 keywords:
     - "mpsyt"

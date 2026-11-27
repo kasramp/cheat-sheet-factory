@@ -1,6 +1,7 @@
 ---
 title: Yaourt
 category: Linux
+logo: { src: /assets/logos/archlinux.svg }
 updated: 2020-07-09
 keywords:
     - "yaourt"

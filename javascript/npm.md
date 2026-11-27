@@ -1,6 +1,7 @@
 ---
 title: NPM
-category: Javascript
+category: JavaScript
+logo: { src: /assets/logos/npm.svg }
 tags: [Featured]
 updated: 2020-04-10
 keywords:

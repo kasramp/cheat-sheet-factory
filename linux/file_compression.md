@@ -1,6 +1,7 @@
 ---
 title: File Compression
 category: Linux
+logo: { set: simple-icons, name: 7zip }
 updated: 2021-11-01
 keywords:
     - "file compression"

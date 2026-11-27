@@ -2,6 +2,7 @@
 title: AppleScript
 updated: 2018-03-17
 category: macOS
+logo: { src: /assets/logos/apple.svg }
 prism_languages: [applescript]
 ---
 

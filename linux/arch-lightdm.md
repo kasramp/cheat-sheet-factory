@@ -2,6 +2,7 @@
 
 title: Arch LightDM 
 category: Linux
+logo: { src: /assets/logos/archlinux.svg }
 updated: 2021-08-01
 keywords:
     - "Arch"

@@ -1,6 +1,7 @@
 ---
 title: Gradle
 category: Java
+logo: { set: simple-icons, name: gradle }
 updated: 2023-10-10
 keywords:
     - "gradle"

@@ -1,6 +1,7 @@
 ---
-title: grep
+title: wget
 category: Linux
+logo: { src: /assets/logos/wget.svg }
 updated: 2024-04-16
 keywords:
     - "wget"

@@ -1,6 +1,7 @@
 ---
 title: Kafkacat
 category: Linux
+logo: { set: logos, name: kafka-icon }
 updated: 2020-03-03
 keywords:
     - "kafkacat"

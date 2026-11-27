@@ -1,6 +1,7 @@
 ---
 title: FreeBSD
 category: FreeBSD
+logo: { set: simple-icons, name: freebsd }
 updated: 2019-01-02
 keywords:
     - "freebsd"

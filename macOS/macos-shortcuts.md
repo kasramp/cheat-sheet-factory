@@ -1,6 +1,7 @@
 ---
 title: macOS Shortcuts
 category: macOS
+logo: { set: simple-icons, name: macos }
 updated: 2022-07-04
 keywords:
     - "macOS keyboard shortcuts"
