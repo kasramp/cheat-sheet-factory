@@ -11,6 +11,9 @@ const viteCacheDir = process.env.ASTRO_VITE_CACHE_DIR
 export default defineConfig({
   site: 'https://devhints.io',
   compressHTML: true,
+  redirects: {
+    '/linux/cncnet-yr': '/linux/redalert2'
+  },
   build: {
     format: 'file' /* generate /my-post.html instead of /my-post/index.html */,
     inlineStylesheets: 'always'
