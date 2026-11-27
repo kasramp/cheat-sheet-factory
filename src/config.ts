@@ -23,15 +23,6 @@ export const urls = {
     'https://github.com/kasramp/cheat-sheet-factory/issues/new'
 } as const
 
-export const carbon = {
-  enabled: false,
-  // src: 'https://cdn.carbonads.com/carbon.js?serve=CE7IK5QM&placement=devhintsio'
-  src: 'https://pubsrv.devhints.io/carbon.js?serve=CE7IK5QM&placement=devhintsio',
-  // Cover format, A/B tested against the zone above
-  coverSrc:
-    'https://pubsrv.devhints.io/carbon.js?serve=CWYIL2JI&placement=devhintsio&format=cover'
-} as const
-
 // Nav order. Every category except Others holds 3-16 non-snippet sheets;
 // Others holds at most 12. Enforced by src/lib/categories.test.ts.
 export const categories = [
@@ -45,7 +36,6 @@ export const categories = [
   'Java',
   'Kotlin',
   'Python',
-  'Javascript',
   'JavaScript',
   'Front-end',
   'IDE',

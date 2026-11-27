@@ -1,6 +1,6 @@
 import type { JsonLdDocument } from '~/types/JsonLdDocument'
 import { site } from '../../config'
-import { getDescription, getPageImage, getPageTitle, getPageURL } from './seo'
+import { getDescription, getPageTitle, getPageURL } from './seo'
 
 export function getJSONLDsForPage(page: {
   // TODO: rename getJsonLdSchemasForPage
@@ -14,7 +14,6 @@ export function getJSONLDsForPage(page: {
   }
 }): Array<JsonLdDocument> {
   const description = getDescription(page)
-  const image = getPageImage(page)
   const url = getPageURL(page)
   const category = page.frontmatter.category ?? 'Others'
   const categoryAnchor = category.toLowerCase().replace(/ /g, '-')
@@ -28,7 +27,6 @@ export function getJSONLDsForPage(page: {
       '@id': 'https://google.com/article'
     },
     headline,
-    image: [image],
     description: description
   }
 

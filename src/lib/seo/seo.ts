@@ -10,7 +10,6 @@ export function getSEOPropsForHome() {
     description: 'A collection of useful cheat sheets for computer related stuff'
   }
   const url = site.url
-  const image = 'https://assets.devhints.io/previews/index.jpg'
 
   return {
     title: t.title,
@@ -23,16 +22,12 @@ export function getSEOPropsForHome() {
     },
     metaProperties: denull({
       'og:description': t.description,
-      'og:image:height': '471',
-      'og:image': image,
-      'og:image:width': '900',
       'og:site_name': site.title,
       'og:title': t.title,
       'og:type': 'website',
       'og:url': url,
       // BUG: twitter card props should be metaNames
-      'twitter:title': image,
-      'twitter:image': image,
+      'twitter:title': t.title,
       'twitter:description': t.description
     })
   }
@@ -72,7 +67,6 @@ export function getSEOPropsForPage(
 ) {
   const title = getSEOTitle(page)
   const description = getDescription(page)
-  const image = getPageImage(page)
   const url = getPageURL(page)
   const robots = isListed(page) ? undefined : 'noindex, follow'
 
@@ -88,9 +82,6 @@ export function getSEOPropsForPage(
     },
     metaProperties: denull({
       'og:description': description,
-      'og:image:height': '471',
-      'og:image': image,
-      'og:image:width': '900',
       'og:site_name': site.title,
       'og:title': title,
       'og:type': 'article',
@@ -99,7 +90,6 @@ export function getSEOPropsForPage(
       'article:section': page.frontmatter.category,
       // BUG: twitter card props should be metaNames
       'twitter:title': title,
-      'twitter:image': image,
       'twitter:description': description
     })
   }
@@ -170,10 +160,6 @@ function denull(
       Boolean(entry[1])
     )
   )
-}
-
-export function getPageImage({ slug }: { slug: string }) {
-  return `https://assets.devhints.io/previews/${slug}.jpg`
 }
 
 export function getPageURL({ slug }: { slug: string }) {
