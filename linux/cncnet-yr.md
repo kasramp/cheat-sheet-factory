@@ -1,5 +1,5 @@
 ---
-title: CnCNet Yuri's Revenge on Linux
+title: Red Alert 2 & Yuri's Revenge (CnCNet) on Linux
 category: Linux
 logo: { src: /assets/logos/redalert2.svg }
 updated: 2026-11-27
