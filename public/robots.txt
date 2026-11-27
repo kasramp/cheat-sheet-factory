@@ -23,4 +23,4 @@ User-agent: Amazonbot
 User-agent: meta-ExternalAgent
 Disallow: /
 
-Sitemap: https://devhints.io/sitemap.xml
+Sitemap: https://cheatsheetfactory.geekyhacker.com/sitemap.xml
