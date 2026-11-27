@@ -1,7 +1,6 @@
 ---
 title: Yaourt
 category: Linux
-layout: 2017/sheet
 updated: 2020-07-09
 keywords:
     - "yaourt"
@@ -11,9 +10,8 @@ intro: |
   Yaourt switches 
 ---
 
-Switches
----------
-{: .-two-column}
+## Switches
+<!-- {: .-two-column} -->
 
 ### Installation
 
@@ -25,6 +23,8 @@ Switches
 
 ### Common switches
 
+|  |  |
+| --- | --- |
 | `-S` | Install a package |
 | `-Sy` | Sync database |
 | `-R` | Remove a package |
@@ -34,4 +34,4 @@ Switches
 | `-Rcs [package]` | Remove a package with all dependencies |
 | `-Syu --noconfirm` | Upgrades all packages without asking for confirmation |
 
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->

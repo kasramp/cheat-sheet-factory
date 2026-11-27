@@ -1,7 +1,6 @@
 ---
 title: CSS 
 category: Front-end
-layout: 2017/sheet
 updated: 2020-05-18
 keywords:
     - "CSS"
@@ -11,9 +10,8 @@ intro: |
     Cheat sheet for CSS
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Add CSS file to HTML
 

@@ -1,0 +1,36 @@
+/*
+ * Type scale.
+ *
+ * The scale is expressed in Tailwind's `--text-*` namespace so utilities and
+ * plain CSS share one API. Each `clamp()` reproduces the old media-query
+ * steps: 11/13/15/17px below 480px, interpolated to 12/14/16/19px at 768px.
+ *
+ * `--text-3xl` stays at Tailwind's 1.875rem: at the 14px root that is the
+ * 26.25px H2 size the sheet pages used before this scale defined the step.
+ *
+ * Line-height pairs are explicit ratios so each step pins the site's rhythm
+ * instead of inheriting Tailwind's defaults (unitless `calc()` ratios such as
+ * `calc(2.25 / 1.875)` for `--text-3xl`).
+ */
+
+@theme static {
+  --text-xs: clamp(11px, calc(0.347222vw + 9.33333px), 12px);
+  --text-sm: clamp(13px, calc(0.347222vw + 11.3333px), 14px);
+  --text-base: clamp(15px, calc(0.347222vw + 13.3333px), 16px);
+  --text-lg: clamp(17px, calc(0.694445vw + 13.6667px), 19px);
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 1.875rem;
+  --text-4xl: 40px;
+  --text-5xl: 42px;
+
+  --text-xs--line-height: 1.5;
+  --text-sm--line-height: 1.6;
+  --text-base--line-height: 1.6;
+  --text-lg--line-height: 1.4;
+  --text-xl--line-height: 1.3;
+  --text-2xl--line-height: 1.3;
+  --text-3xl--line-height: 1.2;
+  --text-4xl--line-height: 1.2;
+  --text-5xl--line-height: 1.2;
+}

@@ -1,0 +1,26 @@
+---
+import type { SheetPage } from '~/lib/page'
+import '@fontsource/handjet/latin-400.css'
+import PageListItem from './PageListItem.astro'
+
+export type Props = {
+  pages: SheetPage[]
+}
+
+const props = Astro.props as Props
+// Insert the cover ad where featured cards 3 and 4 would sit.
+
+const styles = {
+  root: 'FeaturedPages__root col-span-full grid grid-flow-dense grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[16px]'
+}
+---
+
+{props.pages.length > 0 && (
+  <div class={styles.root}>
+    {props.pages.map((page, index) => (
+      <>
+        <PageListItem page={page} variant="featured" showFragments />
+      </>
+    ))}
+  </div>
+)}

@@ -1,7 +1,6 @@
 ---
 title: NVM
 category: Javascript
-layout: 2017/sheet
 tags: [Featured]
 updated: 2020-04-09
 keywords:
@@ -13,7 +12,7 @@ intro: |
   NVM cheat sheet
 ---
 
-{: .-two-column}
+<!-- {: .-two-column} -->
 
 ## Basics
 

@@ -1,7 +1,6 @@
 ---
 title: Python
 category: Python
-layout: 2017/sheet
 tags: [Featured]
 updated: 2020-12-29
 keywords:
@@ -12,9 +11,8 @@ intro: |
   Python cheat sheet 
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ## Basics
 
@@ -910,6 +908,8 @@ pyautogui.hotkey("altleft", "f4") # executing a hotkey
 
 ### Working with pip
 
+|  |  |
+| --- | --- |
 | `pip install --user youtube-dl` | Installs Youtube-dl in user space |
 | `pip install --user --upgrade youtube-dl` | Updates Youtube-dl |
 | `pip uninstall youtube-dl` | Removes Youtube-dl |

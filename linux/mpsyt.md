@@ -1,7 +1,6 @@
 ---
 title: Mpsyt
 category: Linux
-layout: 2017/sheet
 updated: 2018-11-15
 keywords:
     - "mpsyt"
@@ -11,13 +10,14 @@ intro: |
   Useful keybindings of mpsyt 
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Common shortcuts
 
 
+|  |  |
+| --- | --- |
 | `i [video number]` | Video metadata |
 | `d [video number]` | Download a video |
 | `da [video number]` | Download a audio |

@@ -1,7 +1,6 @@
 ---
 title: Kafkacat
 category: Linux
-layout: 2017/sheet
 updated: 2020-03-03
 keywords:
     - "kafkacat"
@@ -9,9 +8,8 @@ intro: |
   Kafkacat consumes messages of a Kafka topic and prints the content
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### How to use
 

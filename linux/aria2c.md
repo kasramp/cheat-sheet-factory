@@ -1,7 +1,6 @@
 ---
 title: aria2c
 category: Linux
-layout: 2017/sheet
 updated: 2022-08-22
 keywords:
     - "aria2c"
@@ -12,9 +11,8 @@ intro: |
   Aria2c cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### RPC mode
 

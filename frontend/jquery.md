@@ -1,7 +1,6 @@
 ---
 title: jQuery 
 category: Front-end
-layout: 2017/sheet
 updated: 2020-05-22
 keywords:
     - "jQuery"
@@ -11,9 +10,8 @@ intro: |
     Cheat sheet for jQuery
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Starting a jQuery document
 

@@ -1,7 +1,6 @@
 ---
 title: ufw
 category: Linux
-layout: 2017/sheet
 updated: 2024-01-22
 keywords:
     - "ufw"
@@ -13,9 +12,8 @@ intro: |
   UFW cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Install UFW
 

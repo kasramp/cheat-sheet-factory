@@ -1,7 +1,6 @@
 ---
 title: Heroku
 category: SaaS
-layout: 2017/sheet
 updated: 2019-01-02
 keywords:
     - "heroku"
@@ -10,12 +9,13 @@ intro: |
   Heroku-cli cheat sheet 
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Handy heroku-cli commands
 
+|  |  |
+| --- | --- |
 | `heroku login` | Login to account |
 | `heroku apps` | List apps |
 | `heroku logs --app AppName` | Show logs |

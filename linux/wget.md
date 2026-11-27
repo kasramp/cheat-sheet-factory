@@ -1,7 +1,6 @@
 ---
 title: grep
 category: Linux
-layout: 2017/sheet
 updated: 2024-04-16
 keywords:
     - "wget"
@@ -11,9 +10,8 @@ intro: |
   Wget cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Recursive download (current directory)
 

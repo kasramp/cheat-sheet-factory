@@ -1,7 +1,6 @@
 ---
 title: rclone
 category: Linux
-layout: 2017/sheet
 updated: 2026-11-27
 keywords:
     - "rclone"
@@ -12,9 +11,8 @@ intro: |
   Rclone cheatsheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Size of an open directory (HTTP listing), without downloading
 

@@ -1,7 +1,6 @@
 ---
 title: Kotlin
 category: Kotlin
-layout: 2017/sheet
 tags: [Featured]
 updated: 2024-10-02
 keywords:
@@ -14,7 +13,7 @@ intro: |
 
 ## Shortcuts
 
-{: .-two-column}
+<!-- {: .-two-column} -->
 
 ## Basics
 

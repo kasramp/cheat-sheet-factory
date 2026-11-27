@@ -1,7 +1,6 @@
 ---
 title: Maven
 category: Java
-layout: 2017/sheet
 updated: 2019-04-17
 keywords:
     - "maven"
@@ -11,12 +10,13 @@ intro: |
   Maven cheat sheet
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Useful commands
 
+|  |  |
+| --- | --- |
 | `mvn dependency:tree` | Get dependency tree |
 | `mvn archetype:generate` | Generate a maven project |
 | `mvn archetype:generate -DgroupId=com.madadipouya.eris -DartifactId=eris-weather-service` | Generate a maven project with `artifactId` and `groupId` |

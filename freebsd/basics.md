@@ -1,7 +1,6 @@
 ---
 title: FreeBSD
 category: FreeBSD
-layout: 2017/sheet
 updated: 2019-01-02
 keywords:
     - "freebsd"
@@ -10,17 +9,20 @@ intro: |
     FreeBSD getting started basics
 ---
 
-Shortcuts
----------
-{: .-two-column}
+## Shortcuts
+<!-- {: .-two-column} -->
 
 ### Package manager
 
+|  |  |
+| --- | --- |
 | `pkg update` | Install/upgrade package manager |
 | `pkg search [keyword]` | Search for a package |
 
 ### Application installation
 
+|  |  |
+| --- | --- |
 | `pkg install xorg` | Install Xorg |
 | `pkg install i3 i3 status i3lock dmenu` | Install i3WM |
 | `pkg install firefox` | Install Firefox |

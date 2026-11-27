@@ -1,7 +1,6 @@
 ---
 title: Kafka connect rest
 category: Kafka
-layout: 2017/sheet
 updated: 2019-01-29
 keywords:
     - "kafka connect"
@@ -11,12 +10,13 @@ intro: |
   Cheat sheet for Kafka connect rest APIs
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Rest APIs
 
+|  |  |
+| --- | --- |
 | `curl /connectors` | Get list of connectors |
 | `cur -X POST -H "Content-Type: application/json" /connectors -d 'json'` | Create a connector |
 | `curl /connectors/[name]` | Get information about a single connector |
@@ -31,4 +31,4 @@ Shortcuts
 | `curl /connectors/[name]/tasks/[number]/status` | Get the status of a single task |
 | `curl -X POST /connectors/[name]/tasks/[number]/restart` | Restart a single task |
 | `curl /connector-plugins/` | Get list of plugins |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->

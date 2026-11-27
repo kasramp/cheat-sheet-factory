@@ -1,7 +1,6 @@
 ---
 title: File Compression
 category: Linux
-layout: 2017/sheet
 updated: 2021-11-01
 keywords:
     - "file compression"
@@ -16,9 +15,8 @@ intro: |
   Learn how to create and extract ten different compressed file formats in Linux
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ## Packages to install
 

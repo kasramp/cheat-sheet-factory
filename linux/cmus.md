@@ -1,7 +1,6 @@
 ---
 title: Cmus
 category: Linux
-layout: 2017/sheet
 updated: 2018-10-16
 keywords:
     - "cmus"
@@ -11,12 +10,13 @@ intro: |
   List of cmus player key bindings 
 ---
 
-Shortcuts
----------
-{: .-three-column}
+## Shortcuts
+<!-- {: .-three-column} -->
 
 ### Common shortcuts
 
+|  |  |
+| --- | --- |
 | `1-7` | Switch views |
 | `x` | Play |
 | `c` | Pause |
@@ -24,7 +24,7 @@ Shortcuts
 | `z` | Play previous |
 | `s` | Shuffle |
 | `r` | Repeat |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Misc
 

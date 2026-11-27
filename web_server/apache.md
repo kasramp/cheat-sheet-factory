@@ -1,7 +1,6 @@
 ---
 title: Apache
 category: Web Server
-layout: 2017/sheet
 updated: 2023-04-13
 keywords:
     - "apache"
@@ -12,9 +11,8 @@ intro: |
   List of useful Apache commands
 ---
 
-Shortcuts
----------
-{: .-one-column}
+## Shortcuts
+<!-- {: .-one-column} -->
 
 ### Run Apache in Docker (for testing)
 

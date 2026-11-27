@@ -1,7 +1,6 @@
 ---
 title: NPM
 category: Javascript
-layout: 2017/sheet
 tags: [Featured]
 updated: 2020-04-10
 keywords:
@@ -15,7 +14,7 @@ intro: |
 
 ## Shortcuts
 
-{: .-two-column}
+<!-- {: .-two-column} -->
 
 ## Basics
 

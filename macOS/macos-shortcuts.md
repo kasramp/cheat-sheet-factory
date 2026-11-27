@@ -1,7 +1,6 @@
 ---
 title: macOS Shortcuts
 category: macOS
-layout: 2017/sheet
 updated: 2022-07-04
 keywords:
     - "macOS keyboard shortcuts"
@@ -9,12 +8,13 @@ intro: |
   List of keyboard shortcuts for macOS
 ---
 
-Shortcuts
----------
-{: .-three-column}
+## Shortcuts
+<!-- {: .-three-column} -->
 
 ### Cut, copy, paste, and other common shortcuts
 
+|  |  |
+| --- | --- |
 | `⌘X` | Cut |
 | `⌘C` | Copy |
 | `⌘V` | Paste |
@@ -41,10 +41,12 @@ Shortcuts
 | `⇧⌘5` | Take a screenshot or make a screen recording |
 | `⇧⌘N` | Create a new folder in the Finder |
 | `⌘,` | Open preferences for the front app |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Sleep, log out, and shut down
 
+|  |  |
+| --- | --- |
 | `⌥⌘Power` | Sleep |
 | `^⇧Power` | Put the display to sleep |
 | `⌃Power` | Shutdown menu |
@@ -54,10 +56,12 @@ Shortcuts
 | `⇧⌘Q` | Log out with confirmation |
 | `⌥⇧⌘Q` | Log out no confirmation |
 | `^⌘Q` | Screen lock |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Finder and system
 
+|  |  |
+| --- | --- |
 | `⌘D` | Duplicate the selected files |
 | `⌘E` | Eject the selected disk or volume |
 | `⌘F` | Start a Spotlight search |
@@ -109,10 +113,12 @@ Shortcuts
 | `⌥⌃` | Open Mission ⌃  preferences |
 | `⌘⌃` | Show the desktop | 
 | `⌃↓` | Show all windows of the front app |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Document
 
+|  |  |
+| --- | --- |
 | `⌘B` | Boldface | 
 | `⌘I` | Italicize |
 | `⌘K` | Add a link |
@@ -164,17 +170,21 @@ Shortcuts
 | `⇧⌘` | Increase the size |
 | `⌘=` | Reset the size |
 | `⇧⌘?` | Open the Help |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Safari
 
+|  |  |
+| --- | --- |
 | `⌘/` | Show links on mouseover | 
 | `⌘D` | Add bookmark |
 | `⌥⌘B` | Edit bookmark |
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Finder copy/cut/paste
 
+|  |  |
+| --- | --- |
 | `⌘c` | Copy |
 | `⌘v` | Paste |
 | `⌘⌥v` | Cut |

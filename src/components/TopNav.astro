@@ -1,0 +1,87 @@
+---
+import cx from 'clsx'
+import type { SheetPage } from '~/lib/page'
+import ThemeToggle from './ThemeToggle.astro'
+import Icon from './Icon.astro'
+import { getEditLink } from '~/lib/links'
+
+export type Props = {
+  noShare?: boolean
+  noEdit?: boolean
+  page?: SheetPage
+}
+const props = Astro.props as Props
+
+const t = {
+  title: 'Cheat Sheet Factory',
+  editOnGitHub: 'Edit on GitHub',
+  edit: 'Edit'
+}
+
+const styles = {
+  root: cx(
+    'TopNav__root',
+    '[--brand-ink:light-dark(var(--foreground),#fff)]',
+    'relative mb-[8px] h-[48px] py-[8px] text-center leading-[64px] min-[481px]:mb-0 min-[481px]:h-[64px] min-[481px]:py-0'
+  ),
+  inner:
+    'TopNav__inner relative flex h-[32px] items-center px-[16px] leading-[32px] min-[481px]:mt-0 min-[481px]:h-[64px] min-[481px]:px-[32px] min-[481px]:leading-[64px]',
+  brand: cx(
+    'TopNav__brand',
+    'group relative block flex-none text-sm font-bold no-underline',
+    'before:absolute before:-inset-x-[16px] before:-inset-y-[16px] before:content-[""]',
+    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+  ),
+  brandMark: cx(
+    'TopNav__brandMark',
+    'block size-full text-[var(--brand-ink)]',
+    '[&>svg]:block [&>svg]:size-full',
+    'group-hover:text-primary group-focus-visible:text-primary'
+  ),
+  actions:
+    'TopNav__actions flex flex-none items-center gap-[8px] max-[481px]:ml-auto min-[481px]:absolute min-[481px]:right-[32px] min-[481px]:top-[16px]',
+  pageActions:
+    'TopNav__pageActions m-0 flex h-[32px] list-none items-center p-0',
+  editItem: 'TopNav__editItem m-0 flex! p-0',
+  editLink: cx(
+    'TopNav__editLink',
+    'inline-flex h-[32px] items-center gap-[8px] rounded-full border border-border-strong px-[16px] text-xs font-medium whitespace-nowrap text-[var(--brand-ink)] no-underline transition-colors duration-100 ease-linear',
+    'hover:border-primary-solid hover:bg-primary-solid hover:text-primary-foreground',
+    'focus-visible:border-primary-solid focus-visible:bg-primary-solid focus-visible:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring',
+    '[&>svg]:shrink-0'
+  ),
+  editText: 'TopNav__editText'
+}
+
+const editLink = getEditLink(props.page)
+---
+
+<nav class={styles.root} data-js-no-preview role="navigation">
+  <div class={styles.inner}>
+    <a class={styles.brand} href="/" aria-label={t.title}>
+      <span class={styles.brandMark}>{t.title}</span>
+    </a>
+
+    <div class={styles.actions}>
+      <ThemeToggle />
+
+      {props.noShare !== true ? (
+        <>
+          {props.noEdit !== true ? (
+            <ul class={styles.pageActions}>
+              <li
+                class={cx(styles.editItem, 'hint--bottom')}
+                data-hint={t.editOnGitHub}
+              >
+                <a class={styles.editLink} href={editLink}>
+                  <Icon name="logo-github" size={16} />
+                  <span class={styles.editText}>{t.edit}</span>
+                </a>
+              </li>
+            </ul>
+          ) : null}
+        </>
+      ) : null}
+    </div>
+  </div>
+</nav>

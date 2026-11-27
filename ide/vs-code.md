@@ -1,7 +1,6 @@
 ---
 title: Visual Studio Code
 category: IDE
-layout: 2017/sheet
 updated: 2019-06-06
 keywords:
     - "VS Code"
@@ -10,12 +9,13 @@ intro: |
   Cheat sheet for Visual Studio Code
 ---
 
-Visual Studio Code
----------
-{: .-two-column}
+## Visual Studio Code
+<!-- {: .-two-column} -->
 
 ### Handy Shortcuts (Linux)
 
+|  |  |
+| --- | --- |
 | `^K^S` | Shortcuts list |
 | `^⇧F` | Search in the project |
 | `^⇧N` | Opens a new instance of VS Code |
@@ -24,10 +24,12 @@ Visual Studio Code
 | `^P` | Search for a file in all projects |
 | `^N` | Open a new unsaved file |
 
-{: .-shortcuts}
+<!-- {: .-shortcuts} -->
 
 ### Handy Shortcuts (Mac)
 
+|  |  |
+| --- | --- |
 | `⌘ p` | Go to file |
 | `⌘ w` | Close a tab |
 | `⌘ K ⌘ S` | Shortcuts list |
@@ -53,4 +55,4 @@ Visual Studio Code
 - All shortcuts for Linux/Windows [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/VS%20Code%20Linux%20and%20Windows.pdf)
 - All shortcuts for macOS [here](https://github.com/kasramp/cheat-sheet-factory/blob/gh-pages/_docs/pdfs/VS%20Code%20macOS.pdf)
 
-{: .-setup}
+<!-- {: .-setup} -->
