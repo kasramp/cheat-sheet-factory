@@ -55,12 +55,10 @@ export function getRecentPages(
 ): SheetPage[] {
   const { maxCount = 8, excludeSnippets = false } = options ?? {}
 
-  // The recent list follows the active t1/t2 rotation, not best-effort t3.
   return Object.values(pages)
     .filter(
       (page) =>
         isListed(page) &&
-        (page.frontmatter.tier === 't1' || page.frontmatter.tier === 't2') &&
         page.frontmatter.updated &&
         (!excludeSnippets || !isSnippet(page))
     )
